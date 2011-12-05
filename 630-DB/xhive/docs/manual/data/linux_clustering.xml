@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<!-- 
+  X-Hive clustering configuration file, for default X-Hive/DB 3.0
+  installations with a 2GB filesize limit.
+  
+  version 1.0
+  
+  32 containers per file, with a max-fill-percentage of 5 %, means a maximum
+  of 
+     32 * 5% * 512 MB = 819 MB
+  per file (you must stay below half of the maximum allowed size, to make
+  sure sessions can copy data in a file during a transaction). You could use
+  other configurations, e.g. if you want more containers you could
+  use 160 containers with a max-fill-percentage of 1 % (for
+  a total of 3200 containers in this configuration, with the same
+  filesizes).
+  
+  Please note that these rules do *not* apply to the root-library and its 
+  sub-libraries that are 'locked with owner'. Therefor, you should either 
+  create only create libraries in the root-library that do not lock with
+  their owner (and do not store too many documents in the root-library),
+  or change the clustering settings of the root-library directly after
+  creation to match those in this configuration file.
+  (this is bug 573)
+  
+  To use this file, pass its location to the createDatabase call, e.g.
+    federation.createDatabase(databaseName, administratorPassword, "/opt/xhive/linux_clustering.xml", System.out);
+  
+  Contact support@x-hive.com in case of unclarities.
+-->
+<xhive-clustering>
+
+  <!-- 
+    Maximum allowed 32 containers per file. Total of 20 files (including
+    default file) gives 16 GB of storage capacity (in 640 containers).
+    
+    If more needed, you can extend the list of file-elements here, or alternatively:
+     - Monitor database files size (esp. of dbname-default-1.XhiveDatabase.DB).
+     - Call session.getDatabase().getDefaultSegment().addFile(null, null, 32);
+       a number of times to create more space.
+   -->
+  <segment id="default" max-containers="32">
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+    <file max-containers="32"/>
+  </segment>
+
+  <!--
+    Container pool for temporary data.
+  -->
+  <pool id="temporary-pool" segment="default" size="32" temporary="true">
+    <container-config initial-pages="100" growth-factor="10" max-fill-percentage="5"/>
+  </pool>
+
+  <!--
+    Cluster temporary data in container-pool by default, a container-config 
+    should not be defined, since that is determined by the pool
+  -->
+  <cluster-rule type="temp" location="temporary-pool"/>
+
+  <!--
+    Set properties on all other clustering rules:
+     - max-fill-percentage: 5 percent to limit maximum file size
+     - initial-pages: low, to keep initial files small (456 KB)
+     - growth-factor: make sure files do not grow to quickly (especially near end)
+  -->
+  <cluster-rule type="library" location="default">
+    <container-config initial-pages="10" growth-factor="10" max-fill-percentage="5"/>
+  </cluster-rule>
+  <cluster-rule type="ccindex" location="default">
+    <container-config initial-pages="10" growth-factor="10" max-fill-percentage="5"/>
+  </cluster-rule>
+  <cluster-rule type="index" location="default">
+    <container-config initial-pages="10" growth-factor="10" max-fill-percentage="5"/>
+  </cluster-rule>
+  <cluster-rule type="document" location="default">
+    <container-config initial-pages="10" growth-factor="10" max-fill-percentage="5"/>
+  </cluster-rule>
+
+</xhive-clustering>

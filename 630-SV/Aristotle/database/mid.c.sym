@@ -1,0 +1,25 @@
+99 1
+0 Symbol Information
+0 File: mid.c  Created: Mon May  2 22:21:45 2005
+0 version v3.5.1
+0 
+1 "main" 30 30 0 
+3 1 x 0 0 0 
+3 2 y 0 0 0 
+3 3 z 0 0 0 
+3 4 m 0 0 0 
+5 4 printf 1 0 5
+5 6 scanf 4 0 1 2 3 7
+5 28 printf 2 0 4 29
+6 2 
+6 30 
+0 end of procedure main
+4 -1 __iob 1 0 1 
+4 -2 _sibuf 1 0 1 
+4 -3 _sobuf 1 0 1 
+4 -4 _bufendtab 1 0 1 
+4 -5 _lastbuf 1 0 1 
+4 -6 optarg 1 0 1 
+4 -7 optind 0 0 1 
+4 -8 opterr 0 0 1 
+4 -9 optopt 0 0 1 

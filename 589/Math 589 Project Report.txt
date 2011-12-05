@@ -1,0 +1,61 @@
+Math 589 Project Report
+
+Web Crawler to fetch the Character Sets
+
+Balaji Ganesan
+
+Introduction:
+
+	I have implemented a Perl script that fetches Character set of webpages. 
+The project involved two things. Crawling the web to get the links from the pages visited 
+and fetching the character set from either the header or the Meta data of the html page. 
+
+Motivation:
+
+	The motivation for this project is my interest in fonts, particularly the Unicode 
+character set. I wanted to write a script that would randomly crawl the web and print the 
+character sets, so that I can see the number of urls that have moved to Unicode. At the very 
+least this script can be used to fetch the character set of some known urls without having to 
+use a browser and then viewing the page source.
+
+How to run:
+
+The project is a single perl script which can be run as follows:
+
+	perl findcharset url debug depth
+
+	debug - takes values 0 or 1, when this is set to 1, it displays all the links fetched 
+	by the crawler, any http error message returned by the hosts etc.
+	
+	depth - takes any non-negative integer. When we want to get the character set of
+	only one url we can give 0. If we want to the crawler to fetch links from the pages, 
+	we can give the depth to which we want it to crawl.
+
+
+Design Decisions:
+
+1. I have used the LWP: Useragent class to crawl the web though I could have very well used GET 
+(familiar from Assignment 3) and storing the links in an array. I just wanted to try using the LWP classes.
+2. I have written the code for fetching the character set from a page myself though I could have 
+used the LWP: Charset class. However the Perl installed on lectura doesn’t have this package installed.
+3. The crawler ignores the mailto and ftp links.
+4. The crawler fetches all the links from a page even if another page from the same website has 
+already been fetched. We could have skipped going to all the pages of one website assuming that 
+they all follow the same character set. However I chose not to do so, since some new links from 
+these pages may have been missed.    
+5. I have implemented a breadth first search approach to crawl the web pages by adding the new 
+links to the end of the queue.
+6. I have implemented a queue using arrays to collect the links and hashes for storing distinct 
+web pages and some statistics on character sets.
+
+Conclusion:
+	
+	Perl script that I have written seems to be able to fetch most of the links from the web 
+	pages it visits and also print the character set used by those pages.
+
+References:
+
+1. cpan.org
+2. perl.com
+3. HTTP The Definitive Guide, O’Reilly Publication.
+

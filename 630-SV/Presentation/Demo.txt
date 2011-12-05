@@ -1,0 +1,11 @@
+cfe mid.c
+il-st-2 mid.c
+gcc -g -I/home/balaji/630/Aristotle/headers/ -o mid.int.exe mid.int.c -L/home/balaji/630/Aristotle/lib/ -lIPF_st -lglobalfunc -lm 
+mid.int.exe
+cp mid.c.tr tracedir/0.tr
+th_builder tracedir tracedir/th mid.c
+th_printer tracedir/th mid.c
+
+cp flavors1.txt data1.txt
+cp flavors2.txt data2.txt
+cp flavors.c input.c

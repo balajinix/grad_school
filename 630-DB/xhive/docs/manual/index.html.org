@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>X-Hive/DB 6.1.4 - Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<frameset rows="50,*" frameborder="no" border="0" framespacing="0"> 
+
+  <frame name="navFrame" scrolling="no" src="nav.html">
+
+  <frameset cols="235, *" frameborder="no" border="0" framespacing="0"> 
+    <frame name="leftFrame" scrolling="AUTO" src="menuFrame_initial.html">
+    <frame name="rightFrame" scrolling="AUTO" src="manual.html">
+  </frameset>
+
+
+</frameset>
+
+
+<noframes> 
+<body bgcolor="#FFFFFF" text="#000000">
+	go to the <a href="manual_simple.html">no frames version of the manual</a>
+</body>
+</noframes> 
+</html>

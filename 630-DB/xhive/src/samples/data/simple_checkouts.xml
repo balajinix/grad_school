@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<checkouts xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.x-hive.com">
+
+  <chapter title="Chapter 1">
+    <!-- The editors involved in this chapter -->
+    <editor xlink:type="simple" 
+            xlink:show="embed" 
+            xlink:title="Margaret Martin" 
+            xlink:role="current editor"
+            xlink:href="/staff#xpointer(staff/employee[employeeId = 'EMP0001'])"/>
+
+    <!-- The document-parts of this chapter -->
+    <documentpart xlink:type="simple" 
+                  xlink:role="document part"
+                  xlink:title="article" xlink:href="UN_Chapter1#/1/2"/>        
+    <documentpart xlink:type="simple" 
+                  xlink:title="article" 
+                  xlink:role="document part"
+                  xlink:href="UN_Chapter1#/1/3"/>        
+
+    <!-- The checkouts of this chapter -->
+    <!-- Margaret has checked out both documentparts as both articles have the same label -->
+    <checkout from="Margaret Martin" 
+              to="article"/>
+
+    <!-- The owner of this chapter -->
+    <!-- This chapter is owned by all employees -->
+    <owner xlink:type="simple" 
+           xlink:show="embed" 
+           xlink:role="document owner"
+           xlink:title="all" 
+           xlink:href="/staff#xpointer(staff/employee)"/>
+  </chapter>
+
+</checkouts>

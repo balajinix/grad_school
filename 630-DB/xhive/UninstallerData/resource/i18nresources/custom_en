@@ -1,0 +1,870 @@
+#Wed Oct 13 12:49:27 PDT 1999
+
+
+
+
+# BILLBOARD
+# ---------
+
+# ................ =BillboardGen.jpg
+Billboard.ImageName=BillboardGen.jpg
+
+# ................ =com/zerog/ia/installer/images/
+Billboard.ImagePath=com/zerog/ia/installer/images/
+
+
+
+
+# CHECKDISKSPACE
+# --------------
+
+# ...................... =There is now enough disk space to proceed with the installation.
+CheckDiskSpace.enoughMegs=There is now enough disk space to proceed with the installation.
+
+# .................... =but there are only XXX MB available at:
+CheckDiskSpace.megsFree=but there are only XXX MB available at:
+
+# ...................... =This installation requires XXX MB of free disk space,
+CheckDiskSpace.megsNeeded=This installation requires XXX MB of free disk space,
+
+# ..................... =Otherwise, you may choose 'Exit' to cancel this installation.
+CheckDiskSpace.otherwise=Otherwise, you may choose 'Exit' to cancel this installation.
+
+# ...................... =Please free at least XXX MB to proceed with the installation.
+CheckDiskSpace.pleaseFree=Please free at least XXX MB to proceed with the installation.
+
+# ......................... =Please free some disk space to proceed with the installation.
+CheckDiskSpace.pleaseFreeAlt=Please free some disk space to proceed with the installation.
+
+# ................... =Please choose 'Install' to continue with the installation.
+CheckDiskSpace.proceed=Please choose 'Install' to continue with the installation.
+
+# ................. =Ready To Proceed
+CheckDiskSpace.ready=Ready To Proceed
+
+# ................. =Not Enough Disk Space
+CheckDiskSpace.title=Not Enough Disk Space
+
+# ................... =Warning!
+CheckDiskSpace.warning=Warning!
+
+
+
+
+# CHOOSEFILE
+# ----------
+
+# ...................... =This installer requires a file to be chosen.
+ChooseFile.AdditionalText=This installer requires a file to be chosen.
+
+# ................. =Choose...
+ChooseFile.chooseStr=Choose...
+
+# .................... =inside
+ChooseFile.macInsideStr=inside
+
+# ................ =on
+ChooseFile.macOnStr=on
+
+# .............. =Please Choose a File:
+ChooseFile.Prompt=Please Choose a File:
+
+# .................. =Restore Default File
+ChooseFile.restoreStr=Restore Default File
+
+# ................. =Choose a File
+ChooseFile.StepTitle=Choose a File
+
+
+
+
+# CHOOSEFOLDER
+# ------------
+
+# ........................ =This installer requires a folder to be chosen.
+ChooseFolder.AdditionalText=This installer requires a folder to be chosen.
+
+# ................... =Choose...
+ChooseFolder.chooseStr=Choose...
+
+# .................. =on
+ChooseFolder.macOnStr=on
+
+# ................ =Please Choose a Folder:
+ChooseFolder.Prompt=Please Choose a Folder:
+
+# .................... =Restore Default Location
+ChooseFolder.restoreStr=Restore Default Location
+
+# ................... =Choose a Folder
+ChooseFolder.StepTitle=Choose a Folder
+
+
+
+
+# CHOOSEINSTALLSET
+# ----------------
+
+# ................... =Choose Install Set
+ChooseInstallSet.Title=Choose Install Set
+
+
+
+
+# CHOOSEINSTALLSETUI
+# ------------------
+
+# ............................. =Customize
+ChooseInstallSetUI.customizeBttn=Customize
+
+
+
+
+# CHOOSEJAVAVM
+# ------------
+
+# ................ =Please select a Java VM for your application
+ChooseJavaVM.header=Please select a Java VM for your application
+
+# ............... =Choose Java Virtual Machine
+ChooseJavaVM.Title=Choose Java Virtual Machine
+
+
+
+
+# CHOOSEJAVAVMUI
+# --------------
+
+
+# ..................... =Choose Another...
+ChooseJavaVMUI.chooseStr=Choose Another...
+
+# ........................... =Open
+ChooseJavaVMUI.fileDialog.open=Open
+
+# ..................... =Install Sun Java VM specifically for this application
+ChooseJavaVMUI.installCb=Install Sun Java VM specifically for this application
+
+# .............................. =Searching In: 
+ChooseJavaVMUI.searchingForVMsStr=Searching In: 
+
+
+# ................... =Stop Searching
+ChooseJavaVMUI.stopStr=Stop Searching
+
+# ..................... =Search For Others
+ChooseJavaVMUI.searchStr=Search For Others
+
+
+# ................... =searching completed.
+ChooseJavaVMUI.searchingCompletedStr=searching completed.
+
+# .................... =Choose a virtual machine already installed on this machine
+ChooseJavaVMUI.selectCb=Choose a virtual machine already installed on this machine
+
+# ..................................... =The application selected is not a valid Java Virtual Machine
+ChooseJavaVMUI.showBadVMDialog().message=The application selected is not a valid Java Virtual Machine
+
+# .................................... =No Java 1.1 VM found. \n This product requires that a Java 1.1 Virtual Machine already be installed on your system. \n The JavaSoft Java VM 1.1.x can be found at http://java.sun.com/products/jdk/1.1/
+ChooseJavaVMUI.showNoVMDialog().message=No Java 1.1 VM found. \n This product requires that a Java 1.1 Virtual Machine already be installed on your system. \n The JavaSoft Java VM 1.1.x can be found at http://java.sun.com/products/jdk/1.1/
+
+
+
+
+
+
+# CUSTOMIZEUI
+# -----------
+
+# ..................... =Current Install Sets:
+CustomizeUI.currentISLbl=Current Install Sets:
+
+# ............................... =Custom Set
+CustomizeUI.custom.setVisualName()=Custom Set
+
+# .................... =kB
+CustomizeUI.kiloByteStr=kB
+
+# ................. =Customize Install
+CustomizeUI.titleLbl=Customize Install
+
+# ................... =???
+CustomizeUI.totalSpace=???
+
+# ...................... =Total Space Required for Install:
+CustomizeUI.totalSpaceLbl=Total Space Required for Install:
+
+
+
+
+# EDITENVIRONMENT
+# ---------------
+
+# .......................... =Your system environment has changed.  You will need to log out or reboot your system for these changes to take effect.
+EditEnvironment.RebootMessage=Your system environment has changed.  You will need to log out or reboot your system for these changes to take effect.
+
+# ........................ =System Environment Changed
+EditEnvironment.RebootTitle=System Environment Changed
+
+
+
+
+# FINDFILEORFOLDER
+# ----------------
+
+# ....................... =Please choose a file/folder for this application.
+FindFileOrFolder.AskPrompt=Please choose a file/folder for this application.
+
+
+
+
+# FINDFILEORFOLDERPANEL
+# ---------------------
+
+# .............................. =Choose
+FindFileOrFolderPanel.ChooseTitle=Choose
+
+# .................................. =Files are being added to the list below.
+FindFileOrFolderPanel.FilesBeingAdded=Files are being added to the list below.
+
+# ................................... =The files found are listed below.
+FindFileOrFolderPanel.FilesFoundListed=The files found are listed below.
+
+# .................................... =Folders are being added to the list below.
+FindFileOrFolderPanel.FoldersBeingAdded=Folders are being added to the list below.
+
+# ..................................... =The folders found are below.
+FindFileOrFolderPanel.FoldersFoundListed=The folders found are below.
+
+# ............................. =Found files matching:
+FindFileOrFolderPanel.FoundFiles=Found files matching:
+
+# ............................... =Found folders matching:
+FindFileOrFolderPanel.FoundFolders=Found folders matching:
+
+# .......................... =Found In:
+FindFileOrFolderPanel.FoundIn=Found In:
+
+# ............................ =I'll Choose One Myself...
+FindFileOrFolderPanel.IllChoose=I'll Choose One Myself...
+
+# ............................ =Looking In:
+FindFileOrFolderPanel.LookingIn=Looking In:
+
+# ................................ =Please make your own selection.
+FindFileOrFolderPanel.MakeSelection=Please make your own selection.
+
+# .................................... =Searching for files matching:
+FindFileOrFolderPanel.SearchingForFiles=Searching for files matching:
+
+# ...................................... =Searching for folders matching:
+FindFileOrFolderPanel.SearchingForFolders=Searching for folders matching:
+
+# .............................. =Searching
+FindFileOrFolderPanel.SearchTitle=Searching
+
+# .............................. =Select
+FindFileOrFolderPanel.SelectTitle=Select
+
+# ................................ =The installer was unable to find a match for:
+FindFileOrFolderPanel.UnableToMatch=The installer was unable to find a match for:
+
+
+
+
+# FOLDERDIALOGLAYER
+# -----------------
+
+# .......................... =Selected:
+FolderDialogLayer.selectedStr=Selected:
+
+# .............................. =Select a Folder
+FolderDialogLayer.selectFolderStr=Select a Folder
+
+
+
+
+# FOLDERSELECTDIALOG
+# ------------------
+
+# ......................... =Cancel
+FolderSelectDialog.cancelStr=Cancel
+
+# ......................... =Create a New Folder
+FolderSelectDialog.createStr=Create a New Folder
+
+# ......................... =Folder:
+FolderSelectDialog.folderStr=Folder:
+
+# ....................... =Name:
+FolderSelectDialog.nameStr=Name:
+
+# ..................... =OK
+FolderSelectDialog.okStr=OK
+
+
+
+
+# GENERICINSTALLPANEL
+# -------------------
+
+# ........................ =The installer is configuring your application...
+GenericInstallPanel.message=The installer is configuring your application...
+
+# ...................... =Configuring
+GenericInstallPanel.title=Configuring
+
+
+
+
+# GETPASSWORD
+# -----------
+
+# ....................... =This installer requires a password to continue.
+GetPassword.AdditionalText=This installer requires a password to continue.
+
+# .................... =Enter Password
+GetPassword.enterPwdStr=Enter Password
+
+# ................... =The password you entered is incorrect.\nPlease try again.
+GetPassword.errMessage=The password you entered is incorrect.\nPlease try again.
+
+# .............. =OK
+GetPassword.okStr=OK
+
+# ............... =Please Enter the Password:
+GetPassword.Prompt=Please Enter the Password:
+
+# ......................... =Password is required to continue.
+GetPassword.pwdToContinueStr=Password is required to continue.
+
+# .................. =Enter Password
+GetPassword.StepTitle=Enter Password
+
+
+
+
+# IMPORTANTNOTE
+# -------------
+
+# ................ =Important Information
+ImportantNote.Title=Important Information
+
+
+
+
+# IMPORTANTNOTEUI
+# ---------------
+
+# ..................... =Please read before continuing:
+ImportantNoteUI.aboveLbl=Please read before continuing:
+
+
+
+
+# INSTALLBUNDLE
+# -------------
+
+# ................................. =Application
+InstallBundle.application.BundleName=Application
+
+# .................................. =This installs the application.
+InstallBundle.application.Description=This installs the application.
+
+# .......................... =Help
+InstallBundle.help.BundleName=Help
+
+# ........................... =This installs the help files.
+InstallBundle.help.Description=This installs the help files.
+
+
+
+
+# INSTALLCOMPLETE
+# ---------------
+
+# ........................ =Congratulations! The installation is complete. Press "Done" to quit the installer.
+InstallComplete.DisplayText=Congratulations! The installation is complete. Press "Done" to quit the installer.
+
+# .................. =Install Complete
+InstallComplete.Title=Install Complete
+
+
+
+
+# INSTALLDIR
+# ----------
+
+# ............. =Choose Install Folder
+InstallDir.Title=Choose Install Folder
+
+
+
+
+# INSTALLDIRUI
+# ------------
+
+# .................. =Where would you like to install?
+InstallDirUI.aboveLbl=Where would you like to install?
+
+# .......................... =You do not have write permissions to the chosen installation destination. \nPlease choose a different location for installation
+InstallDirUI.alertDialog.text=You do not have write permissions to the chosen installation destination. \nPlease choose a different location for installation
+
+# ....................... =Choose...
+InstallDirUI.chooseDirBttn=Choose...
+
+# ..................... =Restore Default Location
+InstallDirUI.defaultBttn=Restore Default Location
+
+# ...................... =inside
+InstallDirUI.macInsideStr=inside
+
+# .................... =into
+InstallDirUI.macIntoLbl=into
+
+# .................. =on
+InstallDirUI.macOnStr=on
+
+
+
+
+# INSTALLER
+# ---------
+
+# .................... =install
+Installer.InstallerName=install
+
+# ......................... =The installer cannot run on your configuration. It will now quit.
+Installer.RulesFailedMessage=The installer cannot run on your configuration. It will now quit.
+
+# ..................... =Splash.jpg
+Installer.UserSplashName=Splash.jpg
+
+# ..................... =com/zerog/ia/installer/images/
+Installer.UserSplashPath=com/zerog/ia/installer/images/
+
+
+
+
+# INSTALLPROGRESSUI
+# -----------------
+
+# ........................ =Cancel Install
+InstallProgressUI.cancelStr=Cancel Install
+
+# .......................... =Continue Install
+InstallProgressUI.continueStr=Continue Install
+
+# ............................ =Installing...
+InstallProgressUI.installingStr=Installing...
+
+# ................................. =Cancel this installation.
+InstallProgressUI.ZGAlert.Cancelling=Cancel this installation.
+
+# ........................................ =Cancel this installation?
+InstallProgressUI.ZGAlert.CancellingInstall=Cancel this installation?
+
+
+
+
+# INSTALLSET
+# ----------
+
+# ........................... =This will only install the required files for this application.
+InstallSet.minimal.Description=This will only install the required files for this application.
+
+# .............................. =Minimal Install
+InstallSet.minimal.InstallSetName=Minimal Install
+
+# ........................... =This will install all files for this application.
+InstallSet.typical.Description=This will install all files for this application.
+
+# .............................. =Typical Install
+InstallSet.typical.InstallSetName=Typical Install
+
+
+
+
+# INTRO
+# -----
+
+# .............. =InstallAnywhere will guide you through the installation of your application. Use the "Next" button to proceed to the next screen. If you want to change something in a previous screen, click the "Previous" button. You may quit the installer at any time by clicking the "Exit" button.
+Intro.DisplayText=InstallAnywhere will guide you through the installation of your application. Use the "Next" button to proceed to the next screen. If you want to change something in a previous screen, click the "Previous" button. You may quit the installer at any time by clicking the "Exit" button.
+
+# ........ =Introduction
+Intro.Title=Introduction
+
+
+
+
+# LICENSEAGR
+# ----------
+
+# ................ =jreLicense.txt
+LicenseAgr.FileName=jreLicense.txt
+
+# ............ =com/zerog/ia/installer/images/
+LicenseAgr.Path=com/zerog/ia/installer/images/
+
+# ............. =License Agreement
+LicenseAgr.Title=License Agreement
+
+
+
+
+# LICENSEAGRUI
+# ------------
+
+# .................. =Please read before installing:
+LicenseAgrUI.aboveLbl=Please read before installing:
+
+# .................. =Do you agree with the terms of the license?
+LicenseAgrUI.belowLbl=Do you agree with the terms of the license?
+
+# ............................. =Exit Install
+LicenseAgrUI.dialog.cancelButton=Exit Install
+
+# ......................... =Continue Install
+LicenseAgrUI.dialog.okButton=Continue Install
+
+# ...................... =License Agreement Warning
+LicenseAgrUI.dialog.title=License Agreement Warning
+
+# ........................ =Warning:
+LicenseAgrUI.dialog.warnLbl=Warning:
+
+# ........................ =If you do not accept the licensing terms you will not be allowed to continue with the install.
+LicenseAgrUI.dialog.warnStr=If you do not accept the licensing terms you will not be allowed to continue with the install.
+
+# .............. =No
+LicenseAgrUI.noCb=No
+
+# .................... =No file found to preview
+LicenseAgrUI.noFileText=No file found to preview
+
+# ............... =Yes
+LicenseAgrUI.yesCb=Yes
+
+
+
+
+# SETSERIALNUMBER
+# ---------------
+
+# ........................... =This installer requires a serial number to continue.
+SetSerialNumber.AdditionalText=This installer requires a serial number to continue.
+
+# ........................ =Enter Serial Number
+SetSerialNumber.enterSNoStr=Enter Serial Number
+
+# ....................... =The serial number you entered is incorrect.\nPlease try again.
+SetSerialNumber.errMessage=The serial number you entered is incorrect.\nPlease try again.
+
+# .................. =OK
+SetSerialNumber.okStr=OK
+
+# ................... =Please Enter the Serial Number:
+SetSerialNumber.Prompt=Please Enter the Serial Number:
+
+# ............................. =Serial Number is required to continue.
+SetSerialNumber.sNoToContinueStr=Serial Number is required to continue.
+
+# ...................... =Enter Serial Number
+SetSerialNumber.StepTitle=Enter Serial Number
+
+
+
+
+# SHORTCUTLOC
+# -----------
+
+# ........................... =Where would you like to create aliases?
+ShortcutLoc.MACOS.aboveCaption=Where would you like to create aliases?
+
+# ................... =Choose Alias Location
+ShortcutLoc.MacOSTitle=Choose Alias Location
+
+# ......................... =Where would you like to create application icons (shadows)?
+ShortcutLoc.OS2.aboveCaption=Where would you like to create application icons (shadows)?
+
+# ................. =Choose Shadow Location
+ShortcutLoc.Os2Title=Choose Shadow Location
+
+# ..................... =Choose Link Location
+ShortcutLoc.SolarisTitle=Choose Link Location
+
+# .......................... =Where would you like to create links?
+ShortcutLoc.UNIX.aboveCaption=Where would you like to create links?
+
+# ........................... =Where would you like to create application icons (shortcuts)?
+ShortcutLoc.WIN32.aboveCaption=Where would you like to create application icons (shortcuts)?
+
+# ................... =Choose Shortcut Location
+ShortcutLoc.Win32Title=Choose Shortcut Location
+
+
+
+
+# SHORTCUTLOCUI
+# -------------
+
+# ............................ =In the Apple Menu
+ShortcutLocUI.MacUI.appleMenuCb=In the Apple Menu
+
+# .......................... =On the Desktop
+ShortcutLocUI.MacUI.desktopCb=On the Desktop
+
+# .......................... =On the Desktop
+ShortcutLocUI.OS2UI.desktopCb=On the Desktop
+
+# ................................... =Choose...
+ShortcutLocUI.PlatformUI.chooseDirBttn=Choose...
+
+# .................................. =Don't create aliases
+ShortcutLocUI.PlatformUI.MACOS.noneCb=Don't create aliases
+
+# ............................. =Other:
+ShortcutLocUI.PlatformUI.otherCb=Other:
+
+# ................................. =Don't create links
+ShortcutLocUI.PlatformUI.UNIX.noneCb=Don't create links
+
+# .................................. =Don't create shortcut icons
+ShortcutLocUI.PlatformUI.WIN32.noneCb=Don't create shortcut icons
+
+# ........................... =In your home folder
+ShortcutLocUI.SolarisUI.homeCb=In your home folder
+
+# .......................... =On the Desktop
+ShortcutLocUI.WinUI.desktopCb=On the Desktop
+
+# ........................... =In a new program group:
+ShortcutLocUI.WinUI.newGroupCb=In a new program group:
+
+# ............................ =In an existing program group:
+ShortcutLocUI.WinUI.progGroupCb=In an existing program group:
+
+# ............................ =In the Start Menu
+ShortcutLocUI.WinUI.startMenuCb=In the Start Menu
+
+
+
+
+# STEPMASTER
+# ----------
+
+# ...................... =Date:
+StepMaster.dialog.dateLbl=Date:
+
+# ......................... =License ID:
+StepMaster.dialog.licenseLbl=License ID:
+
+# ............................... =Script Version:
+StepMaster.dialog.scriptVersionLbl=Script Version:
+
+# ......................... =Version:
+StepMaster.dialog.versionLbl=Version:
+
+# ............... =Done
+StepMaster.doneStr=Done
+
+# ............... =Exit
+StepMaster.exitStr=Exit
+
+# .................. =Install
+StepMaster.installStr=Install
+
+# ............... =Next
+StepMaster.nextStr=Next
+
+# ............... =Previous
+StepMaster.prevStr=Previous
+
+
+
+
+# STEPUI
+# ------
+
+# ....................... =Exit Install
+StepUI.dialog.cancelButton=Exit Install
+
+# .................. =Are you sure you want to exit the install?
+StepUI.dialog.exitLbl=Are you sure you want to exit the install?
+
+# ................... =Continue Install
+StepUI.dialog.okButton=Continue Install
+
+# .................... =Exit Install Warning
+StepUI.dialog.warnTitle=Exit Install Warning
+
+
+
+
+# UFINAL
+# ------
+
+# ............... =All items were successfully uninstalled.
+UFinal.allFilesStr=All items were successfully uninstalled.
+
+# ............... =Uninstall Complete
+UFinal.completeLbl=Uninstall Complete
+
+# ................ =The following items could not be removed:
+UFinal.someFilesStr=The following items could not be removed:
+
+# .................. =Unable to remove
+UFinal.unableToRemove=Unable to remove
+
+
+
+
+# UINTRO
+# ------
+
+# ............ =About to uninstall...
+UIntro.aboutLbl=About to uninstall...
+
+# ........... =This will completely remove all components installed by InstallAnywhere.  It will not remove files and folders created after the installation.
+UIntro.infoStr=This will completely remove all components installed by InstallAnywhere.  It will not remove files and folders created after the installation.
+
+
+
+
+# UNINSTALLER
+# -----------
+
+# ..................... =The uninstallation could not complete due to an error.
+UnInstaller.exceptionStr=The uninstallation could not complete due to an error.
+
+
+
+
+# UNINSTALLERFRAME
+# ----------------
+
+# ...................... =InstallAnywhere Uninstaller
+UnInstallerFrame.titleStr=InstallAnywhere Uninstaller
+
+
+
+
+# UNINSTALLERNAVIGATOR
+# --------------------
+
+# ........................... =Cancel
+UnInstallerNavigator.cancelStr=Cancel
+
+# ......................... =Exit
+UnInstallerNavigator.exitStr=Exit
+
+# .............................. =Uninstall
+UnInstallerNavigator.uninstallStr=Uninstall
+
+
+
+
+# UNINSTALLMGR
+# ------------
+
+# .................................. =An action could not be undone because it wasn't supported.
+UninstallMgr.ActUnableToUninstMessage=An action could not be undone because it wasn't supported.
+
+# .................... =Cleaning up...
+UninstallMgr.CleaningUp=Cleaning up...
+
+# ............... =Files...
+UninstallMgr.Files=Files...
+
+# ................. =Folders...
+UninstallMgr.Folders=Folders...
+
+# ................ =Java VM...
+UninstallMgr.JavaVM=Java VM...
+
+# ............. =LaunchAnywhere
+UninstallMgr.LAX=LaunchAnywhere
+
+# ............... =Links...
+UninstallMgr.Links=Links...
+
+# ................... =Aliases...
+UninstallMgr.Links.mac=Aliases...
+
+# ................... =Shortcuts...
+UninstallMgr.Links.win=Shortcuts...
+
+# ..................... =The product could not be uninstalled because there is no longer a suitable Java virtual machine on this system. Please install a Java virtual machine and try again.
+UninstallMgr.NoVmMessage=The product could not be uninstalled because there is no longer a suitable Java virtual machine on this system. Please install a Java virtual machine and try again.
+
+# ................... =1 folder
+UninstallMgr.OneFolder=1 folder
+
+# ................... =Preparing...
+UninstallMgr.Preparing=Preparing...
+
+# .............. =Software Database...
+UninstallMgr.SwDb=Software Database...
+
+# .................. =Registry...
+UninstallMgr.SwDb.win=Registry...
+
+# .................... =2 folders
+UninstallMgr.TwoFolders=2 folders
+
+# ....................... =Unable to clean up
+UninstallMgr.UnableCleanUp=Unable to clean up
+
+# .................... =Unable to remove file
+UninstallMgr.UnableFile=Unable to remove file
+
+# ...................... =Unable to remove directory
+UninstallMgr.UnableFolder=Unable to remove directory
+
+# ...................... =Unable to remove Java VM component
+UninstallMgr.UnableJavaVM=Unable to remove Java VM component
+
+# .................... =Unable to remove link
+UninstallMgr.UnableLink=Unable to remove link
+
+# ........................ =Unable to remove alias
+UninstallMgr.UnableLink.mac=Unable to remove alias
+
+# ........................ =Unable to remove shortcut
+UninstallMgr.UnableLink.win=Unable to remove shortcut
+
+# ....................... =Unable to
+UninstallMgr.UnablePrepare=Unable to
+
+# .......................... =Unable to remove 1 file
+UninstallMgr.UnableRemOneFile=Unable to remove 1 file
+
+# ........................... =Unable to remove 2 files
+UninstallMgr.UnableRemTwoFiles=Unable to remove 2 files
+
+# .................... =Unable to remove software database
+UninstallMgr.UnableSwDb=Unable to remove software database
+
+# ........................ =Unable to remove registry key
+UninstallMgr.UnableSwDb.win=Unable to remove registry key
+
+
+
+
+# UPROGRESS
+# ---------
+
+# ................ =Please wait while InstallAnywhere's uninstaller
+UProgress.waitArr.0=Please wait while InstallAnywhere's uninstaller
+
+# ................ =removes the following components...
+UProgress.waitArr.1=removes the following components...
+
+
+
+
+# WIN32FOLDERDIALOG
+# -----------------
+
+# ....................... =Browse for Folder
+Win32FolderDialog.titleBar=Browse for Folder

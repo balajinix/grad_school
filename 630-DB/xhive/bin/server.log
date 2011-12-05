@@ -1,0 +1,652 @@
+STATUS | wrapper  | 2005/11/23 19:01:46 | xhive-server installed.
+STATUS | wrapper  | 2005/11/23 19:01:46 | --> Wrapper Started as Service
+STATUS | wrapper  | 2005/11/23 19:01:47 | Launching a JVM...
+INFO   | jvm 1    | 2005/11/23 19:01:47 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2005/11/23 19:01:47 | 
+INFO   | jvm 1    | 2005/11/23 19:01:47 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2005/11/23 19:01:47 | Server utility 6.0
+INFO   | jvm 1    | 2005/11/23 19:01:47 | 
+INFO   | wrapper  | 2005/11/23 19:02:21 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/11/23 19:02:42 | User logged out.  Ignored.
+INFO   | jvm 1    | 2005/11/23 23:39:18 | JVM Process has not received any CPU time for 238 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/23 23:39:18 | Wrapper Process has not received any CPU time for 239 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/24 11:12:22 | Wrapper Process has not received any CPU time for 34566 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/24 11:12:22 | JVM Process has not received any CPU time for 34566 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/24 14:13:46 | JVM Process has not received any CPU time for 84 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/24 14:13:46 | Wrapper Process has not received any CPU time for 84 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/24 19:14:53 | Wrapper Process has not received any CPU time for 67 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/24 19:14:54 | JVM Process has not received any CPU time for 67 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/24 21:16:02 | Wrapper Process has not received any CPU time for 69 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/24 21:16:02 | JVM Process has not received any CPU time for 69 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/25 13:33:45 | Wrapper Process has not received any CPU time for 41397 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/25 13:33:45 | JVM Process has not received any CPU time for 41397 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/25 22:36:45 | Wrapper Process has not received any CPU time for 6585 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/25 22:36:46 | JVM Process has not received any CPU time for 6584 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/26 00:24:23 | JVM Process has not received any CPU time for 722 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/26 00:24:23 | Wrapper Process has not received any CPU time for 723 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/26 08:59:49 | Wrapper Process has not received any CPU time for 25848 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/26 08:59:49 | JVM Process has not received any CPU time for 25847 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/26 09:15:01 | Wrapper Process has not received any CPU time for 133 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/26 09:15:01 | JVM Process has not received any CPU time for 133 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/26 10:00:09 | Wrapper Process has not received any CPU time for 806 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/26 10:00:09 | JVM Process has not received any CPU time for 805 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/26 21:01:18 | Wrapper Process has not received any CPU time for 68 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/26 21:01:18 | JVM Process has not received any CPU time for 68 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/27 10:05:04 | JVM Process has not received any CPU time for 30098 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/27 10:05:05 | Wrapper Process has not received any CPU time for 30099 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/27 16:38:25 | Wrapper Process has not received any CPU time for 2973 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/27 16:38:25 | JVM Process has not received any CPU time for 2972 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/27 22:36:00 | Wrapper Process has not received any CPU time for 1592 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/27 22:36:01 | JVM Process has not received any CPU time for 1591 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/28 02:27:02 | Wrapper Process has not received any CPU time for 1492 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/28 02:27:02 | JVM Process has not received any CPU time for 1492 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/28 05:13:12 | Wrapper Process has not received any CPU time for 7847 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/28 05:13:12 | JVM Process has not received any CPU time for 7847 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/28 09:37:20 | Wrapper Process has not received any CPU time for 15106 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/28 09:37:20 | JVM Process has not received any CPU time for 15106 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/28 10:21:04 | Wrapper Process has not received any CPU time for 527 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/28 10:21:04 | JVM Process has not received any CPU time for 527 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/28 14:11:26 | JVM Process has not received any CPU time for 9061 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/28 14:11:26 | Wrapper Process has not received any CPU time for 9061 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/28 17:11:03 | JVM Process has not received any CPU time for 2514 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/28 17:11:03 | Wrapper Process has not received any CPU time for 2519 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/28 17:14:54 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/11/28 17:15:07 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/11/28 17:17:59 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/11/28 17:18:10 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/11/28 17:18:45 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/11/28 17:18:55 | User logged out.  Ignored.
+INFO   | jvm 1    | 2005/11/29 09:27:45 | JVM Process has not received any CPU time for 25473 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/29 09:27:45 | Wrapper Process has not received any CPU time for 25474 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/29 15:02:03 | Wrapper Process has not received any CPU time for 18497 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/29 15:02:03 | JVM Process has not received any CPU time for 18497 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/29 15:03:05 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/11/29 15:03:19 | User logged out.  Ignored.
+STATUS | wrapper  | 2005/11/29 15:03:25 | Machine is shutting down.
+STATUS | wrapper  | 2005/11/29 15:03:27 | <-- Wrapper Stopped
+STATUS | wrapper  | 2005/11/29 15:05:11 | --> Wrapper Started as Service
+STATUS | wrapper  | 2005/11/29 15:05:13 | Launching a JVM...
+INFO   | jvm 1    | 2005/11/29 15:05:41 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2005/11/29 15:05:41 | 
+INFO   | jvm 1    | 2005/11/29 15:05:42 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2005/11/29 15:05:42 | Server utility 6.0
+INFO   | jvm 1    | 2005/11/29 15:05:42 | 
+INFO   | wrapper  | 2005/11/29 20:25:03 | Wrapper Process has not received any CPU time for 12972 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/29 20:25:03 | JVM Process has not received any CPU time for 12972 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/11/30 10:59:44 | Wrapper Process has not received any CPU time for 35065 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/11/30 10:59:45 | JVM Process has not received any CPU time for 35064 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/01 14:37:24 | JVM Process has not received any CPU time for 37958 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/01 14:37:24 | Wrapper Process has not received any CPU time for 37959 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/01 18:16:45 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/01 18:17:01 | User logged out.  Ignored.
+STATUS | wrapper  | 2005/12/01 18:17:07 | Machine is shutting down.
+STATUS | wrapper  | 2005/12/01 18:17:11 | <-- Wrapper Stopped
+STATUS | wrapper  | 2005/12/01 18:44:23 | --> Wrapper Started as Service
+STATUS | wrapper  | 2005/12/01 18:44:24 | Launching a JVM...
+INFO   | jvm 1    | 2005/12/01 18:44:36 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2005/12/01 18:44:36 | 
+INFO   | jvm 1    | 2005/12/01 18:44:37 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2005/12/01 18:44:37 | Server utility 6.0
+INFO   | jvm 1    | 2005/12/01 18:44:37 | 
+INFO   | wrapper  | 2005/12/01 22:25:49 | Wrapper Process has not received any CPU time for 810 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/01 22:25:49 | JVM Process has not received any CPU time for 810 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/02 00:45:01 | JVM Process has not received any CPU time for 92 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/02 00:45:01 | Wrapper Process has not received any CPU time for 92 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/02 02:46:24 | JVM Process has not received any CPU time for 83 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/02 02:46:24 | Wrapper Process has not received any CPU time for 83 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/02 11:00:43 | Wrapper Process has not received any CPU time for 29365 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/02 11:00:43 | JVM Process has not received any CPU time for 29365 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/02 13:01:53 | Wrapper Process has not received any CPU time for 69 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/02 13:01:53 | JVM Process has not received any CPU time for 68 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/03 10:54:11 | Wrapper Process has not received any CPU time for 24168 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/03 10:54:12 | JVM Process has not received any CPU time for 24167 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/04 09:03:39 | Wrapper Process has not received any CPU time for 11997 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/04 09:03:40 | JVM Process has not received any CPU time for 11996 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/04 22:32:25 | Wrapper Process has not received any CPU time for 2438 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/04 22:32:25 | JVM Process has not received any CPU time for 2437 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/05 07:42:29 | Wrapper Process has not received any CPU time for 21106 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/05 07:42:30 | JVM Process has not received any CPU time for 21105 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/05 13:32:32 | Wrapper Process has not received any CPU time for 6882 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/05 13:32:32 | JVM Process has not received any CPU time for 6882 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/05 21:15:59 | Wrapper Process has not received any CPU time for 8747 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/05 21:15:59 | JVM Process has not received any CPU time for 8747 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/06 08:01:33 | Wrapper Process has not received any CPU time for 8591 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/06 08:01:33 | JVM Process has not received any CPU time for 8590 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/06 12:25:13 | Wrapper Process has not received any CPU time for 13404 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/06 12:25:13 | JVM Process has not received any CPU time for 13404 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/07 00:51:24 | Wrapper Process has not received any CPU time for 1892 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/07 00:51:25 | JVM Process has not received any CPU time for 1892 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/07 09:35:04 | Wrapper Process has not received any CPU time for 26723 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/07 09:35:04 | JVM Process has not received any CPU time for 26722 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/07 10:40:11 | Wrapper Process has not received any CPU time for 2201 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/07 10:40:11 | JVM Process has not received any CPU time for 2201 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/07 13:31:59 | JVM Process has not received any CPU time for 6022 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/07 13:31:59 | Wrapper Process has not received any CPU time for 6022 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/08 10:24:39 | Wrapper Process has not received any CPU time for 27968 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/08 10:24:39 | JVM Process has not received any CPU time for 27967 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/08 10:30:26 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/08 10:30:39 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/08 21:50:32 | Wrapper Process has not received any CPU time for 2016 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/08 21:50:32 | JVM Process has not received any CPU time for 2015 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/08 22:47:22 | Wrapper Process has not received any CPU time for 291 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/08 22:47:22 | JVM Process has not received any CPU time for 290 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/09 00:36:10 | Wrapper Process has not received any CPU time for 5063 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/09 00:36:10 | JVM Process has not received any CPU time for 5062 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/09 10:10:52 | Wrapper Process has not received any CPU time for 27310 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/09 10:10:52 | JVM Process has not received any CPU time for 27309 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/09 12:58:41 | Wrapper Process has not received any CPU time for 777 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/09 12:58:42 | JVM Process has not received any CPU time for 776 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/09 16:31:26 | Wrapper Process has not received any CPU time for 12693 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/09 16:31:26 | JVM Process has not received any CPU time for 12692 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/09 19:32:32 | JVM Process has not received any CPU time for 65 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/09 19:32:32 | Wrapper Process has not received any CPU time for 65 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/09 21:33:55 | Wrapper Process has not received any CPU time for 83 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/09 21:33:55 | JVM Process has not received any CPU time for 83 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/09 23:35:09 | Wrapper Process has not received any CPU time for 74 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/09 23:35:09 | JVM Process has not received any CPU time for 74 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/10 10:07:24 | Wrapper Process has not received any CPU time for 30669 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/10 10:07:24 | JVM Process has not received any CPU time for 30668 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/10 12:08:28 | Wrapper Process has not received any CPU time for 63 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/10 12:08:28 | JVM Process has not received any CPU time for 63 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/10 12:32:33 | Wrapper Process has not received any CPU time for 974 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/10 12:32:33 | JVM Process has not received any CPU time for 973 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/10 16:13:09 | Wrapper Process has not received any CPU time for 628 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/10 16:13:09 | JVM Process has not received any CPU time for 627 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/10 18:56:59 | Wrapper Process has not received any CPU time for 344 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/10 18:57:00 | JVM Process has not received any CPU time for 343 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/10 19:12:48 | Wrapper Process has not received any CPU time for 847 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/10 19:12:48 | JVM Process has not received any CPU time for 846 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 00:28:52 | Wrapper Process has not received any CPU time for 2004 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 00:28:52 | JVM Process has not received any CPU time for 2003 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 08:55:53 | Wrapper Process has not received any CPU time for 27398 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 08:55:53 | JVM Process has not received any CPU time for 27397 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 09:38:53 | Wrapper Process has not received any CPU time for 964 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 09:38:53 | JVM Process has not received any CPU time for 963 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 12:51:58 | JVM Process has not received any CPU time for 8533 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 12:51:58 | Wrapper Process has not received any CPU time for 8533 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 13:47:05 | Wrapper Process has not received any CPU time for 2445 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 13:47:05 | JVM Process has not received any CPU time for 2444 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 14:59:25 | Wrapper Process has not received any CPU time for 4252 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 14:59:25 | JVM Process has not received any CPU time for 4252 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 19:57:24 | Wrapper Process has not received any CPU time for 11479 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 19:57:25 | JVM Process has not received any CPU time for 11479 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 22:03:41 | Wrapper Process has not received any CPU time for 7473 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 22:03:41 | JVM Process has not received any CPU time for 7472 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 22:41:15 | Wrapper Process has not received any CPU time for 1977 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 22:41:15 | JVM Process has not received any CPU time for 1976 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/11 22:48:37 | Wrapper Process has not received any CPU time for 313 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/11 22:48:37 | JVM Process has not received any CPU time for 312 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 02:11:18 | Wrapper Process has not received any CPU time for 11505 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 02:11:18 | JVM Process has not received any CPU time for 11504 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 02:33:13 | Wrapper Process has not received any CPU time for 778 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 02:33:13 | JVM Process has not received any CPU time for 777 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 08:13:07 | Wrapper Process has not received any CPU time for 18622 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 08:13:07 | JVM Process has not received any CPU time for 18621 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 08:48:10 | Wrapper Process has not received any CPU time for 336 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 08:48:10 | JVM Process has not received any CPU time for 335 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 11:27:00 | Wrapper Process has not received any CPU time for 9133 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 11:27:00 | JVM Process has not received any CPU time for 9133 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 16:42:08 | Wrapper Process has not received any CPU time for 16518 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 16:42:08 | JVM Process has not received any CPU time for 16518 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 17:43:57 | Wrapper Process has not received any CPU time for 3560 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 17:43:57 | JVM Process has not received any CPU time for 3559 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 18:48:33 | Wrapper Process has not received any CPU time for 3643 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 18:48:33 | JVM Process has not received any CPU time for 3643 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 21:19:57 | Wrapper Process has not received any CPU time for 8342 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 21:19:57 | JVM Process has not received any CPU time for 8341 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/12 23:02:57 | Wrapper Process has not received any CPU time for 4787 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/12 23:02:57 | JVM Process has not received any CPU time for 4786 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 01:02:01 | Wrapper Process has not received any CPU time for 6501 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 01:02:01 | JVM Process has not received any CPU time for 6500 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 01:11:36 | Wrapper Process has not received any CPU time for 62 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 01:11:36 | JVM Process has not received any CPU time for 61 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 01:50:31 | Wrapper Process has not received any CPU time for 825 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 01:50:31 | JVM Process has not received any CPU time for 825 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 02:57:57 | Wrapper Process has not received any CPU time for 3915 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 02:57:57 | JVM Process has not received any CPU time for 3914 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 04:18:23 | Wrapper Process has not received any CPU time for 4768 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 04:18:23 | JVM Process has not received any CPU time for 4767 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 07:01:20 | Wrapper Process has not received any CPU time for 9533 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 07:01:20 | JVM Process has not received any CPU time for 9532 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 15:24:04 | JVM Process has not received any CPU time for 3357 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 15:24:07 | Wrapper Process has not received any CPU time for 3360 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 19:20:30 | Wrapper Process has not received any CPU time for 10326 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 19:20:30 | JVM Process has not received any CPU time for 10325 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/13 23:58:49 | Wrapper Process has not received any CPU time for 1011 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/13 23:58:49 | JVM Process has not received any CPU time for 1010 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/14 08:28:43 | Wrapper Process has not received any CPU time for 18218 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/14 08:28:44 | JVM Process has not received any CPU time for 18217 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/14 08:54:07 | Wrapper Process has not received any CPU time for 734 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/14 08:54:07 | JVM Process has not received any CPU time for 733 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/14 10:13:28 | Wrapper Process has not received any CPU time for 801 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/14 10:13:28 | JVM Process has not received any CPU time for 800 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/14 17:32:49 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/14 17:33:30 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/14 17:33:43 | User logged out.  Ignored.
+STATUS | wrapper  | 2005/12/14 17:33:48 | Machine is shutting down.
+STATUS | wrapper  | 2005/12/14 17:33:50 | <-- Wrapper Stopped
+STATUS | wrapper  | 2005/12/14 18:05:50 | --> Wrapper Started as Service
+STATUS | wrapper  | 2005/12/14 18:05:51 | Launching a JVM...
+INFO   | jvm 1    | 2005/12/14 18:05:55 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2005/12/14 18:05:55 | 
+INFO   | jvm 1    | 2005/12/14 18:05:56 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2005/12/14 18:05:56 | Server utility 6.0
+INFO   | jvm 1    | 2005/12/14 18:05:56 | 
+INFO   | wrapper  | 2005/12/14 18:14:17 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/14 18:14:28 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/14 18:16:32 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/14 18:16:43 | User logged out.  Ignored.
+STATUS | wrapper  | 2005/12/14 18:16:46 | Machine is shutting down.
+STATUS | wrapper  | 2005/12/14 18:16:47 | <-- Wrapper Stopped
+STATUS | wrapper  | 2005/12/14 18:31:27 | --> Wrapper Started as Service
+STATUS | wrapper  | 2005/12/14 18:31:28 | Launching a JVM...
+INFO   | jvm 1    | 2005/12/14 18:31:29 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2005/12/14 18:31:29 | 
+INFO   | jvm 1    | 2005/12/14 18:31:29 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2005/12/14 18:31:29 | Server utility 6.0
+INFO   | jvm 1    | 2005/12/14 18:31:29 | 
+INFO   | jvm 1    | 2005/12/15 01:31:53 | JVM Process has not received any CPU time for 995 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/15 01:31:53 | Wrapper Process has not received any CPU time for 996 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/15 08:43:26 | Wrapper Process has not received any CPU time for 17557 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/15 08:43:26 | JVM Process has not received any CPU time for 17557 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/15 12:50:30 | Wrapper Process has not received any CPU time for 9055 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/15 12:50:30 | JVM Process has not received any CPU time for 9054 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/15 15:03:13 | Wrapper Process has not received any CPU time for 5056 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/15 15:03:14 | JVM Process has not received any CPU time for 5056 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/15 19:04:27 | JVM Process has not received any CPU time for 73 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/15 19:04:27 | Wrapper Process has not received any CPU time for 74 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/15 20:33:06 | Wrapper Process has not received any CPU time for 5120 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/15 20:33:06 | JVM Process has not received any CPU time for 5120 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/16 00:48:18 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/16 00:48:43 | User logged out.  Ignored.
+STATUS | wrapper  | 2005/12/16 00:48:48 | Machine is shutting down.
+STATUS | wrapper  | 2005/12/16 00:48:51 | <-- Wrapper Stopped
+STATUS | wrapper  | 2005/12/16 10:53:52 | --> Wrapper Started as Service
+STATUS | wrapper  | 2005/12/16 10:53:53 | Launching a JVM...
+INFO   | jvm 1    | 2005/12/16 10:53:53 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2005/12/16 10:53:53 | 
+INFO   | jvm 1    | 2005/12/16 10:53:54 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2005/12/16 10:53:54 | Server utility 6.0
+INFO   | jvm 1    | 2005/12/16 10:53:54 | 
+INFO   | jvm 1    | 2005/12/16 16:54:08 | JVM Process has not received any CPU time for 91 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/16 16:54:08 | Wrapper Process has not received any CPU time for 91 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/16 18:55:26 | JVM Process has not received any CPU time for 78 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/16 18:55:26 | Wrapper Process has not received any CPU time for 78 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/16 21:51:52 | Wrapper Process has not received any CPU time for 5834 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/16 21:51:52 | JVM Process has not received any CPU time for 5833 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/17 08:50:39 | JVM Process has not received any CPU time for 21223 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/17 08:50:39 | Wrapper Process has not received any CPU time for 21224 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/17 13:04:27 | Wrapper Process has not received any CPU time for 5622 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/17 13:04:27 | JVM Process has not received any CPU time for 5621 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/17 14:56:10 | Wrapper Process has not received any CPU time for 543 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/17 14:56:10 | JVM Process has not received any CPU time for 542 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/17 18:54:27 | Wrapper Process has not received any CPU time for 5150 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/17 18:54:27 | JVM Process has not received any CPU time for 5149 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/17 20:44:56 | Wrapper Process has not received any CPU time for 5502 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/17 20:44:56 | JVM Process has not received any CPU time for 5502 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/17 22:28:29 | Wrapper Process has not received any CPU time for 5438 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/17 22:28:29 | JVM Process has not received any CPU time for 5437 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/18 08:23:12 | Wrapper Process has not received any CPU time for 22196 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/18 08:23:12 | JVM Process has not received any CPU time for 22195 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/18 09:04:54 | JVM Process has not received any CPU time for 2149 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/18 09:04:54 | Wrapper Process has not received any CPU time for 2150 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/18 10:20:49 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/18 10:21:15 | User logged out.  Ignored.
+STATUS | wrapper  | 2005/12/18 10:21:23 | Machine is shutting down.
+STATUS | wrapper  | 2005/12/18 10:21:25 | <-- Wrapper Stopped
+STATUS | wrapper  | 2005/12/18 12:04:31 | --> Wrapper Started as Service
+STATUS | wrapper  | 2005/12/18 12:04:33 | Launching a JVM...
+INFO   | jvm 1    | 2005/12/18 12:04:34 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2005/12/18 12:04:34 | 
+INFO   | jvm 1    | 2005/12/18 12:04:35 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2005/12/18 12:04:35 | Server utility 6.0
+INFO   | jvm 1    | 2005/12/18 12:04:35 | 
+INFO   | wrapper  | 2005/12/18 13:29:19 | Wrapper Process has not received any CPU time for 109 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/18 13:29:19 | JVM Process has not received any CPU time for 108 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/18 17:04:09 | JVM Process has not received any CPU time for 39 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/18 17:04:09 | Wrapper Process has not received any CPU time for 39 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/18 18:02:07 | Wrapper Process has not received any CPU time for 16 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/18 18:02:07 | JVM Process has not received any CPU time for 16 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/18 18:57:26 | Wrapper Process has not received any CPU time for 1461 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/18 18:57:26 | JVM Process has not received any CPU time for 1461 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/18 20:05:15 | Wrapper Process has not received any CPU time for 1297 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/18 20:05:15 | JVM Process has not received any CPU time for 1296 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/19 09:07:39 | Wrapper Process has not received any CPU time for 37877 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/19 09:07:39 | JVM Process has not received any CPU time for 37876 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/19 11:59:23 | Wrapper Process has not received any CPU time for 7516 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/19 11:59:23 | JVM Process has not received any CPU time for 7516 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/19 17:46:16 | Wrapper Process has not received any CPU time for 10008 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/19 17:46:16 | JVM Process has not received any CPU time for 10007 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/19 19:38:22 | Wrapper Process has not received any CPU time for 2052 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/19 19:38:22 | JVM Process has not received any CPU time for 2052 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/20 03:57:47 | JVM Process has not received any CPU time for 14027 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/20 03:57:47 | Wrapper Process has not received any CPU time for 14028 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/20 09:32:05 | Wrapper Process has not received any CPU time for 19545 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/20 09:32:05 | JVM Process has not received any CPU time for 19544 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/20 11:26:58 | Wrapper Process has not received any CPU time for 4584 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/20 11:26:58 | JVM Process has not received any CPU time for 4584 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/20 12:09:40 | JVM Process has not received any CPU time for 786 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/20 12:09:40 | Wrapper Process has not received any CPU time for 787 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/20 20:09:03 | Wrapper Process has not received any CPU time for 18047 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/20 20:09:04 | JVM Process has not received any CPU time for 18046 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/21 09:24:49 | Wrapper Process has not received any CPU time for 27838 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/21 09:24:49 | JVM Process has not received any CPU time for 27837 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/21 12:19:35 | Wrapper Process has not received any CPU time for 5964 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/21 12:19:35 | JVM Process has not received any CPU time for 5963 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/21 14:20:47 | Wrapper Process has not received any CPU time for 71 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/21 14:20:47 | JVM Process has not received any CPU time for 71 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/21 16:22:10 | Wrapper Process has not received any CPU time for 83 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/21 16:22:10 | JVM Process has not received any CPU time for 83 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/21 18:23:31 | JVM Process has not received any CPU time for 81 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/21 18:23:31 | Wrapper Process has not received any CPU time for 81 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/21 22:15:58 | JVM Process has not received any CPU time for 9622 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/21 22:15:58 | Wrapper Process has not received any CPU time for 9622 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/22 00:12:18 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/22 00:43:09 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/22 00:44:56 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/22 00:45:07 | User logged out.  Ignored.
+ERROR  | wrapper  | 2005/12/22 00:45:45 | JVM exited unexpectedly.
+STATUS | wrapper  | 2005/12/22 00:45:52 | Launching a JVM...
+INFO   | jvm 2    | 2005/12/22 00:45:54 | Wrapper (Version 3.0.3)
+INFO   | jvm 2    | 2005/12/22 00:45:54 | 
+INFO   | jvm 2    | 2005/12/22 00:45:54 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 2    | 2005/12/22 00:45:54 | Server utility 6.0
+INFO   | jvm 2    | 2005/12/22 00:45:54 | 
+INFO   | wrapper  | 2005/12/22 00:47:04 | User logged out.  Ignored.
+INFO   | wrapper  | 2005/12/22 00:47:28 | User logged out.  Ignored.
+STATUS | wrapper  | 2005/12/22 00:47:30 | Machine is shutting down.
+STATUS | wrapper  | 2005/12/22 00:47:32 | <-- Wrapper Stopped
+STATUS | wrapper  | 2005/12/22 00:49:47 | --> Wrapper Started as Service
+STATUS | wrapper  | 2005/12/22 00:49:48 | Launching a JVM...
+INFO   | jvm 1    | 2005/12/22 00:49:48 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2005/12/22 00:49:48 | 
+INFO   | jvm 1    | 2005/12/22 00:49:49 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2005/12/22 00:49:49 | Server utility 6.0
+INFO   | jvm 1    | 2005/12/22 00:49:49 | 
+INFO   | wrapper  | 2005/12/22 06:18:33 | Wrapper Process has not received any CPU time for 17906 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/22 06:18:33 | JVM Process has not received any CPU time for 17905 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/22 06:51:01 | Wrapper Process has not received any CPU time for 1536 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/22 06:51:01 | JVM Process has not received any CPU time for 1535 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/22 07:11:07 | Wrapper Process has not received any CPU time for 194 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/22 07:11:07 | JVM Process has not received any CPU time for 193 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/22 20:40:04 | Wrapper Process has not received any CPU time for 47209 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/22 20:40:04 | JVM Process has not received any CPU time for 47208 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/23 06:00:01 | Wrapper Process has not received any CPU time for 33411 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/23 06:00:01 | JVM Process has not received any CPU time for 33410 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 04:08:04 | Wrapper Process has not received any CPU time for 79127 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 04:08:04 | JVM Process has not received any CPU time for 79127 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 04:42:49 | Wrapper Process has not received any CPU time for 11 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 04:42:49 | JVM Process has not received any CPU time for 10 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 08:32:29 | Wrapper Process has not received any CPU time for 13643 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 08:32:29 | JVM Process has not received any CPU time for 13642 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 09:32:05 | Wrapper Process has not received any CPU time for 264 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 09:32:05 | JVM Process has not received any CPU time for 264 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 20:52:26 | Wrapper Process has not received any CPU time for 40610 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 20:52:26 | JVM Process has not received any CPU time for 40609 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 20:52:48 | Wrapper Process has not received any CPU time for 21 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 20:52:48 | JVM Process has not received any CPU time for 19 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 21:46:53 | Wrapper Process has not received any CPU time for 1549 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 21:46:53 | JVM Process has not received any CPU time for 1549 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 21:49:46 | Wrapper Process has not received any CPU time for 29 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 21:49:46 | JVM Process has not received any CPU time for 29 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 22:16:37 | Wrapper Process has not received any CPU time for 1464 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 22:16:37 | JVM Process has not received any CPU time for 1464 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 22:26:07 | Wrapper Process has not received any CPU time for 511 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 22:26:07 | JVM Process has not received any CPU time for 510 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/24 23:16:28 | Wrapper Process has not received any CPU time for 2959 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/24 23:16:28 | JVM Process has not received any CPU time for 2958 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 00:01:00 | Wrapper Process has not received any CPU time for 2587 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 00:01:00 | JVM Process has not received any CPU time for 2586 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 08:28:38 | Wrapper Process has not received any CPU time for 27628 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 08:28:49 | JVM Process has not received any CPU time for 27627 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 08:28:49 | Wrapper Process has not received any CPU time for 11 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 08:30:41 | Wrapper Process has not received any CPU time for 11 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 08:30:41 | JVM Process has not received any CPU time for 11 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 10:53:52 | Wrapper Process has not received any CPU time for 8456 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 10:54:03 | JVM Process has not received any CPU time for 8466 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 10:59:11 | JVM Process has not received any CPU time for 202 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 10:59:11 | Wrapper Process has not received any CPU time for 202 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 11:14:04 | JVM Process has not received any CPU time for 803 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 11:14:04 | Wrapper Process has not received any CPU time for 803 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 12:53:57 | Wrapper Process has not received any CPU time for 5684 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 12:54:04 | JVM Process has not received any CPU time for 5691 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 16:20:42 | Wrapper Process has not received any CPU time for 12285 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 16:20:57 | JVM Process has not received any CPU time for 12299 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 16:20:57 | Wrapper Process has not received any CPU time for 14 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 16:36:25 | Wrapper Process has not received any CPU time for 834 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 16:36:25 | JVM Process has not received any CPU time for 833 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 17:21:54 | Wrapper Process has not received any CPU time for 2392 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 17:21:54 | JVM Process has not received any CPU time for 2391 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 17:34:05 | JVM Process has not received any CPU time for 249 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 17:34:05 | Wrapper Process has not received any CPU time for 249 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 18:04:50 | Wrapper Process has not received any CPU time for 439 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 18:04:50 | JVM Process has not received any CPU time for 438 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 19:47:05 | Wrapper Process has not received any CPU time for 5988 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 19:47:12 | JVM Process has not received any CPU time for 5995 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/25 20:50:05 | JVM Process has not received any CPU time for 3700 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/25 20:50:05 | Wrapper Process has not received any CPU time for 3701 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 10:42:34 | Wrapper Process has not received any CPU time for 45805 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 10:42:50 | JVM Process has not received any CPU time for 45805 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 10:42:50 | JVM Process has not received any CPU time for 11 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 10:42:50 | Wrapper Process has not received any CPU time for 49 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 11:05:57 | Wrapper Process has not received any CPU time for 812 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 11:05:57 | JVM Process has not received any CPU time for 811 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 14:57:07 | Wrapper Process has not received any CPU time for 12952 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 14:57:07 | JVM Process has not received any CPU time for 12951 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 16:44:32 | Wrapper Process has not received any CPU time for 6396 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 16:44:32 | JVM Process has not received any CPU time for 6396 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 16:56:14 | Wrapper Process has not received any CPU time for 235 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 16:56:14 | JVM Process has not received any CPU time for 235 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 17:38:18 | JVM Process has not received any CPU time for 859 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 17:38:18 | Wrapper Process has not received any CPU time for 859 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 18:05:17 | Wrapper Process has not received any CPU time for 1424 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 18:05:17 | JVM Process has not received any CPU time for 1423 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 18:24:03 | Wrapper Process has not received any CPU time for 1021 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 18:24:03 | JVM Process has not received any CPU time for 1020 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 18:43:12 | Wrapper Process has not received any CPU time for 855 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 18:43:12 | JVM Process has not received any CPU time for 854 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 22:37:33 | Wrapper Process has not received any CPU time for 12351 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 22:37:33 | JVM Process has not received any CPU time for 12351 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/26 22:54:32 | Wrapper Process has not received any CPU time for 950 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/26 22:54:32 | JVM Process has not received any CPU time for 949 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/27 08:33:11 | Wrapper Process has not received any CPU time for 33939 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/27 08:33:11 | JVM Process has not received any CPU time for 33939 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/27 11:27:52 | Wrapper Process has not received any CPU time for 9943 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/27 11:27:52 | JVM Process has not received any CPU time for 9943 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/27 13:07:21 | Wrapper Process has not received any CPU time for 3348 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/27 13:07:21 | JVM Process has not received any CPU time for 3348 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/27 16:43:02 | Wrapper Process has not received any CPU time for 12801 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/27 16:43:02 | JVM Process has not received any CPU time for 12800 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/27 20:05:40 | Wrapper Process has not received any CPU time for 10053 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/27 20:05:40 | JVM Process has not received any CPU time for 10052 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 07:09:09 | Wrapper Process has not received any CPU time for 29309 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 07:09:10 | JVM Process has not received any CPU time for 29309 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 09:41:39 | JVM Process has not received any CPU time for 3015 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 09:41:43 | Wrapper Process has not received any CPU time for 3020 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 12:07:16 | JVM Process has not received any CPU time for 1204 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 12:07:16 | Wrapper Process has not received any CPU time for 1204 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 14:25:26 | JVM Process has not received any CPU time for 3687 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 14:25:26 | Wrapper Process has not received any CPU time for 3687 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 18:12:27 | Wrapper Process has not received any CPU time for 2067 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 18:12:28 | JVM Process has not received any CPU time for 2066 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 20:26:43 | Wrapper Process has not received any CPU time for 76 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 20:26:43 | JVM Process has not received any CPU time for 76 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 20:50:09 | Wrapper Process has not received any CPU time for 148 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 20:50:09 | JVM Process has not received any CPU time for 147 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 21:37:50 | Wrapper Process has not received any CPU time for 2626 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 21:37:50 | JVM Process has not received any CPU time for 2626 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/28 22:57:51 | Wrapper Process has not received any CPU time for 89 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/28 22:57:51 | JVM Process has not received any CPU time for 89 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/29 00:51:24 | Wrapper Process has not received any CPU time for 96 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/29 00:51:24 | JVM Process has not received any CPU time for 96 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/29 07:34:13 | Wrapper Process has not received any CPU time for 23556 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/29 07:34:13 | JVM Process has not received any CPU time for 23555 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/29 15:33:16 | Wrapper Process has not received any CPU time for 2341 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/29 15:33:17 | JVM Process has not received any CPU time for 2340 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/29 19:24:44 | Wrapper Process has not received any CPU time for 3816 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/29 19:24:44 | JVM Process has not received any CPU time for 3816 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/29 22:48:58 | Wrapper Process has not received any CPU time for 11143 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/29 22:48:58 | JVM Process has not received any CPU time for 11142 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/30 08:24:37 | Wrapper Process has not received any CPU time for 32682 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/30 08:24:37 | JVM Process has not received any CPU time for 32681 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/30 10:24:49 | Wrapper Process has not received any CPU time for 574 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/30 10:24:49 | JVM Process has not received any CPU time for 573 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/30 12:14:18 | Wrapper Process has not received any CPU time for 5621 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/30 12:14:18 | JVM Process has not received any CPU time for 5620 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/30 16:32:16 | Wrapper Process has not received any CPU time for 13018 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/30 16:32:16 | JVM Process has not received any CPU time for 13017 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/30 19:53:19 | Wrapper Process has not received any CPU time for 1535 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/30 19:53:20 | JVM Process has not received any CPU time for 1535 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/30 23:23:15 | JVM Process has not received any CPU time for 98 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/30 23:23:15 | Wrapper Process has not received any CPU time for 99 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/31 07:59:20 | Wrapper Process has not received any CPU time for 30817 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/31 07:59:20 | JVM Process has not received any CPU time for 30816 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/31 10:00:04 | Wrapper Process has not received any CPU time for 2417 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/31 10:00:04 | JVM Process has not received any CPU time for 2416 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/31 12:54:00 | Wrapper Process has not received any CPU time for 784 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/31 12:54:00 | JVM Process has not received any CPU time for 784 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/31 16:22:29 | Wrapper Process has not received any CPU time for 3406 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/31 16:22:29 | JVM Process has not received any CPU time for 3406 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/31 20:09:22 | Wrapper Process has not received any CPU time for 5365 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/31 20:09:22 | JVM Process has not received any CPU time for 5364 seconds.  Extending timeouts.
+INFO   | wrapper  | 2005/12/31 20:53:54 | Wrapper Process has not received any CPU time for 2222 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2005/12/31 20:53:54 | JVM Process has not received any CPU time for 2222 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/01 00:19:25 | JVM Process has not received any CPU time for 3472 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/01 00:19:25 | Wrapper Process has not received any CPU time for 3473 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/01 07:13:34 | Wrapper Process has not received any CPU time for 24118 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/01 07:13:34 | JVM Process has not received any CPU time for 24117 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/01 09:09:48 | Wrapper Process has not received any CPU time for 6250 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/01 09:09:48 | JVM Process has not received any CPU time for 6250 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/01 09:41:22 | Wrapper Process has not received any CPU time for 228 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/01 09:41:23 | JVM Process has not received any CPU time for 228 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/01 11:11:20 | Wrapper Process has not received any CPU time for 3070 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/01 11:11:20 | JVM Process has not received any CPU time for 3069 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/02 08:19:38 | Wrapper Process has not received any CPU time for 34328 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/02 08:19:38 | JVM Process has not received any CPU time for 34327 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/02 10:17:33 | Wrapper Process has not received any CPU time for 2933 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/02 10:18:00 | JVM Process has not received any CPU time for 2947 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/02 10:18:00 | Wrapper Process has not received any CPU time for 26 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/02 10:18:07 | JVM Process has not received any CPU time for 12 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/02 16:38:34 | Wrapper Process has not received any CPU time for 5805 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/02 16:38:35 | JVM Process has not received any CPU time for 5805 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/02 19:37:39 | Wrapper Process has not received any CPU time for 7427 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/02 19:37:39 | JVM Process has not received any CPU time for 7426 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/02 20:23:12 | Wrapper Process has not received any CPU time for 2283 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/02 20:23:12 | JVM Process has not received any CPU time for 2283 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/03 08:51:11 | Wrapper Process has not received any CPU time for 43395 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/03 08:51:11 | JVM Process has not received any CPU time for 43395 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/03 12:28:22 | Wrapper Process has not received any CPU time for 8475 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/03 12:28:22 | JVM Process has not received any CPU time for 8474 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/03 14:05:08 | Wrapper Process has not received any CPU time for 3759 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/03 14:05:08 | JVM Process has not received any CPU time for 3758 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/03 15:40:49 | Wrapper Process has not received any CPU time for 981 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/03 15:40:49 | JVM Process has not received any CPU time for 980 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/03 17:59:04 | JVM Process has not received any CPU time for 6552 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/03 17:59:04 | Wrapper Process has not received any CPU time for 6552 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/03 20:35:04 | Wrapper Process has not received any CPU time for 9188 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/03 20:35:04 | JVM Process has not received any CPU time for 9187 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/03 21:27:41 | Wrapper Process has not received any CPU time for 758 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/03 21:27:41 | JVM Process has not received any CPU time for 757 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/04 08:48:22 | Wrapper Process has not received any CPU time for 32671 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/04 08:48:22 | JVM Process has not received any CPU time for 32671 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/04 10:12:28 | Wrapper Process has not received any CPU time for 796 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/04 10:12:28 | JVM Process has not received any CPU time for 795 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/04 11:45:10 | Wrapper Process has not received any CPU time for 2367 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/04 11:45:10 | JVM Process has not received any CPU time for 2366 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/04 14:49:24 | Wrapper Process has not received any CPU time for 61 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/04 14:49:24 | JVM Process has not received any CPU time for 61 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/04 16:50:35 | JVM Process has not received any CPU time for 71 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/04 16:50:35 | Wrapper Process has not received any CPU time for 71 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/04 21:35:19 | Wrapper Process has not received any CPU time for 1691 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/04 21:35:19 | JVM Process has not received any CPU time for 1691 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 08:33:21 | Wrapper Process has not received any CPU time for 31476 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/05 08:33:22 | JVM Process has not received any CPU time for 31476 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 09:05:05 | Wrapper Process has not received any CPU time for 1318 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/05 09:05:05 | JVM Process has not received any CPU time for 1317 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/05 11:07:32 | JVM Process has not received any CPU time for 1878 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 11:07:32 | Wrapper Process has not received any CPU time for 1879 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 12:27:21 | Wrapper Process has not received any CPU time for 1402 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/05 12:27:21 | JVM Process has not received any CPU time for 1402 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 15:35:10 | Wrapper Process has not received any CPU time for 9307 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/05 15:35:10 | JVM Process has not received any CPU time for 9306 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 16:16:19 | Wrapper Process has not received any CPU time for 1771 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/05 16:16:19 | JVM Process has not received any CPU time for 1770 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/05 18:09:11 | JVM Process has not received any CPU time for 2447 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 18:09:11 | Wrapper Process has not received any CPU time for 2448 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 21:37:27 | Wrapper Process has not received any CPU time for 2124 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/05 21:37:27 | JVM Process has not received any CPU time for 2124 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/05 21:42:09 | User logged out.  Ignored.
+INFO   | wrapper  | 2006/01/05 21:42:27 | User logged out.  Ignored.
+STATUS | wrapper  | 2006/01/05 21:42:31 | Machine is shutting down.
+ERROR  | wrapper  | 2006/01/05 21:42:44 | Shutdown failed: Timed out waiting for the JVM to terminate.
+ERROR  | wrapper  | 2006/01/05 21:42:44 | Java Virtual Machine did not exit on request, terminated
+STATUS | wrapper  | 2006/01/05 21:42:44 | <-- Wrapper Stopped
+STATUS | wrapper  | 2006/01/05 22:52:30 | --> Wrapper Started as Service
+STATUS | wrapper  | 2006/01/05 22:52:31 | Launching a JVM...
+INFO   | jvm 1    | 2006/01/05 22:52:33 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2006/01/05 22:52:33 | 
+INFO   | jvm 1    | 2006/01/05 22:52:34 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2006/01/05 22:52:34 | Server utility 6.0
+INFO   | jvm 1    | 2006/01/05 22:52:34 | 
+INFO   | wrapper  | 2006/01/06 08:01:04 | Wrapper Process has not received any CPU time for 24710 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 08:01:04 | JVM Process has not received any CPU time for 24710 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 09:08:34 | JVM Process has not received any CPU time for 834 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 09:08:34 | Wrapper Process has not received any CPU time for 834 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 09:33:26 | Wrapper Process has not received any CPU time for 879 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 09:33:26 | JVM Process has not received any CPU time for 879 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 09:44:57 | Wrapper Process has not received any CPU time for 550 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 09:44:57 | JVM Process has not received any CPU time for 550 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 11:12:39 | Wrapper Process has not received any CPU time for 2542 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 11:12:39 | JVM Process has not received any CPU time for 2542 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 12:04:03 | Wrapper Process has not received any CPU time for 1757 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 12:04:03 | JVM Process has not received any CPU time for 1756 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 14:03:55 | Wrapper Process has not received any CPU time for 2929 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 14:03:55 | JVM Process has not received any CPU time for 2928 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 18:14:21 | JVM Process has not received any CPU time for 101 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 18:14:21 | Wrapper Process has not received any CPU time for 101 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 20:15:43 | JVM Process has not received any CPU time for 82 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 20:15:43 | Wrapper Process has not received any CPU time for 82 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/06 23:34:09 | JVM Process has not received any CPU time for 11513 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/06 23:34:09 | Wrapper Process has not received any CPU time for 11514 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/07 08:57:59 | Wrapper Process has not received any CPU time for 25619 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/07 08:57:59 | JVM Process has not received any CPU time for 25619 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/07 08:58:16 | User logged out.  Ignored.
+INFO   | wrapper  | 2006/01/07 08:58:32 | User logged out.  Ignored.
+STATUS | wrapper  | 2006/01/07 08:58:34 | Machine is shutting down.
+STATUS | wrapper  | 2006/01/07 08:58:37 | <-- Wrapper Stopped
+STATUS | wrapper  | 2006/01/08 14:22:36 | --> Wrapper Started as Service
+STATUS | wrapper  | 2006/01/08 14:22:37 | Launching a JVM...
+INFO   | jvm 1    | 2006/01/08 14:22:37 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2006/01/08 14:22:37 | 
+INFO   | jvm 1    | 2006/01/08 14:22:37 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2006/01/08 14:22:37 | Server utility 6.0
+INFO   | jvm 1    | 2006/01/08 14:22:37 | 
+INFO   | wrapper  | 2006/01/08 18:10:08 | Wrapper Process has not received any CPU time for 12756 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/08 18:10:08 | JVM Process has not received any CPU time for 12756 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/09 08:47:10 | Wrapper Process has not received any CPU time for 27762 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/09 08:47:11 | JVM Process has not received any CPU time for 27762 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/09 14:41:47 | Wrapper Process has not received any CPU time for 3035 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/09 14:41:48 | JVM Process has not received any CPU time for 3035 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/09 16:34:33 | Wrapper Process has not received any CPU time for 2754 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/09 16:34:33 | JVM Process has not received any CPU time for 2753 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/09 16:57:01 | Wrapper Process has not received any CPU time for 1318 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/09 16:57:01 | JVM Process has not received any CPU time for 1317 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/09 20:56:11 | Wrapper Process has not received any CPU time for 5108 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/09 20:56:11 | JVM Process has not received any CPU time for 5107 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/09 21:30:19 | Wrapper Process has not received any CPU time for 1023 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/09 21:30:19 | JVM Process has not received any CPU time for 1023 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/09 22:33:46 | Wrapper Process has not received any CPU time for 3763 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/09 22:33:46 | JVM Process has not received any CPU time for 3762 seconds.  Extending timeouts.
+INFO   | jvm 1    | 2006/01/09 23:07:53 | JVM Process has not received any CPU time for 667 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/09 23:07:53 | Wrapper Process has not received any CPU time for 667 seconds.  Extending timeouts.
+INFO   | wrapper  | 2006/01/10 00:01:03 | User logged out.  Ignored.
+INFO   | wrapper  | 2006/01/10 00:01:22 | User logged out.  Ignored.
+STATUS | wrapper  | 2006/01/10 00:01:24 | Machine is shutting down.
+STATUS | wrapper  | 2006/01/10 00:01:27 | <-- Wrapper Stopped
+STATUS | wrapper  | 2006/01/10 15:42:49 | --> Wrapper Started as Service
+STATUS | wrapper  | 2006/01/10 15:42:51 | Launching a JVM...
+INFO   | jvm 1    | 2006/01/10 15:42:52 | Wrapper (Version 3.0.3)
+INFO   | jvm 1    | 2006/01/10 15:42:52 | 
+INFO   | jvm 1    | 2006/01/10 15:42:53 | X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+INFO   | jvm 1    | 2006/01/10 15:42:53 | Server utility 6.0
+INFO   | jvm 1    | 2006/01/10 15:42:53 | 

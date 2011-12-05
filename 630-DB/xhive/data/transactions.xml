@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transactions>
+	<transaction id="1">
+		<items>
+			<item> a </item>
+			<item> d </item>
+			<item> e </item>
+		</items>
+	</transaction>
+
+	<transaction id="2">
+		<items>
+			<item> b </item>
+			<item> c </item>
+			<item> d </item>
+		</items>
+	</transaction>
+
+	<transaction id="3">
+		<items>
+			<item> a </item>
+			<item> c </item>
+			<item> f </item>
+			<item> g </item>
+			<item> k </item>
+		</items>
+	</transaction>
+
+	<transaction id="4">
+		<items>
+			<item> b </item>
+			<item> c </item>
+			<item> d </item>
+		</items>
+	</transaction>
+	
+	<transaction id="5">
+		<items>
+			<item> a </item>
+			<item> b </item>
+			<item> x </item>
+			<item> y </item>
+			<item> z </item>
+		</items>
+	</transaction>
+</transactions>

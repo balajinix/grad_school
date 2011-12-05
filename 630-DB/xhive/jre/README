@@ -1,0 +1,406 @@
+
+                              README
+
+                  The Java(tm) Runtime Environment
+                            JRE 1.1.8
+
+
+    Updates to these release notes will be posted on the Java 
+    Software website:
+
+        http://java.sun.com/products/jdk/1.1/README-update.html
+
+-----------------------------------------------------------------------
+CONTENTS
+
+  Overview of the Java Runtime Environment
+    - Introduction
+    - The Java Runtime Interpreter
+    - Required vs. Optional Files
+    - Win 32 Files 
+       - Optional Files
+    - Solaris Files 
+       - Optional Files
+
+  Bundling and Running the Java Runtime
+    - Bundling the Java Runtime
+    - Runtime Documentation
+
+
+=======================================================================
+                 Overview of the Java Runtime Environment
+=======================================================================
+
+-----------------------------------------------------------------------
+Introduction
+-----------------------------------------------------------------------
+
+The Java Runtime Environment is the minimum standard Java Platform for 
+running Java programs.  It contains the Java virtual machine, Java core 
+classes and supporting files. 
+
+The JRE includes all of the non-debuggable .dll or .so files plus
+the necessary classes from the JDK software to support a runtime-only 
+program.  The JRE does not include any of the development tools
+(such as appletviewer or javac) or classes that would pertain only 
+to a development system.
+
+The JRE can be invoked from the command line by using the jre tool 
+(see the following section). On Windows platforms, the jre tool will 
+ignore the CLASSPATH environment variable. For both Windows and 
+Solaris platforms, the -cp option is recommended to specify an 
+application's class path.
+
+This version of the Java Runtime Environment contains a JIT compiler.  
+The JIT compiler is enabled by default on the Win32 JRE.  To disable 
+the compiler, you can use the -nojit option of the Java runtime 
+interpreter (see following section).
+
+The Symantec JIT compiler is copyrighted (c), 1996-1999, by Symantec 
+Corporation. All rights reserved.
+
+The Win32 version of the JRE has an installer suitable for use 
+by end-users. This gives software developers the option of not 
+bundling the JRE with their applications. Instead, they can direct 
+end-users to download and install the JRE themselves.
+
+An installer is not available for Solaris versions of the JRE. 
+Developers should bundle the JRE and an installer with their Solaris 
+applications. 
+
+Licensees, developers, and independent software vendors who distribute 
+the JRE with their Java programs must follow the terms of the JRE 
+Binary Code License agreement, which includes these terms:
+
+ - Don't arbitrarily subset the JRE. You may omit only the
+   files listed below as optional.  See the section entitled 
+   Required vs. Optional Files. 
+
+ - Include in your product's license the provisions called out
+   in the JRE Binary Code License.
+
+Comments regarding the JRE are welcome. Please send them to 
+jre-comments@java.sun.com. Due to the large volume of email received 
+each day, Java Software usually cannot respond to your email 
+personally.
+    
+The JRE is a product of Sun Microsystems, Inc.  
+
+
+-----------------------------------------------------------------------
+The Java Runtime Interpreter
+-----------------------------------------------------------------------
+
+The jre tool invokes the Java Runtime interpreter for executing Java 
+applications. The tool is available in the Win32, Solaris-Sparc, and 
+Solaris x86 downloads of the JRE. The syntax for the jre command is:
+
+	jre [ options ] classname <args>
+
+The classname argument is the name of the class file to be 
+executed. Any arguments to be passed to the class must be placed 
+after the classname on the command line.
+
+An alternative version of the tool, jrew, is available for Win32. The 
+jrew command is identical to jre, except that a console window is not 
+invoked. The syntax of the jrew command is 
+
+	jrew [ options ] classname <args>
+
+On Windows platforms, the jre tool will ignore the CLASSPATH 
+environment variable. For both Windows and Solaris platforms, the 
+-cp option is recommended to specify an application's class path.
+
+Options for the jre and the jrew commands are as follows:
+
+   -classpath path	Specifies the path that jre uses to 
+   			look up classes. Overrides the default 
+   			classpath.  
+
+   -cp path		Prepends the specified path to the default 
+   			classpath that jre uses to look up classes. 
+
+   -help		Print a usage message.
+
+   -mx x		Sets the maximum size of the memory allocation 
+   			pool (the garbage collected heap) to x. The 
+   			default is 16 megabytes of memory. x must be
+			greater than or equal to 1000 bytes.
+
+   -ms x		Sets the startup size of the memory allocation 
+   			pool (the garbage collected heap) to x. The 
+   			default is 1 megabyte of memory. x must be
+			greater than 1000 bytes.
+
+   -maxe<size>          Sets the maximum size of each expansion of the 
+                        heap when more memory is required.  Example: 
+
+                           jre -maxe2097152 MyClass
+
+   -mine<size>          Sets the minimum size of each expansion of the 
+                        heap. Also sets the minimum size of free object 
+                        space in the heap. Example: 
+
+                           jre -mine1048576 MyClass 
+
+   -maxf<float>         Sets the approximate percentage of maximum free 
+                        heap. Example: 
+
+                           jre -maxf0.60 MyClass
+
+   -minf<float>         Sets the approximate percentage of minimum free 
+                        space in the heap to give control over the rate 
+                        of preallocation performed when heap space is 
+                        expanded. Example: 
+
+                           jre -minf0.35 MyClass
+
+   -noasyncgc		Turns off asynchronous garbage collection. When 
+   			activated, no garbage collection takes place 
+   			unless it is explicitly called or the program 
+			runs out of memory.
+
+   -noclassgc		Turns off garbage collection of Java classes. 
+   			By default, the Java interpreter reclaims space 
+   			for unused Java classes during garbage collection.
+
+   -nojit		Don't invoke the Just In Time bytecode
+		        compiler. The virtual machine directly
+			interprets bytecodes, without converting them
+			to native code.
+
+   -ss x		The -ss option sets the maximum stack size that 
+   			can be used by C code in a thread to x. The 
+			default units for x are bytes. The value of x 
+			must be greater than or equal to 1000 bytes.
+
+   -oss x		The -oss option sets the maximum stack size 
+			that can be used by Java code in a thread to x. 
+			The default units for x are bytes. The value of 
+			x must be greater than or equal to 1000 bytes.
+
+   -v, -verbose		Causes jre to print a message to stdout each 
+			time a class file is loaded.
+
+   -verify		Performs byte-code verification on the class 
+			file. Beware, however, that java -verify does 
+			not perform a full verification in all 
+			situations. Any code path that is not actually 
+			executed by the interpreter is not verified. 
+			Therefore, java -verify cannot be relied upon to 
+			certify class files unless all code paths in 
+			the class file are actually run.
+
+   -verifyremote	Runs the verifier on all code that is loaded 
+			into the system via a classloader. verifyremote 
+			is the default for the interpreter.
+
+   -noverify		Turns verification off.
+
+   -verbosegc		Causes the garbage collector to print out 
+			messages whenever it frees memory.
+   
+   -DpropName=value	Defines a property value. propName is the name 
+			of the property whose value you want to change 
+			and value is the value to change it to. For 
+			example, the command 
+			java -Dawt.button.color=green ...
+			sets the value of the property awt.button.color 
+			to "green".
+
+
+-----------------------------------------------------------------------
+Required vs. Optional Files
+-----------------------------------------------------------------------
+
+Licensees must follow the terms of the accompanying LICENSE when 
+redistributing the JRE.  The following sections contain lists of the 
+JRE files for both Win32 and Solaris platforms that may optionally be 
+excluded from redistributions of the JRE.  All files not in these lists 
+of optional files must be included in redistributions of the JRE.
+
+In the case of the Win32 JRE, the native code C runtime library, 
+msvcrt.dll, is located in the Windows system directory. The location of 
+this directory varies on different operating systems, but is usually
+
+   - winnt\system32 on Windows NT
+   - windows98\system on Windows 98
+   - windows\system on Windows 95
+
+The msvcrt.dll file should be included in redistributions of the 
+Win32 JRE.
+
+-----------------------------------------------------------------------
+Win32 Optional Files and Directories
+-----------------------------------------------------------------------
+All font properties files in the lib directory other than the default 
+lib\font.properties file are optional, and vendors may choose not to 
+include them in redistributions of the JRE. In addition, the following 
+may be optionally excluded from redistributions:
+
+bin\javakey.exe		 
+   Executable for Javakey, the Java Security Tool
+bin\rmiregistry.exe		 
+   Executable for rmiregistry, the Remote Object Registry Tool
+bin\symcjit.dll               
+   JIT compiler
+lib\i18n.jar                  
+   Character conversion classes and all other locale support
+
+
+-----------------------------------------------------------------------
+Solaris Optional Files and Directories
+-----------------------------------------------------------------------
+The symbol '<sys>' used in the pathnames of this section stands for 
+the 'sparc' directories in the Solaris-SPARC JRE and the 'i386' 
+directories in the Solaris-x86 JRE.
+
+The Solaris version of the JRE uses a threads implementation called 
+"green threads".  Files providing support for green threads are in the 
+directories lib/<sys>/green_threads and bin/<sys>green_threads.  
+Another implementation of threads called "native threads" is available 
+in the Solaris Native Threads Pack.  If the Solaris Native Threads Pack 
+is installed, its files will be in the directories 
+lib/<sys>native_threads and bin/<sys>/native_threads.  With the 
+exception of the optional files listed below, you must include either 
+the entire set of green threads files, or the entire set of native 
+threads files, or both entire sets, when redistributing the JRE.  
+
+All font properties files in the lib directory other than the default 
+lib\font.properties file are optional, and vendors may choose not to 
+include them in redistributions of the JRE. In addition, the following 
+may be optionally excluded from redistributions:
+
+bin/javakey			 
+   Shell script for launching Javakey, the Java Security Tool
+bin/rmiregistry			 
+   Shell script for launching rmiregistry
+bin/<sys>/green_threads/javakey		 
+   Executable for Javakey (green threads)
+bin/<sys>/native_threads/javakey		 
+   Executable for Javakey (native threads)
+bin/<sys>/green_threads/rmiregistry		 
+   Executable for rmiregistry (green threads)
+bin/<sys>/native_threads/rmiregistry		 
+   Executable for rmiregistry (native threads)
+lib/i18n.jar
+   Character conversion classes and all other locale support
+lib/<sys>/green_threads/libXm.so            
+   Symbolic link to Motif runtime library (green threads)
+lib/<sys>/native_threads/libXm.so            
+   Symbolic link to Motif runtime library (native threads)
+lib/<sys>/green_threads/libXm.so.3          
+   Motif runtime library (green threads)
+lib/<sys>/native_threads/libXm.so.3
+   Motif runtime library (native threads)
+
+
+=======================================================================
+                Bundling and Running the Java Runtime
+=======================================================================
+
+-----------------------------------------------------------------------
+Bundling the Java Runtime
+-----------------------------------------------------------------------
+
+Information relating to redistributing the Java Runtime Environment with 
+your applications can be found in the JRE Notes of Developers web site.
+
+   http://java.sun.com/products/jdk/1.1/runtime.html
+
+This release of the JRE for Win32 comes with its own installer that 
+makes is suitable for downloading by end users. Java application 
+developers have the option of not bundling the JRE with their software. 
+Instead, they can direct end-users to download and install the JRE 
+themselves.
+
+Solaris versions of the JRE do not have an installer. Software 
+developers should bundle the JRE and installer with their Solaris 
+software. 
+
+When bundling the JRE with application software on Solaris, the 
+following points should be considered:
+
+1) It is suggested that the JRE be installed in its own subdirectory
+   (referred to below as <runtime-dir>).  Include all the the required
+   files listed above in the bin and lib subdirectories of 
+   <runtime-dir>, following the same directory hierarchy and 
+   relative placement of files.  The internationalization files 
+   marked optional can be included for language localization support.
+
+2) It is suggested that all application-specific classes be placed 
+   in a directory other than <runtime-dir>. Application-specific 
+   classes may be individual .class files, .jar files, or .zip 
+   files.
+ 
+   An example directory structure might look like the following:
+
+		       <app-dir>
+	   ________________|___________
+	  |         |		       |
+         bin       lib           <runtime-dir>
+          |         |          ________|________
+                 app.jar      |                 | 
+                             bin               lib         
+                              |                 |
+                       
+
+3) If native code support is required, then the native library must be 
+   located in LD_LIBRARY_PATH on Solaris or the executable search PATH 
+   on Win32. The best way to do this is to install the native libraries
+   in either <app-dir>/lib/<sys> on Solaris or <app-dir>\bin 
+   on Win32. LD_LIBRARY_PATH (on Solaris) or PATH (on Win32) should 
+   then be set to include these directories.
+
+4) The application can be invoked by using the jre command-line tool, 
+   using the -cp option to specify the application's class path. In 
+   the example directory tree above, for example, the command might 
+   look like this:
+ 
+   <app-dir>/<runtime-dir>/bin/jre -cp <app-dir>/lib/app.jar <classname>
+
+   Information on the jre command-line tool can be found in the section 
+   "The Java Runtime Interpreter" above and on the Java Software web 
+   site.
+   
+     For Solaris:
+     http://java.sun.com/products/jdk1.1/docs/tooldocs/solaris/jre.html
+   
+     For Win32:
+     http://java.sun.com/products/jdk1.1/docs/tooldocs/win32/jre.html
+
+   Source code for the jre tool can be found in the Win32 JDK 1.1.8 
+   directory tree in the jdk1.1.8\demo\jre\win32 folder. For the 
+   Solaris JDK 1.1.8, jre source code files can be found in the 
+   jdk1.1.8/demo/jre/solaris directory.
+
+
+-----------------------------------------------------------------------
+Runtime Documentation
+-----------------------------------------------------------------------
+
+Runtime documentation is any documentation that an end-user might
+need after they have installed a Java program that runs on the JRE.
+
+We supply the following runtime documentation:
+
+  - Each property file contains comments that describe what the
+    file is useful for and how to modify it.
+
+  - awt.properties file - KeyEvent uses it to print out properties of
+    key events, usually for debugging purposes.  This might be used
+    by a GUI debugger that needs to print out events.
+
+  - fontprop.html file has a web page describing how to add 
+    fonts to the runtime.  This document is part of the 
+    JDK documentation, and is located both in the JDK documentation
+    download bundle and at the JavaSoft website:
+
+    http://java.sun.com/products/jdk/1.1/docs/guide/intl/fontprop.html
+
+
+-----------------------------------------------------------------------
+Copyright (c) 1997-2000 Sun Microsystems, Inc.
+901 San Antonio Rd., Palo Alto, CA 94303 USA.
+All rights reserved.
+

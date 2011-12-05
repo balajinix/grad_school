@@ -1,0 +1,36 @@
+# 
+# X-Hive/DB sql loader test
+#
+#
+# if you use Mysql you can use this script to load the test database.
+# usages: "Mysql < loadtest.txt"
+#
+# create database
+#
+CREATE DATABASE TCFPHONE;
+
+USE TCFPHONE;
+#
+# create test table phone_numbers
+#
+CREATE TABLE phone_numbers (
+  numberid int(3) DEFAULT '0' NOT NULL,
+  name varchar(80),
+  phonenumber varchar(15),
+  status char(1),
+  category char(1),
+  remarks varchar(200),
+  dtg_created varchar(12),
+  dtg_lastmod varchar(12),
+  PRIMARY KEY (numberid)
+);
+
+
+
+INSERT INTO phone_numbers VALUES (611,'Politie Rotterdam NIET URGENT','010-2740415','',NULL,NULL,NULL,NULL);
+INSERT INTO phone_numbers VALUES (612,'Securop Beveiliging','020-6690061','',NULL,NULL,NULL,NULL);
+INSERT INTO phone_numbers VALUES (614,'Vermissing giropas','058-212 60 00','',NULL,NULL,NULL,NULL);
+INSERT INTO phone_numbers VALUES (619,'Bloedbank Rotterdam','0800 0223699','',NULL,NULL,NULL,NULL);
+INSERT INTO phone_numbers VALUES (620,'Boekhandel Donner','010-4132070','',NULL,NULL,NULL,NULL);
+INSERT INTO phone_numbers VALUES (621,'Dunnet','0104008100','',NULL,NULL,NULL,NULL);
+INSERT INTO phone_numbers VALUES (628,'Tim Kantoorboekhandel','010-5140200','',NULL,NULL,NULL,NULL);

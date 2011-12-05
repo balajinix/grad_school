@@ -1,0 +1,21 @@
+
+install-federation:
+    [mkdir] Created dir: C:\xhive\data
+     [java] X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+     [java] Create federation utility
+
+
+setup-federation:
+
+setup-federation-check:
+
+setup-federation-perform:
+     [java] X-Hive/DB 7.0.0 (c)1999-2004 X-Hive Corporation
+     [java] Install federation utility
+
+     [java] Operating on federation: C:/xhive/data/XhiveDatabase.bootstrap
+
+     [java] Updated licensekey
+
+BUILD SUCCESSFUL
+Total time: 3 seconds

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- version 1.1 : July 20, 2000 -->
+<address_list>
+  <address id="1">
+    <firstname>X-Hive Corporation</firstname>
+    <lastname></lastname>
+    <street>Van Vollenhovenstraat</street>
+    <number>3</number>
+    <city>Rotterdam</city>
+    <country>Netherlands</country>
+  </address>
+  <address id="2">
+    <firstname>Jan</firstname>
+    <lastname>de Boer</lastname>
+    <street>van Hamelingenstraat</street>
+    <number>84b</number>
+    <city>Grootebroek</city>
+    <country>Netherlands</country>
+  </address>
+  <address id="3">
+    <firstname>Martien</firstname>
+    <lastname>van Mens</lastname>
+    <street>Tongelreseweg</street>
+    <number>1</number>
+    <city>Eindhoven</city>
+    <country>Netherlands</country>
+  </address>
+  <address id="4">
+    <firstname>Cor</firstname>
+    <lastname>Dera</lastname>
+    <street>Gedempte Voldersgracht</street>
+    <number>22</number>
+    <city>Haarlem</city>
+    <country>Netherlands</country>
+  </address>
+  <address id="5">
+    <firstname>ANOZ Verzekeringen</firstname>
+    <lastname></lastname>
+    <street>Vlijtseweg</street>
+    <number>1</number>
+    <city>Apeldoorn</city>
+    <country>The Netherlands</country>
+  </address>
+</address_list>

@@ -1,0 +1,1816 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://www.security.ase.md/publ/en/puben12/puben12.html -->
+<HTML><HEAD><TITLE>MINING SEMI STRUCTURED DATA</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META content="MSHTML 6.00.2900.2769" name=GENERATOR>
+<STYLE>@font-face {
+	font-family: Wingdings;
+}
+@page Section1 {size: 419.6pt 21.0cm; margin: 51.05pt 51.05pt 51.05pt 51.05pt; }
+@page Section2 {size: 419.6pt 21.0cm; margin: 51.05pt 51.05pt 51.05pt 51.05pt; }
+@page Section3 {size: 419.6pt 21.0cm; margin: 51.05pt 51.05pt 51.05pt 51.05pt; }
+@page Section4 {size: 419.6pt 21.0cm; margin: 51.05pt 51.05pt 51.05pt 51.05pt; }
+@page Section5 {size: 419.6pt 21.0cm; margin: 51.05pt 51.05pt 51.05pt 51.05pt; }
+@page Section6 {size: 595.3pt 841.9pt; margin: 2.0cm 42.5pt 2.0cm 3.0cm; }
+P.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+DIV.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Arial
+}
+H6 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: center
+}
+P.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 19.85pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: right
+}
+LI.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 19.85pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: right
+}
+DIV.MsoHeading9 {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 19.85pt; FONT-STYLE: italic; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: right
+}
+P.MsoFooter {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+LI.MsoFooter {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+DIV.MsoFooter {
+	FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+P.MsoBodyText {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+LI.MsoBodyText {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+DIV.MsoBodyText {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: "Times New Roman"
+}
+P.MsoBodyTextIndent3 {
+	FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 19.85pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify
+}
+LI.MsoBodyTextIndent3 {
+	FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 19.85pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify
+}
+DIV.MsoBodyTextIndent3 {
+	FONT-SIZE: 11pt; MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 19.85pt; FONT-FAMILY: "Times New Roman"; TEXT-ALIGN: justify
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: purple; TEXT-DECORATION: underline
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: purple; TEXT-DECORATION: underline
+}
+P {
+	FONT-SIZE: 12pt; MARGIN-LEFT: 0cm; MARGIN-RIGHT: 0cm; FONT-FAMILY: "Times New Roman"
+}
+DIV.Section1 {
+	page: Section1
+}
+DIV.Section2 {
+	page: Section2
+}
+DIV.Section3 {
+	page: Section3
+}
+DIV.Section4 {
+	page: Section4
+}
+DIV.Section5 {
+	page: Section5
+}
+DIV.Section6 {
+	page: Section6
+}
+OL {
+	MARGIN-BOTTOM: 0cm
+}
+UL {
+	MARGIN-BOTTOM: 0cm
+}
+</STYLE>
+</HEAD>
+<BODY lang=RU style="DIRECTION: ltr" vLink=purple link=blue>
+<DIV class=Section1>
+<H1 style="PAGE-BREAK-AFTER: auto; TEXT-ALIGN: center" align=center><SPAN
+lang=EN-US
+style="FONT-SIZE: 12pt; COLOR: black; FONT-FAMILY: 'Times New Roman'">MINING
+SEMI STRUCTURED DATA</SPAN></H1>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt"><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN></B>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: right"
+align=right><B><I><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">M.Balakrishnan Lecturer –Computer
+science </SPAN></I></B><I><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">SRM Engineering college SRM Nagar
+Kattankulathur – 603 203 Kancheepuram Dist., Tamilnadu, India.
+</SPAN></I><I><SPAN style="FONT-SIZE: 10.5pt; COLOR: black"><A
+href="mailto:mailtombala@yahoo.com"><SPAN lang=EN-US
+style="COLOR: black">mailtombala@yahoo.com</SPAN></A></SPAN></I></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: right"
+align=right><B><I><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">M.V.S.S.Nagaendranath Student –
+M.Tech(C.S.E) SRM Engineering college SRM Nagar Kattankulathur – 603 203
+Kancheepuram Dist., Tamilnadu, India. </SPAN></I></B><B><I><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black"><A
+href="mailto:Shivamaganti_@yahoo.co.in"><SPAN lang=EN-US
+style="COLOR: black">Shivamaganti_@yahoo.co.in</SPAN></A></SPAN></I></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Abstract:</SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><I><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">In recent years XML has
+become very popular for representing semi structured data and a standard for
+data exchange over the web. Mining XML data from the web is becoming
+increasingly important. Several encouraging attempts at developing methods for
+mining XML data have been proposed. Normally, pre-processing or post-processing
+are required for mining XML data, such as transforming the data from XML format
+to relational format. However, efficiency and simplicity is still a barrier for
+further development. In this paper, we show that extracting association rules
+from XML documents without any preprocessing or post processing using Xquery is
+possible and analyze the Xquery implementation of the well known Apriori
+algorithm. In addition, we suggest features that need to be added into Xquery in
+order to make the implementation of the Apriori algorithm more
+efficient.</SPAN></I></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><I><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Keywords : Xquery , XML
+,Association rule mining ,Semi structured data</SPAN></I></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 21pt; TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">1.0<SPAN
+style="FONT: 7pt 'Times New Roman'; font-size-adjust: none; font-stretch: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</SPAN></SPAN></B><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Introduction :</SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Building a database system
+accommodates semi structured data has required us to rethink nearly every aspect
+of database management.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The web is rich with
+information. However the data contained in the web is not well organized which
+makes obtaining useful information from the web [1] a difficult task.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Knowledge discovery in
+databases (KDD) deals with the process of extracting interesting knowledge from
+large amount of data, usually stored in large(relational) databases
+[10].</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Knowledge can be represented
+in many different ways such as clusters, decision trees, decision rules, etc.,
+Among the others, association rules [2] proved effective in discovering
+interesting relations in massive amounts of relational data. The recent years
+have seen the dramatic development of the extensible Markup Language(XML)
+[3].</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Extensible Markup Language
+was developed as a standard to represent semi structured data. With developments
+like xyleme [4,5] which is a huge warehouse integrating XML data from the web.
+To data mining XML documents requires mapping the data to be relational data
+model and using techniques designed for relational databases to do the mining.
+The XMINE operator has been introduced by Braga et.al for extracting association
+rules from XML documents, where mapping the XML data to relational database is
+required before mining is preformed.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The Query language Xquery [3]
+was proposed by the W3C [6] in order to provide a flexible way to extract XML
+data and provide the necessary interaction document can be mined for association
+rules using only the query language Xquery without any preprocessing or post
+processing.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN></B>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">1.1 Semi structured
+data</SPAN></B><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">
+:</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The data is self-describing
+in the sense that it does not come with a separate schema, and the structure of
+the data, when it exists, has to be inferred from the data itself, such data is
+called semi structured. Semi-structured data is also useful when integrating
+several databases, some of which may be structured.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">In such an integration
+process the data may come from several different sources and thus it may be
+difficult to constrain the integrated database to a single unifying
+schema.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Semi-structured data is
+naturally modeled in terms of graphs which contain labels that give semantics to
+the underlying structure.</SPAN></P></DIV><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'"><BR
+style="PAGE-BREAK-BEFORE: auto" clear=all></SPAN>
+<DIV class=Section2>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 8pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Table 1 (The Entity set EMPS)</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 8pt; COLOR: black"></SPAN>&nbsp;</P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 77.4pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 54pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=72>
+      <P class=MsoNormal style="TEXT-INDENT: 2.2pt; TEXT-ALIGN: center"
+      align=center><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">E EM
+      EMPS</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 54pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=72>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">EMP1</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">EMP2</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">EMP3</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US
+  style="FONT-SIZE: 10.5pt; COLOR: black">EMPS4</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 8pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Table 2 (A subset of EMPS)</SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 8pt; COLOR: black"></SPAN>&nbsp;</P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 72pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=108>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">ED2</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 81pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=108>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">EMP3</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US
+  style="FONT-SIZE: 10.5pt; COLOR: black">EMP4</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 8pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Table 3 ( The entity EMP1)</SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 8pt; COLOR: black"></SPAN>&nbsp;</P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 72pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 95.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=127>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">EMP1</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 95.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=127>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Attribute &#8594;
+      Value</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 95.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=127>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Ename &#8594; Jana</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Dept &#8594; DEPT1</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Boss &#8594;
+    EMP2</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 8pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Table 4 (The entity ser
+DEPTS)</SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 8pt; COLOR: black"></SPAN>&nbsp;</P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 63pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 95.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=127>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">DEPTS</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 95.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=127>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">DEPT1</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US
+  style="FONT-SIZE: 10.5pt; COLOR: black">DEPT2</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Table 5 (The entity DEPT1)</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 54pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 131.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=175>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">DEPT1</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 131.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=175>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Attribute &#8594;
+      Value</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 131.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=175>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Dname &#8594;
+      computing</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Emp &#8594; EMP1</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Emp &#8594; EMP2</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Head &#8594; EMP2</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Address &#8594;
+      London</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Table 6 (The Entity DEPT2) </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 14.4pt; BORDER-LEFT: medium none; WIDTH: 20.64%; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 width="20%" border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 100%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width="100%">
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">DEPT2</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 100%; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width="100%">
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Attribute &#8594;
+      value</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 100%; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width="100%">
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Dname &#8594;
+Maths</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Emp &#8594; ED2</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Head &#8594; EMP3</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Address</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Faculty &#8594;
+      science</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; LETTER-SPACING: -0.4pt"></SPAN>&nbsp;</P></DIV><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'; LETTER-SPACING: -0.4pt"><BR
+style="PAGE-BREAK-BEFORE: auto" clear=all></SPAN>
+<DIV class=Section3>
+<P class=MsoNormal style="MARGIN-LEFT: 63pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black; LETTER-SPACING: -0.4pt">Table
+7 (The relationship WORKS )</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 84.55pt; BORDER-LEFT: medium none; WIDTH: 22.22%; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 width="22%" border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 100%; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width="100%">
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">WORKS</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 100%; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width="100%">
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">EMP1 &#8594; DEPT1</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">EMP2 &#8594; DEPT1</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">EMP3 &#8594;
+    DEPT2</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P></DIV><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'"><BR
+style="PAGE-BREAK-BEFORE: auto" clear=all></SPAN>
+<DIV class=Section4>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Table1, which is labeled EMPS, models an
+entity set of employees ,where each entity in EMPS is represented by an isolated
+node.Table2,which is labeled ED2,models the subset of employees in EMPS working
+in the Maths department. Table 3 models the information pertaining to
+EMP1.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">DEPTS, shown in table 4
+models an entity set of departments and nodes labeled DEPT1 and DEPT2 shown in
+Table 5 and 6 respectively, model the information pertaining to DEPT1 and DEPT2.
+Note that in DEPT2 the actual address of the department is missing and also that
+it has the additional attribute faculty which is missing from DEPT1.Finally,the
+node labeled works shown in Table7, models the relationship of an employee
+working in a department, where each employee and their department is represented
+by an arc in the node.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">We observe that cyclic
+references are achieved by two nodes referencing each other, for example, a
+cyclic reference exists between EMP1 and DEPT1,since EMP1 references DEPT 1 and
+DEPT1 references EMP1</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">In general, the problem of
+information wise equivalence of node databases and thus semi-structure databases
+is un decidable.</SPAN></P><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'"><BR
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN></B>
+<P class=MsoNormal
+style="MARGIN-LEFT: 21pt; TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">2.0<SPAN
+style="FONT: 7pt 'Times New Roman'; font-size-adjust: none; font-stretch: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</SPAN></SPAN></B><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Related work :</SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">One data mining technique
+that has proved popular is association rule mining. It finds association between
+items in a data base. Application of association rules extend to finding useful
+patterns in consumer behavior , target marketing and electronic commerce.
+</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">XML documents can be mined
+for association rules by implementing the well known Apriori algorithm using
+only Xquery.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">An association rule [7] is a
+rule which implies certain association relationships among a set of objects(such
+as “occur together” or “one implies the other”)in a database.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Given a set of transactions,
+where each transaction is a set of items ,an association rule is an expression
+of the form X </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> Y, where X and Y are set of
+items. The intuitive meaning of such a rule is that transactions of the database
+which contain X tend to contain Y.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+style="MARGIN-TOP: 28px; Z-INDEX: 1; LEFT: 0px; MARGIN-LEFT: 443px; WIDTH: 2px; POSITION: absolute; HEIGHT: 2px"><IMG
+height=2 src="MINING SEMI STRUCTURED DATA_files/image001.gif"
+width=2></SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;Let I = {
+i<SUB>1</SUB>,i<SUB>2</SUB>,…….,i<SUB>m </SUB>} be a set of literals, called
+items[8]. Let D be a set of transactions, where each transaction T is a set of
+items such that T </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black">Є</SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> I. Associated with each transaction is
+a unique identifier, called its TID, we say that a transaction T contains X ,a
+set of some items in I, if X </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black">Є</SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> T.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">An association rule is an
+implication of the form X</SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Y, where X C I, Y C I and X &#8745;
+Y = </SPAN><SPAN style="FONT-SIZE: 10.5pt; COLOR: black">&#934;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">. The rule X </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> Y holds in the transaction
+set D with confidence C if C% of transactions in D that contain X also contain
+Y. The rule X</SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> Y has support S in the
+transaction set D if S% of transactions in D contain XUY.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Y, where X C I,Y C I and
+X&#8745;Y=</SPAN><SPAN style="FONT-SIZE: 10.5pt; COLOR: black">&#934;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">. The rule X Y holds in the
+transaction set D with confidence C if C% of transactions in D that contain X
+also contain Y. the rule X Y has support Sin the transaction set D if S% of
+transactions in D contain XU Y.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 27pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Confidence </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black">&#945;</SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> is the ratio of number of transactions
+that contain XUY to the number of transactions that contain X [9].The accuracy
+of confidence or strength for an association rule X </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> Y is given by </SPAN></P>
+<P class=MsoNormal style="MARGIN: 2pt 0cm; TEXT-ALIGN: center"
+align=center><SPAN style="FONT-SIZE: 10.5pt; COLOR: black">&#945;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> (X</SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Y)=P(XUY /X)</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 27pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Support S for an algorithm
+rule X</SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Y is the %of transactions in
+the database that contain X U Y.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Given a set of transaction D
+,the problem of mining association rules is to generate all association rules
+that have support and confidence greater than the user-specified minimum (called
+min sup) and minimum confidence(called min conf )respectively.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Following table 8 gives the
+rule for support and confidence,</SPAN></P><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'"><BR
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN>
+<P class=MsoHeading9 style="PAGE-BREAK-AFTER: auto"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Table 8</SPAN></P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 31.1pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 111.3pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=148 rowSpan=3>
+      <P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+      <P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+      <P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+      <P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+      <P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+      lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      High </SPAN></P>
+      <P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+      <P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Support S </SPAN></P>
+      <P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+      lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Low</SPAN></P>
+      <P class=MsoNormal><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 293.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=392 colSpan=2>
+      <P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN
+      lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Confidence </SPAN><SPAN
+      style="FONT-SIZE: 10.5pt; COLOR: black">&#945;</SPAN></P>
+      <P class=MsoNormal><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Low&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High</SPAN></P>
+      <P class=MsoNormal><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 116.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=155>
+      <P class=MsoNormal><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Event occurs very often; correct
+      only few times</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 177.25pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=236>
+      <P class=MsoNormal><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Event occurs very often; mostly
+      correct</SPAN></P></TD></TR>
+  <TR style="HEIGHT: 3.5pt">
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 116.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid; HEIGHT: 3.5pt"
+    vAlign=top width=155>
+      <P class=MsoNormal><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Event occurs less often; correct
+      only few times</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 177.25pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid; HEIGHT: 3.5pt"
+    vAlign=top width=236>
+      <P class=MsoNormal><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Event occurs less often. Mostly
+      correct</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">If low support and low
+confidence then rules can be ignored and rules having high support and high
+confidence though desirable may not be available.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN></B>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">3.0 Association rules
+:</SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Consider the database in
+table 9,a database ‘D’ contains a set of transaction T and each transactions
+consist of one or more items.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: right"
+align=right><B><I><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Table
+9.</SPAN></I></B></P>
+<H6 style="PAGE-BREAK-AFTER: auto"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">An example Database</SPAN></H6>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 6.75pt; BORDER-LEFT: medium none; WIDTH: 230.4pt; MARGIN-RIGHT: 6.75pt; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 width=307 align=left border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Tid</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=246>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Items</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">1</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=246>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread, butter,
+  milk}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">2</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=246>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread, butter, milk, ice
+      cream}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">3</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=246>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{ice cream, coke}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">4</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=246>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{battery , bread, butter,
+      milk}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">5</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=246>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread, butter,
+  milk}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.95pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">6</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 184.45pt; PADDING-TOP: 0cm; BORDER-BOTTOM: medium none"
+    vAlign=top width=246>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{battery, ice cream, bread,
+      butter}</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">When people buy bread and
+butter, may also buy milk in 66% of the cases and 80% of the transaction with
+bread and butter also contain milk. Such a rule can represented as </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">“bread, butter </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">milk | support =0.66 ,
+confidence=0.8”</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The pattern of discovering
+all association rules can be decomposed into two subprograms [2].</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">1. Find all sets of items
+(item sets) that have transaction support above minimum support. The support for
+an item set is the number of transactions that contain the item set Item sets
+with minimum support are large item sets and all others small item
+sets.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">2.Use the large item sets to
+generate the desired rules. For every large item set L, find all non-empty
+subsets of L For every such subset a, output a rule of the form a </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> (L-a) if the ratio of
+support(L)to support(a) is at least min conf.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The performance of mining
+association rules is mainly dependent on the large item sets discovery process.
+Therefore, it is important to have an efficient algorithm for large item sets
+discovery. </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">In order to find frequent
+item sets (Patterns),the apriori algorithm, which is the more efficient and
+basic algorithm for finding frequent item sets , is used.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Algorithms for discovery
+large item sets make multiple passes over the data. In the first pass, we count
+the support of individual items and determine which of them are large, i.e. have
+minimum support .In each subsequent pass, we start with a seed set of item sets
+found to be large in the previous pass. we use this seed set for generating new
+potentially large item sets called candidate item sets and count the actual
+support for these candidate item sets during the pass over the data. At the end
+of the pass, we determine which of the candidate item sets are actually large,
+and they become the seed for the next pass. This process continues until no new
+large item sets are found.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Apriori is an influential
+algorithm for mining frequent item sets for association rules. The name of the
+algorithm is based on the fact that the algorithms uses prior knowledge of
+frequent item set properties. Apriori employs an iterative approach known as a
+level wise search, where K item sets are used to explore (K+1) item sets. First
+the set of frequent 1 item sets is found. This set is denoted as L1.L1 is used
+to find L2,the set of frequent 2 item sets, which is used to find L3 and so on,
+until no more frequent K item sets can be found. The finding of each L<SUB>k
+</SUB>one full scans of the database.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Algorithm : Apriori
+[8]</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">L1={large
+1-itemsets}</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">For(K=2; L <SUB>K-1 &#8800;
+</SUB></SPAN><SUB><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black">&#934;</SPAN></SUB><SUB><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> ; </SPAN></SUB><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">K++) do begin</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">C<SUB>k </SUB>= apriori-gen
+(L<SUB>K-1</SUB>); //New candidate</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;For all transaction t
+</SPAN><SPAN style="FONT-SIZE: 10.5pt; COLOR: black">&#949;</SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> D do begin</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;C<SUB>t </SUB>=subset
+(Ck, t); //candidates contained in t </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;For all candidate C
+</SPAN><SPAN style="FONT-SIZE: 10.5pt; COLOR: black">&#949;</SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> C<SUB>t </SUB>do</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;C. Count++;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;End.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;L<SUB>K </SUB>={C
+</SPAN><SPAN style="FONT-SIZE: 10.5pt; COLOR: black">&#949;</SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> C<SUB>K </SUB>| C. Count &#8805; min
+sup}</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">End.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="COLOR: black">Table 10 summarizes the notation used in the
+algorithm</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="COLOR: black">Table 10 </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<DIV align=center>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 59.4pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 162pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=216>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Notation</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 221.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=295>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Definition</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 162pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=216>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">K-item set</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 221.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=295>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">An item set having K
+      items</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 162pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=216>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">C<SUB>k</SUB></SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 221.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=295>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Set of candidate K-item
+      sets</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 162pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=216>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">L<SUB>k</SUB></SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 221.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=295>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Set Of large K – item
+      sets</SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The Apriori-gen function
+takes as arrangement L<SUB>K-1</SUB>,the set of all large (K-L) items sets. It
+returns a superset of the set of all large K item sets. The function works as
+follows.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">First, in the join step, we
+join L <SUB>K-1</SUB> with L <SUB>K-1</SUB></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Insert into
+C<SUB>K</SUB></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Select P.item1,P.item2,…,
+P.item <SUB>K-1 </SUB>,q.item<SUB> K-1</SUB></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">From L <SUB>K-1 </SUB>P,<SUB>
+</SUB>L <SUB>K-1 </SUB>q</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Where P.item
+<SUB>1</SUB>=q.item<SUB>1,</SUB>….., P.item <SUB>K-2</SUB>=q.item<SUB>K-2,</SUB>
+P.item <SUB>K-1</SUB>&lt;q.item<SUB>K-1</SUB></SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Next, in the prune step , we
+delete all item sets C </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black">Є</SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> C<SUB>K </SUB>Such that some (K-1)
+subset of C is not in L <SUB>K-1</SUB>;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">For all item sets C
+</SPAN><SPAN style="FONT-SIZE: 10.5pt; COLOR: black">Є</SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black"> C<SUB>K</SUB> do</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">For all (K-1) subsets s of C
+do</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">If (S € L <SUB>K-1</SUB> )
+then</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;Delete C from
+C<SUB>K.</SUB></SPAN></P>
+<P class=MsoNormal style="MARGIN-LEFT: 37.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 18pt; TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="COLOR: black">3.1<SPAN
+style="FONT: 7pt 'Times New Roman'; font-size-adjust: none; font-stretch: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</SPAN></SPAN></B><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Finding frequent item sets : mining
+</SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">From the input table
+presented above ,with the constraints of min_support = 0.49 and confidence
+threshold=80%. for an illustration purpose , description field only taken for
+first level mining to discover description based knowledge as below.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Initial candidate set
+,</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 83.75pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 149.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=199>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Candidate set</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 149.4pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=199>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke butter, ice
+cream}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread, butter, milk}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke, bread, butter,
+      milk}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread,
+  milk}</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'"><BR
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Frequent-1item set</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 86.25pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 75.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=101>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Candidate(C1)</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Support</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 23.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=31>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">L1</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 75.6pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=101>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{butter}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{ice cream}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{milk}</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.5</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.75</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.75</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.25</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.75</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 23.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=31>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">N</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Frequent –2 item
+set</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 82.75pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 82.3pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=110>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Candidate(C2)</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Support</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 23.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=31>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">L2</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 82.3pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=110>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke, bread}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke, butter}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke, milk}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread, butter}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread, milk}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{butter, milk}</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.25</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.5</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.25</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.5</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.75</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.5</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 23.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=31>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">N</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">N</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Frequent –3item
+set</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 62.75pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 123.25pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=164>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Candidate(C3)</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Support</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 23.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=31>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">L3</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 123.25pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=164>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke, butter, bread}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke, bread, butter,
+      milk}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{coke, bread, milk}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread, butter, milk}</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.25</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.25</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.25</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.5</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 23.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=31>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">N</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">N</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">N</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Frequent –4 item
+set</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 73.25pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 101.9pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=136>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Candidate(C4)</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Support</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 23.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=31>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">L4</SPAN></P></TD></TR>
+  <TR style="HEIGHT: 4.5pt">
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 101.9pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid; HEIGHT: 4.5pt"
+    vAlign=top width=136>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{bread, butter,
+milk}</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 45.65pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid; HEIGHT: 4.5pt"
+    vAlign=top width=61>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">0.5</SPAN></P>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 23.05pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid; HEIGHT: 4.5pt"
+    vAlign=top width=31>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Y</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The data base was scanned 4
+times to find the frequent item sets of at all search levels with different
+combinations of candidate item as mentioned in the algorithm. The candidate for
+which the support is not satisfactory i.e. support &lt; 49% are considered to be
+infrequent and they have been removed from the next iteration candidate
+list.</SPAN></P><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'"><BR
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN></B>
+<P class=MsoNormal
+style="MARGIN-LEFT: 18pt; TEXT-INDENT: 0cm; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="COLOR: black">3.2<SPAN
+style="FONT: 7pt 'Times New Roman'; font-size-adjust: none; font-stretch: normal">&nbsp;
+</SPAN></SPAN></B><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Generation of association rules from
+frequent Item sets :</SPAN></B></P>
+<P class=MsoBodyTextIndent3><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Once the frequent item sets from records
+in a database have been found, it is straight forward to generate strong
+association rules from them .</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Method :</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">1.List all frequent item
+sets</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">2.Form all non-empty subset
+of frequent item set</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 36pt; TEXT-INDENT: -16.15pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">3. Generate rules by relating
+the subset with one another as like A</SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> B, and measure
+confidence</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 36pt; TEXT-INDENT: -16.15pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">4.The rule that support the
+minimum confidence threshold are only the really interesting and they will be
+confirmed as strong</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Confidence ( A </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> B) = P(B/A) =
+Support-count(AU B)</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;----------------------------</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;Support –count
+(A)</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">In this illustration, the
+frequent item set found is,</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">L ={ bread, butter, milk
+}</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Non-empty subsets are, {bread
+, butter} , {bread, milk }, {butter, milk},{bread},{butter},{milk}</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The Association rules
+are,</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{bread ,butter} </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{milk}confidence = 2/3 =
+66%</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{bread, milk}</SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{butter} confidence = 2/3 =
+66%</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{butter,milk}</SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{bread}confidence = 2/2 =
+100%</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{bread} </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> {butter, milk}confidence=
+2/3 = 66%</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{butter} </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> {bread, milk }confidence
+=2/3=66%</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">{milk} </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> {bread butter} confidence =
+2/3=66%</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Though the minimum confidence
+threshold is 80%,the rule {butter, milk}</SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: Wingdings">&#224;</SPAN><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"> {bread} only is the more
+interesting and strong to generate knowledge. </SPAN></P>
+<P class=MsoBodyText style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">4.0 Xquery expression for
+mining association rules from XML data :</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; LETTER-SPACING: -0.2pt">&nbsp;We refer
+to the sample XML document, depicted in fig 1. where information about the items
+purchased in each transaction are represented. For example, the set of
+transactions are identified by the tag &lt;transactions&gt; and each transaction
+in the transactions set is identified by the tag &lt;transaction&gt;.The set of
+items in each transaction are identified by the tag &lt;items&gt; and an item is
+identified by the tag &lt;item&gt;. Fig 1. An example data base we can move on
+to discuss how to compute the association rules document as shown in fig1.
+Inside the association rules document, an association rule is identified by the
+tag &lt;rule&gt;,with two attributes support and confidence which specify the
+support and confidence values. </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P></DIV><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'"><BR
+style="PAGE-BREAK-BEFORE: auto" clear=all></SPAN>
+<DIV class=Section5>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<TABLE class=MsoNormalTable
+style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; MARGIN-LEFT: 45pt; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse"
+cellSpacing=0 cellPadding=0 border=1>
+  <TBODY>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: windowtext 1pt solid; WIDTH: 39.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=52>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">tid</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 74.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: windowtext 1pt solid"
+    vAlign=top width=99>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">Items</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 39.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=52>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">1</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 74.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=99>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{a, d, e}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 39.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=52>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">2</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 74.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=99>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{b, c, d}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 39.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=52>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">3</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 74.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=99>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{a, c}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 39.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=52>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">4</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 74.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=99>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{b, c, d}</SPAN></P></TD></TR>
+  <TR>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: 1pt solid; WIDTH: 39.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=52>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">5</SPAN></P></TD>
+    <TD
+    style="BORDER-RIGHT: 1pt solid; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; PADDING-LEFT: 5.4pt; PADDING-BOTTOM: 0cm; BORDER-LEFT: medium none; WIDTH: 74.2pt; PADDING-TOP: 0cm; BORDER-BOTTOM: 1pt solid"
+    vAlign=top width=99>
+      <P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+      style="FONT-SIZE: 10.5pt; COLOR: black">{a,
+b}</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&lt;transactions&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;transaction
+id=”1”&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;a&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;d&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;e&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/items&gt;
+</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/transaction&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;transaction
+id=”2”&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;b&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;c&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;d&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/transaction&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;transaction
+id=”3”&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;a&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;c&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/transaction&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;transaction
+id=”4”&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;b&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;c&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;d&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/transaction&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;transaction
+id=”5”&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;item&gt;a&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;item&gt;b&lt;/item&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/items&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/transaction&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&lt;/transactions&gt;</SPAN></P></DIV><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; FONT-FAMILY: 'Times New Roman'"><BR
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN>
+<DIV class=Section6>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black; LETTER-SPACING: -0.2pt">Also, the
+antecedent and the consequent of the rule are identified by the tag
+&lt;antecedent&gt; and &lt;consequent&gt; respectively, each contains one or
+more items. </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">We
+present the following Xquery expression that computes the rule
+document.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Let $min
+conf:=1.00</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Let
+$src:=document(“/large.XML”) //large item set</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">For $itemset1 in
+$src</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Let
+$item1:=$itemset1/items</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">/* For $itemset2 in
+$src</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Let $item2:=$itemset2/items
+*/</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Where
+count($items1)&gt;count($items2) and </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;Count(common
+Its($items1,$items2)=</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;Count($items2)and
+$itemset1/support div $itemset2/support &#8805;$min conf</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">return &lt; rule support =
+“{$itemset1/support}”</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;confidence=”{$itemset1/support *
+1.0) div</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;($itemset2/support *
+1.0)” &gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;antecendent&gt;
+{$items2}&lt;/antecendent&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;consequent&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;{removeItems($items1,$items2)}</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/consequent&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&lt;/rule&gt;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The above expression can be
+explained as follows. For each large item set X in the large item sets document,
+we look for other item sets Y in the large item sets document such that Y C X
+and support (X U Y )/support(Y) &#8805;min conf .</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">However, if the document to
+be mined has an irregular structure like that shown in fig2.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transactions</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+style="MARGIN-TOP: 0px; Z-INDEX: 3; LEFT: 0px; MARGIN-LEFT: 131px; WIDTH: 65px; POSITION: absolute; HEIGHT: 31px"><IMG
+height=31 src="MINING SEMI STRUCTURED DATA_files/image002.gif"
+width=65></SPAN><SPAN
+style="MARGIN-TOP: 0px; Z-INDEX: 2; LEFT: 0px; MARGIN-LEFT: 114px; WIDTH: 12px; POSITION: absolute; HEIGHT: 27px"><IMG
+height=27 src="MINING SEMI STRUCTURED DATA_files/image003.gif"
+width=12></SPAN><SPAN
+style="MARGIN-TOP: 0px; Z-INDEX: 4; LEFT: 0px; MARGIN-LEFT: 44px; WIDTH: 65px; POSITION: absolute; HEIGHT: 31px"><IMG
+height=31 src="MINING SEMI STRUCTURED DATA_files/image004.gif"
+width=65></SPAN><SPAN style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+style="MARGIN-TOP: 11px; Z-INDEX: 10; LEFT: 0px; MARGIN-LEFT: 227px; WIDTH: 90px; POSITION: absolute; HEIGHT: 79px"><IMG
+height=79 src="MINING SEMI STRUCTURED DATA_files/image005.gif"
+width=90></SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Transaction Transaction
+Transaction</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+style="Z-INDEX: 7; POSITION: relative"><SPAN
+style="LEFT: 114px; WIDTH: 19px; POSITION: absolute; TOP: -1px; HEIGHT: 36px"><IMG
+height=36 src="MINING SEMI STRUCTURED DATA_files/image006.gif"
+width=19></SPAN></SPAN><SPAN style="Z-INDEX: 8; POSITION: relative"><SPAN
+style="LEFT: 131px; WIDTH: 54px; POSITION: absolute; TOP: -1px; HEIGHT: 38px"><IMG
+height=38 src="MINING SEMI STRUCTURED DATA_files/image007.gif"
+width=54></SPAN></SPAN><SPAN style="Z-INDEX: 5; POSITION: relative"><SPAN
+style="LEFT: 7px; WIDTH: 42px; POSITION: absolute; TOP: -1px; HEIGHT: 31px"><IMG
+height=31 src="MINING SEMI STRUCTURED DATA_files/image008.gif"
+width=42></SPAN></SPAN><SPAN style="Z-INDEX: 6; POSITION: relative"><SPAN
+style="LEFT: 47px; WIDTH: 42px; POSITION: absolute; TOP: -1px; HEIGHT: 31px"><IMG
+height=31 src="MINING SEMI STRUCTURED DATA_files/image009.gif"
+width=42></SPAN></SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN
+style="MARGIN-TOP: 11px; Z-INDEX: 11; LEFT: 0px; MARGIN-LEFT: 181px; WIDTH: 12px; POSITION: absolute; HEIGHT: 27px"><IMG
+height=27 src="MINING SEMI STRUCTURED DATA_files/image003.gif"
+width=12></SPAN><SPAN
+style="MARGIN-TOP: 10px; Z-INDEX: 12; LEFT: 0px; MARGIN-LEFT: 114px; WIDTH: 12px; POSITION: absolute; HEIGHT: 27px"><IMG
+height=27 src="MINING SEMI STRUCTURED DATA_files/image003.gif"
+width=12></SPAN><SPAN
+style="MARGIN-TOP: 10px; Z-INDEX: 9; LEFT: 0px; MARGIN-LEFT: 18px; WIDTH: 12px; POSITION: absolute; HEIGHT: 27px"><IMG
+height=27 src="MINING SEMI STRUCTURED DATA_files/image003.gif"
+width=12></SPAN><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;Item A item B items number of
+items</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">&nbsp;Price item C item D category
+A</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Fig2.</SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black"></SPAN>&nbsp;</P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Then an extra query can be
+added inside the let clause where we specify the data source to take the
+structure into account, to restructure the input to a more regular structure at
+runtime. This is possible since an Xquery query returns an XML document of any
+structure. Therefore, any XML documents can be mined using Xquery.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The Xquery implementation
+requires that for each item set in the candidate set it will read the database
+once to obtain the support value. Therefore, the number of times needed, to scan
+the data base to obtain the support count for finding large item sets is
+O(2<SUP>l</SUP>),where l is the length of the maximal large item set. This is
+very inefficient compared with the implementation in other languages.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Xquery cannot store the
+support value for the item sets but instead return it in a query. Therefore, it
+is difficult to read a record in the database and update the support count for
+the item sets using Xquery. This means that the whole database needs to be read
+for each candidate itemset. The results of our experiments shown that xquery is
+more suitable for mining data from small datasets.</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 18pt; TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">5.0<SPAN
+style="FONT: 7pt 'Times New Roman'; font-size-adjust: none; font-stretch: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</SPAN></SPAN></B><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">Conclusion</SPAN></B></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">In this paper, we presented
+the Xquery implementation of apriori method and demonstrating the process of
+mining association rules from native XML data.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">The significance of this work
+is that with implementation, the corpuses of XML data that exist can now be
+mined for association rules directly without mapping the XML data to another
+form at. Many issues remain open, one of the issues concerns the structure of
+the XML data. Since , the structure of the XML data can be very complex and
+irregular, identifying the mining context on such XML data becomes difficult
+.Therefore, to simplify the task of identifying the context, a set of
+transformations of the XML data might be required.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">Our current and future
+research in this area focuses on investigating what other standard data mining
+algorithm can be expressed in Xquery. We are currently testing large XML data
+sets to study the performance of our Xquery implementation of the
+algorithm.</SPAN></P>
+<P class=MsoBodyTextIndent3><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">This research provides a good starting
+point, there are still many open issues for future research- even within the
+work presented in this paper.</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 19.85pt; TEXT-ALIGN: justify"><B><SPAN
+lang=EN-US style="FONT-SIZE: 8pt; COLOR: black"></SPAN></B>&nbsp;</P>
+<P class=MsoNormal style="TEXT-ALIGN: justify"><B><SPAN lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">6.0 References</SPAN></B><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">:</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">1. Jacky W.W.Wan,Gillian
+Dobble,”Mining association rules from XML data using Xquery”</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">2.R.Agrawal,T.Imielinski and
+A.Swami, ”Mining association rules between sets of items in large data
+bases”,may’1993</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">3.Worldwide web consortium,
+eXtensible markup language version 1.0.</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">http://www.w3org/XML</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">4.Xyleme. </SPAN><SPAN
+style="FONT-SIZE: 10.5pt; COLOR: black"><A href="http://www.xyleme.com/"><SPAN
+lang=EN-US style="COLOR: black">http://www.Xyleme.com</SPAN></A></SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">5.Luice Xyleme, A dynamic
+warehouse for XML data of the web ,IEEE 2001</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">6.World wide
+webconsortium.http://www.w3.org</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">7.Uma maheswari, association
+analysis on generalized object relational data model of video annotation of
+cricket match,Dec’2004.</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">8.Rakesh Agarwal, rama
+Krishnan srikanth “Fast algorithms for mining association rules in large data
+base.Sep’1994</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US
+style="FONT-SIZE: 10.5pt; COLOR: black">9.A.S.Al.Amean,Dr.R.Srinivasan,An
+application of association rule mining ,DEC’2004</SPAN></P>
+<P class=MsoNormal
+style="MARGIN-LEFT: 27pt; TEXT-INDENT: -18pt; TEXT-ALIGN: justify"><SPAN
+lang=EN-US style="FONT-SIZE: 10.5pt; COLOR: black">10. D.Brage, A.Campi “A Tool
+for extracting XML Association rules from XML documents,2002</SPAN></P>
+<P style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 19.85pt; TEXT-ALIGN: center"
+align=center><B><SPAN lang=RO
+style="FONT-SIZE: 10.5pt; TEXT-TRANSFORM: uppercase; COLOR: black"></SPAN></B>&nbsp;</P>
+<P class=MsoNormal><SPAN lang=EN-US></SPAN>&nbsp;</P></DIV></BODY></HTML>

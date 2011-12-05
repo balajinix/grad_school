@@ -1,0 +1,22 @@
+body {
+	border-right: thin solid #cccccc;
+}
+
+.div1closed{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#000000; text-transform: uppercase;}
+ a.div1closed:link{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#000000;}
+ a.div1closed:active{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#000000;}
+ a.div1closed:visited{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#000000;}
+ a.div1closed:hover{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#ee726b;}
+
+.div1open{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:bold; text-decoration:none; color:#000000; text-transform: uppercase;}
+ a.div1open:link{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:bold; text-decoration:none; color:#000000;}
+ a.div1open:active{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:bold; text-decoration:none; color:#000000;}
+ a.div1open:visited{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:bold; text-decoration:none; color:#000000;}
+ a.div1open:hover{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:bold; text-decoration:none; color:#ee726b;}
+
+.div2{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#000000;}
+ a.div2:link{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#000000;}
+ a.div2:active{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#000000;}
+ a.div2:visited{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#000000;}
+ a.div2:hover{font-size: 8pt;font-family:arial,helvetica,geneva,sans-serif; font-weight:normal; text-decoration:none; color:#ee726b;}
+

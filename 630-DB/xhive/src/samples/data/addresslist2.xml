@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- version 1.1 : July 20, 2000 -->
+<ns1:address_list xmlns="http://www.xhive.com/ns" xmlns:ns1="http://www.xhive.com/ns1" xmlns:ns2="http://www.xhive.com/ns2">
+  <ns1:address ns2:id="1">
+    <ns1:firstname>X-Hive Corporation</ns1:firstname>
+    <ns1:lastname></ns1:lastname>
+    <ns1:street>Van Vollenhovenstraat</ns1:street>
+    <ns1:number>3</ns1:number>
+    <ns1:city>Rotterdam</ns1:city>
+    <ns2:country>Netherlands</ns2:country>
+  </ns1:address>
+  <ns1:address ns2:id="2">
+    <ns1:firstname>Jan</ns1:firstname>
+    <ns1:lastname>de Boer</ns1:lastname>
+    <ns1:street>van Hamelingenstraat</ns1:street>
+    <ns1:number>84b</ns1:number>
+    <ns1:city>Grootebroek</ns1:city>
+    <ns2:country>Netherlands</ns2:country>
+  </ns1:address>
+  <ns1:address ns2:id="3">
+    <ns1:firstname>Martien</ns1:firstname>
+    <ns1:lastname>van Mens</ns1:lastname>
+    <ns1:street>Tongelreseweg</ns1:street>
+    <ns1:number>1</ns1:number>
+    <ns1:city>Eindhoven</ns1:city>
+    <ns2:country>Netherlands</ns2:country>
+  </ns1:address>
+  <ns1:address ns1:id="4">
+    <ns2:firstname>Cor</ns2:firstname>
+    <ns2:lastname>Dera</ns2:lastname>
+    <ns1:street>Gedempte Voldersgracht</ns1:street>
+    <ns1:number>22</ns1:number>
+    <ns2:city>Haarlem</ns2:city>
+    <ns2:country>Netherlands</ns2:country>
+  </ns1:address>
+</ns1:address_list>

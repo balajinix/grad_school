@@ -1,0 +1,91 @@
+<largeTIDItemsets>
+  <largeTIDItemset>
+    <items>
+      <item> a </item>
+    </items>
+    <trans>
+      <tran>1</tran>
+      <tran>3</tran>
+      <tran>5</tran>
+    </trans>
+    <support>0.6</support>
+  </largeTIDItemset>
+  <largeTIDItemset>
+    <items>
+      <item> d </item>
+    </items>
+    <trans>
+      <tran>1</tran>
+      <tran>2</tran>
+      <tran>4</tran>
+    </trans>
+    <support>0.6</support>
+  </largeTIDItemset>
+  <largeTIDItemset>
+    <items>
+      <item> b </item>
+    </items>
+    <trans>
+      <tran>2</tran>
+      <tran>4</tran>
+      <tran>5</tran>
+    </trans>
+    <support>0.6</support>
+  </largeTIDItemset>
+  <largeTIDItemset>
+    <items>
+      <item> c </item>
+    </items>
+    <trans>
+      <tran>2</tran>
+      <tran>3</tran>
+      <tran>4</tran>
+    </trans>
+    <support>0.6</support>
+  </largeTIDItemset>
+  <largeTIDItemset>
+    <items>
+      <item> d </item>
+      <item> b </item>
+    </items>
+    <trans>
+      <tran>2</tran>
+      <tran>4</tran>
+    </trans>
+    <support>0.4</support>
+  </largeTIDItemset>
+  <largeTIDItemset>
+    <items>
+      <item> d </item>
+      <item> c </item>
+    </items>
+    <trans>
+      <tran>2</tran>
+      <tran>4</tran>
+    </trans>
+    <support>0.4</support>
+  </largeTIDItemset>
+  <largeTIDItemset>
+    <items>
+      <item> b </item>
+      <item> c </item>
+    </items>
+    <trans>
+      <tran>2</tran>
+      <tran>4</tran>
+    </trans>
+    <support>0.4</support>
+  </largeTIDItemset>
+  <largeTIDItemset>
+    <items>
+      <item> d </item>
+      <item> c </item>
+      <item> b </item>
+    </items>
+    <trans>
+      <tran>2</tran>
+      <tran>4</tran>
+    </trans>
+    <support>0.4</support>
+  </largeTIDItemset>
+</largeTIDItemsets>

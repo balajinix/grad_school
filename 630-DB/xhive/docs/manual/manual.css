@@ -1,0 +1,98 @@
+body {
+	padding: 1em 1em 1em 1em;
+	font-family: sans-serif;
+	font-size: 9pt;
+
+	color: black;
+
+	background: white;
+        background-position: right bottom; 
+	background-attachment: fixed; 
+	background-image: url(images/interface/background_x.gif); 
+	background-repeat: no-repeat;
+}
+
+:link { color: #0000CC; background: transparent }
+:visited { color: #0000CC; background: transparent }
+:active { color: #CC0000; background: transparent }
+
+table {
+	border: thin solid #000000;
+	font-family: sans-serif; 
+	font-size: 9pt;
+}
+
+th, td { 
+	vertical-align: top;
+	padding: 1px 1px 1px 1px;
+        nowrap: true;
+}
+
+h2 { 	
+	color: #fd0e02;
+	border-bottom: thin solid #9194D1;
+	padding: 3px 3px 3px 3px;
+}
+
+h1 { font: bold 170% sans-serif }
+h2 { font: bold 140% sans-serif }
+h3 { font: bold 120% sans-serif; color: #003366; }
+h4 { font: bold 100% sans-serif }
+h5 { font: italic 100% sans-serif }
+h6 { font: small-caps 100% sans-serif }
+
+.hide { display: none }
+
+div.div1 { margin-bottom: 400px; }
+div.div2 { margin-bottom: 50px; }
+div.div3 { margin-bottom: 25px; }
+div.div4 { margin-bottom: 20px; }
+div.body { margin-top: 100px }
+
+code, eg { 	
+	font-family: monospace;
+} 
+
+ul.toc {
+	list-style: disc;		
+	list-style: none;
+}
+
+li p { 	
+	margin-top: 0.3em;
+	margin-bottom: 0.3em; 
+}
+
+.eg { 
+	margin: 0.3em 1.0em 0.3em 1.0em; 
+	padding: 0em 0.3em;
+	background: #ccffff; 
+}
+
+.refheader { 
+	margin-left: 1.7em;
+}
+
+.ref2samples, .ref2apis { 
+	margin-left: 2em;
+	font-family: monospace;
+}
+
+.image {
+	text-align: center;
+	padding: 25px 15px 25px 15px;
+}
+
+.caption {
+	margin-top: 25px; 
+	font-family: sans-serif;
+        font-style: italic;
+}
+
+.comment {
+	padding: 2px 2px 2px 20px;
+        font-style: italic;
+	background: #ffff99; 
+}
+
+.prefix { }

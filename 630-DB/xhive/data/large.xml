@@ -1,0 +1,55 @@
+<largeItemsets>
+  <largeItemset>
+    <items>
+      <item> a </item>
+    </items>
+    <support>0.6</support>
+  </largeItemset>
+  <largeItemset>
+    <items>
+      <item> d </item>
+    </items>
+    <support>0.6</support>
+  </largeItemset>
+  <largeItemset>
+    <items>
+      <item> b </item>
+    </items>
+    <support>0.6</support>
+  </largeItemset>
+  <largeItemset>
+    <items>
+      <item> c </item>
+    </items>
+    <support>0.6</support>
+  </largeItemset>
+  <largeItemset>
+    <items>
+      <item> d </item>
+      <item> b </item>
+    </items>
+    <support>0.4</support>
+  </largeItemset>
+  <largeItemset>
+    <items>
+      <item> d </item>
+      <item> c </item>
+    </items>
+    <support>0.4</support>
+  </largeItemset>
+  <largeItemset>
+    <items>
+      <item> b </item>
+      <item> c </item>
+    </items>
+    <support>0.4</support>
+  </largeItemset>
+  <largeItemset>
+    <items>
+      <item> d </item>
+      <item> c </item>
+      <item> b </item>
+    </items>
+    <support>0.4</support>
+  </largeItemset>
+</largeItemsets>

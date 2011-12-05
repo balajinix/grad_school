@@ -1,0 +1,4 @@
+idnumber,name,telephone
+611,"Politie Rotterdam, NIET URGENT",010-2740415
+614,"X-Hive corporation, zie D:\\Xhive",010-4046870
+"620","Boekhandel Donner","010-4132070"

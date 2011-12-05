@@ -1,0 +1,15 @@
+Math 589 Project Proposal
+
+Project Description:
+
+	I wish to design and implement a script that would fetch the Character set of webpages. The idea is to write a web crawler that would traverse through web pages and print the character set of those pages. The motivation for this project is my interest in fonts, particularly the Unicode character set. 
+
+I believe I will gain insight into the following as I implement the project.
+
+1. Learn about the various Character sets and how they are used on the web.
+2. Write a web crawler in Perl, which would traverse the web by locating the various hyperlinks in a page.
+3. Implement the Breadth First Search Strategy to crawl the webpages. I’m thinking of having a command line parameter for specifying the level of this search.
+
+Project Status:
+
+	I have completed the Perl code for fetching the character set and the hyperlinks from a page and am presently working on BFS. 

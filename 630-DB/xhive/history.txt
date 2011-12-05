@@ -1,0 +1,1893 @@
+Changes since release 5.1.2
+---------------------------
+ - All changes since release 5.0.5 and 5.0.6 (see below).
+
+Changes since release 5.0.6
+---------------------------
+ - Made changes so J2EE connector support can use read-only
+   transactions.
+ - database pages created during a transaction that did not
+   finish regularly (commit/ rollback) are now released
+   during recovery.
+ - In XQuery element constructors, allow for '(' character
+   after element start. (696)
+ - Made adminclient dialogs a few pixels larger in order to
+   try to prevent field collapsing. (698)
+ - Fixed XHCreateFD command for certain command line
+   args. (699)
+ - Changed Publish2PDF.java sample to write to stream
+   directly.
+
+Changes since release 5.0.5
+---------------------------
+ - Especially in the case of many readonly transactions 
+   creating temporary data, rollback (and commit of 
+   readonly transactions) could lead to unrecoverable 
+   IO_ERRORS related to missing logpages. (694)
+ - Certain XQueries having a combination of let, for and
+   order by could lead to INTERNAL_ERROR exceptions. (695)
+ - writeToString of DOMWriter would simply return a null
+   result in case of a Exception occurrence.
+
+Changes since release 5.1.1 (same as 5.0.5)
+-------------------------------------------
+ - Under special circumstances, the X-Hive/DB index processing 
+   code would interpret the internal index data incorrectly, 
+   and no values would be found for certain keys. (693)
+ - Certain XQueries using 'order by' on an empty set could
+   give NullpointerExceptions. (691)
+ - Literal strings in XQuery were not processed in accordance
+   with the latest specification. &...; and "" (quote escape)
+   are now properly processed. This may have an effect on your
+   current queries, a query containing a string literal like:
+      "foo && bar"
+   would now have to be rewritten to:
+      "foo &amp;&amp; bar"
+   (692)
+
+Changes since release 5.1
+-------------------------
+ - In certain cases concurrent transactions in a remote client
+   configuration could start leaking memory (on the remote 
+   client). (690)
+ - In case of memory errors in a server process, try to
+   exit more gently.
+ - In adminclient importer, made filters case sensitive and 
+   in import file list check for existence of files. (689)
+
+Changes since release 5.0.3
+---------------------------
+ - Introduced option to write/read documents or entire libraries
+   including their properties (indexes, document versions, catalogs
+   etc.) to a binary format, to ease copying X-Hive/DB data within and
+   between databases.
+   The relevant added API calls are:
+    com.xhive.dom.interfaces.XhiveLibraryChildIf
+      public void serialize(java.io.OutputStream out);
+    com.xhive.dom.interfaces.XhiveLibraryIf
+      public XhiveLibraryChildIf deserialize(java.io.InputStream in);
+ - It is now possible to run X-Hive/DB applications directly
+   of a readonly medium (like a CDROM), without the need for 
+   temporary files on a harddisk. See section 12.9 of the manual.
+ - XQuery support has been upgraded to the November last call (minor
+   changes with the XQuery support in X-Hive/DB 5.0.x).
+ - XQuery now supports positional variables in FLWOR expressions. E.g.
+     for $x at $i in //item return <result>item {$i} is {$x}</result> 
+ - In XQuery, the starts-with function can now use sorted value indexes.
+ - XML 1.1 support.
+ - Serializer improvements, more adherence to various XML specifications.
+ - More logging using (using java.util.logging) in X-Hive/DB kernel.
+ - Added XhiveDeadlockException and XhiveLockNotGrantedException, 
+   extensions of XhiveException for more convenient error catching.
+ - Upgraded included Xerces to release 2.6, Xalan to release 
+   2.5.2, ICU4J to release 2.6.1.
+ - The Xerces XML Schema API has been moved (by Xerces) to the 
+   package org.apache.xerces.xs.
+ - New method commit(int commitOption) in XhiveSessionIf allows
+   commits that are faster, but not guaranteed to be durable.
+
+Changes since release 5.0.2
+---------------------------
+ - In XQuery, getting a subsequence of an ordered result could lead
+   to errors (NullpointerException or INTERNAL_ERROR). (688)
+ - Improved XQuery optimization for range queries in special case.
+ - Minor fixes in anyURI type in XQuery.
+ - More stacktrace debugging in case of a server halt.
+
+Changes since release 5.0.1
+---------------------------
+ - Access control was not properly checked for modification actions.
+ - Versioning now allowed if library (but not documents) is readonly.
+ - Value indexes now work correctly for indexed elements without
+   content.
+ - Make pagecache eligible for garbage collection on 
+   XhiveDriverIf::close(), even when there are still references 
+   to objects created on that driver.
+ - Better cleanup of reused sessions after an (OutOfMemory)Error.
+ - Notation declarations with enumerations are now properly stored
+   (and not stored in duplicate). (684, 683)
+ - XQuery:
+    - doc function now supported (besides document). (686)
+    - doc/ document now work on relative paths. (687)
+    - current-date() and current-dateTime() functions now give back 
+      current time/ date. (685)
+    - 'local' function namespace added to namespaces.
+    - declare default element namespace now has syntax in accordance 
+      with the spec, so without '='.
+    - As per specification, comparisons are now only allowed between
+      atomic values.
+ - In the adminclient, on deletion of a document/ library you could
+   get an (innocent) error that the document could not be found.
+ - Installer now always autodetermines free server-port.
+
+Changes since release 5.0
+-------------------------
+ - When the driver was not properly closed when accessing the federation
+   directly, the database could become inaccessible during the next
+   recovery.
+ - Calling getWaitOption no longer leads to a hang on a remote session.
+ - When using '/' as a seperate expression in XQuery, you could get
+   a NullPointerException.
+ - The DOMWriter now respects the xml-declaration setting. (681)
+ - The Adminclient now shows the correct exception in case of an
+   unexpected java.lang.Error.
+
+Changes since release 4.x
+-------------------------
+Architectural changes:
+ - X-Hive/DB 5 no longer uses third party native libraries, it's 100%
+   Java now.
+ - Although the default installation uses a separate server process,
+   it is no longer necessary to run any seperate processes to access
+   X-Hive/DB from your Java application.
+ - The database storage is now based on update-in-place and log-files, 
+   leading to amongst others less transaction overhead (commit time).
+ - MROW transactions are no longer supported, all standard
+   transactions are now regular transactions, meaning data read by 
+   a transaction cannot be updated simultaneously in another
+   transaction. 
+   This does not have to hinder concurrency, as read-only transactions 
+   are now much more useful. Any action that does not involve permanent
+   changes in the database (this includes querying, getting older 
+   versions of a document and calling session.createTemporaryDocument)
+   can be executed in a a read-only transaction, which does not block 
+   other transactions. Regular transactions now wait for locks by 
+   default (to help concurrent programming).
+
+Changes related to the new Architecture:
+ - JDK 1.4 is now a requirement. Since X-Hive/DB 5 is all Java, any 
+   platform running JDK 1.4 (100% compatible with Sun's version) is 
+   supported. This release was tested on Windows, Linux, Solaris, 
+   HP-UX and Mac OS X.
+ - All the existing oo-tools are no longer present. A list of 
+   replacement XH-tools can be found in section 4.4 of the manual. 
+   See section 12.7 of the manual for how to perform backups now.
+ - Even more than before, every X-Hive/DB functionality can be 
+   accessed  through the Java API (this includes calls for e.g. 
+   creating federations, performing backups/restores, and monitoring
+   locks).
+ - It is now possible to set a maximum size for database files, 
+   helping to have a database span multiple partitions without the 
+   need for external storage management tools.
+ - Cache pages are now more shared between all sessions created on the 
+   same driver.
+ - The units of locking are now always individual documents, libraries 
+   and indexes.  Libraries are only locked when they are changed 
+   themselves (e.g., by adding a document), not when only a document 
+   in the library is changed.
+
+Other changes:
+ - XQuery supports the functionality of newer releases of the XQuery 
+   specification, specifically the XML Query Language draft 
+   of August 22 2003 and the Functions and Operators specification of
+   May 2 2003.
+   When migrating from our XQuery support in release 3.x/4.x,
+   you will have to change most of your queries. Here are some tips
+   to get you started:
+   * XQuery now supports order by instead of sortby. See 
+        http://www.w3.org/TR/xquery/#id-orderby-return
+     for some information on this. E.g.
+       for $i in //address sortby(firstname)
+       return concat($i/firstname, ' ', $i/lastname) 
+     could be replaced by
+       for $i in //address
+       order by $i/lastname
+       return concat($i/firstname, ' ', $i/lastname)
+     (note that in the second case, a context is specified for the
+     argument to order on)
+   * The XQuery parser has been updated, keyword escaping with a ':'
+     like //:item is no longer necessary (or possible).
+   * The keyword 'unordered', important for performance in X-Hive/DB, 
+     is now a function (so in practice you have to add some 
+     parentheses when using it), e.g. instead of
+       unordered //eltname
+     use
+       unordered(//eltname)
+   * The syntax for cast as and treat as is also changed, from
+       cast as xs:integer ($i)
+     to
+       $i cast as xs:integer
+   * The syntax for comments has been changed from
+       {-- ... --}
+     to
+       (: ... :)
+   * The syntax to declare a namespace have changed, from
+       namespace prefix = "http://www.example.org/ns"
+     to
+       declare namespace prefix = "http://www.example.org/ns";
+   * 'define function' has been changed to declare function. Like
+     namespace declarations, function declarations have to be
+     terminated by a ';'.
+   * base-uri($i) now returns an object of type anyURI, which when
+     used as a string is escaped. So you may want to use
+     string(base-uri($i)) in the context of X-Hive/DB paths to
+     prevent escaping.
+ - It is now possible to connect to X-Hive/DB through JAAS.
+ - The adminclient has some extra functions related to federations 
+   in the user interface.
+ - The adminclient now has some syntax highlighting for XML en XQuery 
+   text.
+
+API changes:
+ - All methods made deprecated in X-Hive/DB 4.0 and 4.1 have been 
+   removed.
+ - All methods and interfaces related to clustering, cluster locations, 
+   containers and container pools have been removed. Clustering rules 
+   and containers do not exist anymore. You can call 
+     XhiveDatabaseIf::setTemporaryDataSegment(String);
+     XhiveLibraryIf::setChildSegmentId(String);
+   to control where data will be physically placed. Databases (and 
+   segments and files) can no longer be placed on different hosts, 
+   so methods/ arguments related to that have been removed.
+ - Other API changes (note that the list is long, but most methods 
+   would not be used in your applications):
+  com.xhive.XhiveDriverFactory
+    static XhiveFederationFactoryIf getFederationFactory(); added
+  com.xhive.core.interfaces.XhiveFederationFactoryIf, added
+     A federation factory can be used to create new federations, and
+     to restore a database through the API.
+  com.xhive.core.interfaces.XhiveDriverIf
+    void init(int cachePages); added
+    void init(int cachePages, SocketFactory factory); added
+    boolean isInitialized(); added
+      Drivers now need to be intialized before session can be created 
+      on them, to initialize the shared cache. The reverse of 
+      driver.init(...) is driver.close().
+    void startListenerThread(ServerSocket socket); added
+      You can start a server on the driver in your application after
+      an initialization.
+    void printSessionInformation(PrintWriter); added
+      The call used by XHSessionInfo, assembles information on what 
+      session is accessing what data (to monitor locks).
+    XhiveSessionIf createSession(int, int); removed
+      Amounts of cache pages are now set on the driver using the 
+      XhiveDriverIf.init(...) method.
+    XhiveSessionIf createSession(String name); added
+      It is possible to give a session a name, that is then used in
+      printSessionInformation.
+    XhiveFtsUtilIf getFtsUtil(); added
+      Get a miscelleneous full text search utility object.
+      See com.xhive.util.interfaces.XhiveFtsUtilIf
+      and com.xhive.util.interfaces.XhiveFtsTextHandlerIf for
+      details.
+    Iterator getDatabaseNames(); added
+      Get a list of database names in the current federation.
+    XhiveSecurityConfigIf getSecurityConfig(); added
+      Retrieves an interface to manipulate the security 
+      configuration of the X-Hive/DB server.
+  com.xhive.core.interfaces.XhiveSessionIf
+      MROW mode and deaden objects after commit no longer are 
+      relevant, so related methods were removed.
+    Object getJTAXAResource(); removed
+      XATransactions are now processed differently.
+    void waitedJoin(); added
+      Special version of join, that waits for the currently 
+      joined thread (if any) to leave.
+    boolean getReadOnlyMode(); added
+      Check whether a session is readonly mode. As mentioned above,
+      read-only mode is now a useful mode for X-Hive/DB sessions.
+    void setWaitOption(int option); changed
+      Changed in two ways: Now, the default wait-mode of new sessions
+      is WAIT (so the default is to wait for locks to be released by
+      other sessions), and when specified as a number that number
+      is now the amount of milliseconds to wait for a lock.
+    void connect(String databaseName, 
+                 CallbackHandler callbackHandler); added
+      Added way to connect using JAAS.
+  com.xhive.core.interfaces.XhiveFederationIf
+    void backup(WritableByteChannel outputStream, int mode); added
+      Create a backup from the API. A WritableByteChannel can e.g.
+      be retrieved from FileOutputStream.getChannel().
+    get/setKeepLogFiles(boolean); added
+      When set to true, incremental backups are enabled.
+    XhiveDatabaseIf createDatabase(String databaseName,
+                                      String dbaPassword,
+                                      String path,
+                                      long maxSize); changed
+      Parameters of createDatabase have different meaning.
+  com.xhive.core.interfaces.XhiveDatabaseIf
+    Iterator getLocations(); removed
+      Replaced by getSegments (now only returns segments)
+    XhiveSegmentIf getSegment(String name); added
+    Iterator getSegments(); added
+    XhiveSegmentIf createSegment(String, String, long); changed
+      New methods to work with segments.
+    get/setTemporarySegment(String segmentName); added
+      Determine in what segment temporary data is created.
+  com.xhive.core.interfaces.XhiveSegmentIf
+    long getFreeSpace(); added
+      Find the amount of free space (pages) in the segment.
+      This is the space that is part of the files of the segment, 
+      but does not currently contain database objects.
+  com.xhive.core.interface.XhiveFileIf
+    void delete(); removed
+      Individual database files can no longer be deleted, only
+      the segments they reside in.
+    long getCurrentFileSize(); added
+    long getMaxFileSize(); added
+    void setMaxFileSize(long); added
+      There now is more control over how large files (can) grow.
+  com.xhive.core.interfaces.XhiveLockingContextIf 
+    boolean isLockedWithOwner(); removed
+      For for instance libraries and indexes, you can find out the 
+      locking options through getOptions.
+    XhiveSegmentIf getSegment(); added
+      Find the segment that contains this locking context.
+  com.xhive.core.interfaces.XhiveUserListIf
+    void removeUser(XhiveUserIf user); changed
+      When removing a user, it is no longer possible to change 
+      ownership to another user (this method was very slow).
+    public ListIterator listIterator(); removed
+      Had special way to remove users, use removeUser instead.
+  com.xhive.core.interfaces.XhiveGroupListIf
+    void removeGroup(XhiveGroupIf, XhiveGroupIf); removed
+      When removing a group, it is no longer possible to change 
+      authority to another group (this method was very slow).
+    public ListIterator listIterator(); removed
+      Had special way to remove users, use removeUser instead.
+  com.xhive.core.interfaces.XhiveUserIf, changed
+  com.xhive.core.interfaces.XhiveGroupIf, changed
+      These interfaces no longer implement XhiveNamedItemIf, some 
+      methods were moved to the individual interfaces. As a 
+      consequence, it is no longer possible to change the names of 
+      users or groups, and they no longer have descriptions.
+  com.xhive.dom.interfaces.XhiveLibraryIf
+    get/setChildSegmentId(String); added
+      Helps control in which segment of the database child-libraries
+      will be placed (defaults to the segment where the library
+      itself resides.
+    XhiveVersionSpaceIf importVersionSpace
+                  (XhiveVersionSpaceIf versionSpace); added
+      Copies a version space with all its branches and versions 
+      into another library.
+  com.xhive.dom.interfaces.XhiveBlobNodeIf
+    void setContents(InputStream, int); removed
+      This variant of setContents with a segment size is no longer
+      relevant.
+  com.xhive.security
+    Package added, with JAAS related classes and interfaces. The
+    main interface is XhiveSecurityConfigIf which can be retrieved
+    on an XhiveDriverIf object.
+  com.xhive.util.interfaces.XhiveSqlLoaderIf
+    Has been made deprecated, and is replaced by interfaces
+    with a more modular interface (and identical functionality):
+  com.xhive.util.interfaces.XhiveSQLDataLoaderIf
+  com.xhive.util.interfaces.XhiveCSVFileLoaderIf
+  
+Short guide to changing your existing applications (assuming a 
+migration from X-Hive/DB 4.1.x):
+To get your applications running again, you should:
+ - Resolve all compile errors. In a lot of cases, this will simply be
+   the removal of parameters from method calls where those parameters 
+   are not relevant anymore.
+ - The bootstrap path may have to be changed. In X-Hive/DB 5, you can 
+   either connect to an existing database server (the installer starts 
+   up a dedicated server), in that case the bootstrap location has the 
+   syntax 'xhive://hostname:portname'. Or you can connect to the 
+   database directly (no server is running), then the syntax of the 
+   bootstrap location is the familiar 
+   'path/to/XhiveDatabase.bootstrap'.
+ - Call driver.init(numCachePages). This method is new and has to be 
+   called before any sessions can be used. So it is best to place 
+   this call directly after the (first) getDriver call on 
+   XhiveDriverFactory.
+ - For every session.join(), there now should be a session.leave(), in 
+   other words it is now an error to join sessions in multiple threads.
+ - When using non-trivial XQueries, you will have to change them as 
+   described above.
+ - As an optimization in concurrent sitations, it may be wise to see 
+   whether you can identify in which cases you can use read-only 
+   transactions in your applications. You can call 
+   setReadOnlyMode(boolean) before a call to begin, and change the 
+   behavior between transactions of a session (so you can still use 
+   one session pool).
+Of course, the manual and API documentation can help you in resolving
+further migration problems.
+
+List of changes made since release 5.0 beta 1:
+ - Several bugfixes
+ - Document order sorting in querying is now faster for documents 
+   unchanged since they were parsed.
+ - DTD models are now cached during a transaction for performance 
+   improvements, mostly of DOM operations on documents with an attached DTD.
+ - XQuery is now more up to date with the latest specification, being the 
+   one of August 22 2003.
+ - JAAS support has been added, see the javadocs of the com.xhive.security 
+   package LDAP samples for more information.
+ - You can now copy version-spaces between libraries with importVersionSpace
+   on XhiveLibraryIf.
+ - The XhiveSqlLoaderIf interface has been rewritten.
+ - You can find the amount of free space in a segment with the
+   adminclient or the getFreeSpace() method of XhiveSegmentIf.
+ - Upgraded third party libraries: Xerces to release 2.5.0, Xalan to 
+   release 2.5.1 and ICU4J to release 2.6.
+
+Changes from relese release 4.1.2 to 4.1.3
+------------------------------------------
+Bug-fixes:
+ - Errors used to occur when you had an XML schema against which
+   a document was loaded contained a doctype declaration (the DTD
+   referred to in the XML Schema is not automatically stored).
+ - In the adminclient, the text-search dialog now uses proper focus.
+
+Changes from release 4.0.5 to 4.0.6
+-----------------------------------
+Bug-fixes:
+ - Versioning does now take into account CDATA section. (668)
+ - Versioning now works correctly with default attributes. (671)
+ - The XQuery engine could give errors (ClassCastException) for
+   queries using multiple indexes with large result sets. (673)
+ - XLink expand document could incorrectly give roundtrip errors. (675)
+ - It's now possible to set an error handler for XLink document 
+   expansion (new expandDocument API call with extra 
+   DOMErrorHandler argument). (665)
+ - XLink expansion with links to a document now give a better error 
+   message. (664)
+ - Duplicate attribute declarations in parsed DTD's are now no
+   longer stored twice. (670)
+ - Error messages from abstract DTD validation now give more
+   info.
+ - When a user defined DOMErrorHandler returns false, DTD validation
+   is now immediately terminated.
+ - DTD validation now also works for DTDs with over 60 element names
+   in one element declaration. (669)
+
+Changes from release 4.1.1 to 4.1.2
+-----------------------------------
+ - DTD serializations are now cached, leading to better performance
+   when parsing multiple documents against one DTD in the catalog
+   in one transaction. (660)
+ - Encoding was not processed correctly for writeASModel on
+   DOMASWriter. (655)
+ - setActiveASModel incorrectly used the location instead of hint 
+   to register the schema location of an XML Schema. (648)
+ - On a DOMBuilder configuration, setting validate-if-schema to true
+   now sets xhive-store-schema to true as well. (651)
+ - validate-if-schema option now more treated like equal to validate
+   in parsing.
+ - In XQuery, namespace attributes in element constructors were
+   not present in the result.
+ - A simple text-search function has been added to the document views
+   in the adminclient. (649)
+ - The adminclient now has a menu-option to export Schema's. (652)
+ - Adminclient now always shows directories in import file browser.
+
+Changes from release 4.0.4 to release 4.0.5
+-------------------------------------------
+Bug-fixes:
+ - In XQuery, a predicate [not(notExistingName)] returned false
+   if no element with name 'notExistingName' were ever in the 
+   database. (659)
+ - There was a NullPointerException in XQueries combining number predicates
+   and axes. (650)
+ - Checking out or importing a document in a library with a very large
+   DTD attached was very slow. (658)
+ - document.validate() did not work correctly for comments. (656)
+ - When you directly modified either a text-node or attribute that is 
+   indexed by a typed value index (type != string), a classcast 
+   exception could be thrown. (657)
+ - Removing a branch in versioning now removes all subbranches as well.
+
+
+Changes since release 4.1:
+--------------------------
+ - On XhiveSchemaDocIf, added several methods for XML Schema support:
+     String getSchemaId();
+     boolean representsXMLSchema();
+     String serializeToString();
+ - In X-Hive/DB 4.1, some interface methods of XhiveCatalogIf that were 
+   made deprecated were accidentally removed, these were reinstated (but
+   are still deprecated):
+     boolean publicIdExists(String id, boolean includeHigherLevelCatalogs);
+     Iterator getPublicIds(boolean includeHigherLevelCatalogs);
+     ASModel getASModelByPublicId(String publicId,
+          boolean includeHigherLevelCatalogs);
+ - Encoding of documents is now versioned. (645)
+ - importNode on XhiveLibraryIf now also copies BLOB nodes.
+ - Doctype node could still be altered if document was versioned (and thus
+   read-only).
+ - pasWithContext of DOMBuilder now takes into account schema-location on document
+   for validation when replacing whole document, and throws an exception when 
+   validating and not replacing the whole document.
+ - Added special 'xhive-parsewithcontext-speed-optimized' DOMBuilder option
+   to speed up editing of documents with full text indexes on them in the 
+   adminclient.
+ - Samples and Adminclient sources no longer use deprecated APIs.
+ - FTPServer now allows XML Schema's to be retrieved and saved.
+ - Passwords of more than 8 characters can no longer be entered (was already 
+   not possible to set them to anything larger).
+ - Several fixes in the Adminclient, among which:
+    - Improvements in concurrent transaction handling 
+      (could lead to object-is-dead-exceptions)
+    - Double clicking libraries can no longer lead to the contents
+      being listed twice.
+    - Adminclient divider no longer moves around when adminclient screen
+      is set too small.
+    - Pressing cancel now leads to a rollback in most dialogs. (647)
+
+Changes since release 4.0.x:
+----------------------------
+Major changes:
+ - XML Schema support has been added, with the following
+   main features:
+   - XML Schemas can be stored in the catalog.
+   - It is possible to revalidate a document in the database
+     against an XML Schema, with normalizeDocument on
+     XhiveDocumentIf.
+   - PSVI information can be stored with the document data during
+     validation, this allows querying of the validation state and
+     XML Schema type information in through the API and in XQuery.
+   - The Xerces XML Schema API is now supported for X-Hive/DB DOMs
+     (as a side-effect, Xerces is now more closely tied to X-Hive/DB. You
+     should always use 'our' version of Xerces (for X-Hive/DB 4.1, Xerces
+     2.4.0) with X-Hive/DB.
+   - XML Schema is supported by the DOM Level 3 Validation interfaces
+     and partially by the abstract schema interfaces.
+   (see the ValidateDocumentWithXMLSchema.java and PSVI.java samples
+   for usages examples)
+ - Type support has been added to XQuery, and expanded in the indexes:
+   - XQuery now supports data types, both the functions and the processor.
+     As far as data types are concerned, X-Hive/DB 4.1 conforms to the 
+     "Basic XQuery" conformance level (except typeswitch).
+   - Indexes now also support date and type related types, and XQueries
+     can make use of these indexes.
+   - XQuery makes use of typed indexes, and PSVI information on documents.
+   (see the TypeIndexes.java sample for usages examples)
+ - The administrator client has been rewritten:
+    - Several functions of X-Hive/DB were added to the interface.
+    - The user interface has been improved
+    - Transactions are now used more modular, every isolated action 
+      in the Adminclient now occurs in its own transaction.
+Other changes:
+ - A draft version of the DOM Level 3 Validation specification is now
+   supported. The Validation interface is the successor of part of the
+   Abstract Schema API.
+   (org.w3c.dom.xhiveval)
+ - The DOM Level 3 Load/ Save interface support has been updated 
+   to the latest public draft. A lot of interface changes were made 
+   since the previous version supported in X-Hive/DB 4.0.
+   (org.w3c.dom.xhivels)
+ - The DOM Level 3 DOMConfiguration interface (also used by Load/ Save)
+   is also available for Documents (getConfig() on XhiveDocumentIf).
+   (org.w3c.dom.xhivecore.DOMConfiguration)
+ - The manual has been updated to document the new features, the samples
+   ValidateDocumentWithXMLSchema.java, DOMValidation, PSVI.java, 
+   DOMValidation.java and TypedIndex.java have been added.
+ - Updated Xerces to version 2.4.0, Xalan to 2.5.0 (Xalan only in full release).
+(As mentioned above, the supported DOM Level 3 interfaces have changed
+a lot since previous versions. Although we can give no guarantees on this,
+the expectation is that the current drafts will be rather stable).
+Changed Interfaces:
+ - Partly because of the introduction of the Validation interfaces, some
+   of the AS interfaces were changed:
+    - ElementEditAS:
+      - In canSetAttributeNS and canRemoveAttributeNS, the order of the
+        parameters has changed (namespace URI now first). 
+        Note: Since they are all String parameters, you will not get
+        compiler errors for this change!
+    - ASModel:
+      - public boolean representsXMLSchema(); added
+      - public long getCatalogId(); added
+          Returns a unique id for the ASModel in the catalog.
+      - public XSModel getXSModel(); added
+          For ASModels representing XML Schema's, returns the Xerces
+          XML Schema API XSModel representation of the XML Schema.
+    - ASDOMBuilder:
+      - No longer extends DOMBuilder (only relevant if your used to parse
+        documents and DTDs with one builder object).
+      - parseInputSource now has extra String schemaType parameter,
+        parseASURI schemaType now becomes relevant. You need to enter
+        DTD_SCHEMA_TYPE or XML_SCHEMA_SCHEMA_TYPE for that parameter
+        (as you can now load DTDs and XML Schema's with that call)
+    - ASElementDecl:
+      - getContentType may now also return new constant SIMPLE_CONTENTTYPE.
+ - com.xhive.dom.interfaces.XhiveLibraryIf
+    - public DOMBuilder createDOMBuilder(); added
+        Convenience method to get a DOMBuilder
+    - public Document createDocumentPSVI(String namespaceURI, 
+          String qualifiedName, DocumentType doctype); added
+        Create a new document, whose nodes will be able to store PSVI
+        information.
+    - public final static int PARSER_PSVI; added
+        New constant for the XhiveLibraryIf parseDocument methods.
+ - com.xhive.dom.interfaces.XhiveLibraryIf
+        Constant PARSER_IGNORE_PUBLIC_ID is replaced with
+        PARSER_IGNORE_CATALOG.
+ - com.xhive.dom.interfaces.XhiveDocumentIf
+    - XhiveDocumentIf now extends more interfaces (so less casting
+      is necessary).
+    - public DOMConfiguration getConfig(); added
+        DOM Level 3, get the DOMConfiguration of the document
+    - public void normalizeDocument(); added
+        DOM Level 3, normalize the document. Most common use is
+        to set 'validate' to true on the DOMConfiguration, and
+        then use normalizeDocument to (re-)validate the document
+        against the XML Schema.
+ - com.xhive.dom.interfaces.XhiveNodeIf
+    - public TypeInfo getSchemaTypeInfo(); added
+        Returns the DOM Level 3 TypeInfo of a node.
+ - com.xhive.dom.interfaces.XhiveCatalogIf
+    - For all methods that had a variant with 
+      includeHigherLevelCatalogs and without, the one without
+      the parameter has been made deprecated (replace those
+      usages with methodName(includeHigherLevelCatalogs==false)).
+    - Some methods with the name publicid in them have been made
+      deprecated because an alternative was introduced that works
+      for both XML Schemas and DTDs.
+    - public boolean idExists
+            (String id, boolean includeHigherLevelCatalogs); added
+        Determine whether an ASModel with the given id exists.
+    - public java.util.Iterator getIds
+            (boolean includeHigherLevelCatalogs); added
+        Get all public ids of DTDs and schema ids of XML Schemas
+        for all models in the catalog.
+    - public java.util.Iterator getIds
+            (String schemaType, boolean includeHigherLevelCatalogs); added
+        Get all public ids of DTDs or schema ids of XML Schemas, depending
+        on the schemaType variable.
+    - public void setSchemaId(String fileName, ASModel model); added
+        Set the filename (indentifier) of an XML Schema ASModel.
+    - public ASModel getASModelById(String targetNamespace, 
+            String fileName, boolean includeHigherLevelCatalogs); added
+        Get an ASModel representing an XML Schema.
+    - public ASModel getASModelByCatalogId(long id); added
+        Get an ASModel with the specified unique id. To get an id,
+        use the getCatalogId method on ASModel.
+    - public Iterator getDocumentsUsingASModel(ASModel model); added
+        Locate all documents in the database that use a specified 
+        ASModel.
+    - public XhiveGrammarPoolIf getGrammarPool(); added
+        Direct access to the Xerces grammar cache used by X-Hive/DB,
+        for that catalog.
+    - public ASDOMBuilder createASDOMBuilder(); added
+        Create an ASDOMBuilder that can be used to load DTDs or
+        XML Schemas into the catalog.
+    - public DOMASWriter createDOMASWriter(); added
+        Convencience method to create an DOMASWriter to serialize
+        ASModels with.
+ - com.xhive.core.interfaces.XhiveGrammarPoolIf
+    New interface, with methods to directly affect the Xerces 2 Grammar
+    objects that X-Hive/DB uses.
+ - com.xhive.versioning.interfaces.XhiveVersionSpaceIf
+    public String getName(); added
+      Return an identifying name for the versionspace
+    public void remove(); added
+      Remove the versionspace and all version information
+      contained in it.
+ - com.xhive.index.interfaces.XhiveIndexIf
+    - Added the constants TYPE_DATE_TIME, TYPE_DATE, TYPE_TIME,
+      TYPE_YEAR_MONTH_DURATION, TYPE_DAY_TIME_DURATION representing
+      index data types.
+Bug fixes:
+ - In NO_MROW mode, it was possible to get 'Invalid ooId' messages instead
+   of LOCK_NOT_GRANTED exceptions.
+ - Column numbers of XQuery error messages corrected for certain cases.
+ - See below for the bugfixes made in earlier 4.0.x releases.
+
+Changes since release 4.0.3
+---------------------------
+Bug-fixes:
+ - The creator of versions is now set to the right user (was the user
+   who created the original version). (643)
+ - Encoding is not versioned. In release 4.0.4 a work-around was
+   added so that the encoding of the document originally versioned
+   is returned (sufficient for documents whose encoding does not
+   change during versioning). (645)
+ - With certain parse options, and entity declarations using nested
+   entity references, a stack overflow could occur. (644)
+ - FTI indexes using FTI_GET_ALL_TEXT did not index text correctly
+   at element boundaries. This is fixed for newly created indexes
+   by adding whitespaces in the indexing at element boundaries. (646)
+   A constant was added on XhiveIndexIf,
+     FTI_CONCATENATE_INDEXED_NODES_DIRECTLY
+   for when an index old index in which element boundaries do
+   not lead to extra whitespace for the tokenizer (this should never
+   be needed).
+ - Column numbers in XQuery error messages could be off by a few 
+   positions.
+
+Changes since release 4.0.2
+---------------------------
+Bug-fixes:
+ - In certain cases, XQueries involving multiple libraries with
+   separate locking contexts could give incorrect results.
+ - Literal sequences in XQuery now take less stack space during
+   query execution.
+ - Serializing documents with a document type declaration without a 
+   system id no gives wellformed output. (634)
+ - You can now move named items within a library. (635)
+ - Original encoding is now used in Adminclient edit dialog. (636)
+ - Adminclient importer now takes into account unreadable directories. (638)
+ - In the importer, libraries were never created locked-with-owner. (637)
+
+Changes since release 4.0.1
+---------------------------
+Bug-fixes:
+ - When having temporary query-results that exceed a 
+   container-fill rate (512 MB by default), an 
+   ObjectIsDeadException could occur in the commit or checkpoint 
+   under some circumstances. (633)
+ - Queries like //eltname[@attr1='value1'][@attr2='value2'] now
+   yield results (if there are matches). (632)
+ - In the adminclient, after a 'Refresh' of a library try to get 
+   fewer ClassCastExceptions (impossible to guarantee completely
+   as refresh breaks the transaction model).
+ - In the adminclient, do not use 'xhive-namespace-fixup' for the 
+   default serializer.
+ - In the adminclient, when an item is removed from the treeview
+   the information pane on the right is updated (used to cause
+   ObjectIsDeadExceptions on the console). (631)
+ - When using paths with spaces using X-Hive/DB from JBoss, it is
+   possible to prevent whitespace escaping in URLs by setting the
+   driver-property 'com.xhive.core.parser.escapeSpaces' to 'false'. (628)
+ - Made some fixes in the namespace fixup algorithm of the serializer,
+   now works correctly for the 'xml' prefix, and chooses the original
+   prefix for new declarations instead of a generated one, when
+   possible. (630)
+
+Changes since release 4.0
+-------------------------
+New features/ improvements:
+ - Added XQuery function: xhive:force(item* $items), which
+   forces the immediate evaluation of its argument. This can be used 
+   if you want to modify query results as you proces them. E.g.
+     Iterator result = lc.executeXQuery("xhive:force(document('doc')//elem)");
+     while (result.hasNext()) {
+       XhiveXQueryValueIf value = (XhiveXQueryValueIf)result.next();
+       // We know this query will only return nodes.
+       Node node = value.asNode();
+       // Remove this node
+       node.getParentNode().removeChild(node);
+     }
+ - It is now possible to use versioned information in XQuery,
+   added functions:
+     xhive:version(node* $document, xs:string $version) 
+       returns a sequence of documents that represent the 
+       contents of specific versions of a set of input documents.
+     xhive:version-property(node* $document, xs:string $version,
+          "date|creator|checked-out-by") 
+       returns the value of a specified property of a specified
+       version.
+     xhive:version-ids(node* $document[, xs:string $branchid])
+       returns the ids of versions of a document.
+     Sample:
+       let $doc := document("/version-lib/book.xml")
+       for $version in xhive:version-ids($doc)
+       where xhive:version-property($doc, $version, "date") < "2003-01-01"
+       return xhive:version($doc, $version)/book/title
+   (See the revised manual for more information)
+ - It is now possible to access versions in XPointers, which
+   can e.g. be used in XLinks. It is done by specifying
+   ##versionid directly after the document name. E.g.
+     /Plays/caesar.xml##1.3#xpointer(/descendent:SPEECH)
+ - When creating indexes, it is now possible to specify
+   a uniqueness constraint (see below).
+ - XhiveExceptions will now always print the error-code in
+   the message. This does mean that the messages may
+   have changed, and if you check for exception message 
+   fragments in your code you should check whether the messages
+   have changed.
+ - getFullPath() on XhiveLibraryChildIf will now return
+   paths with names for those items in the path that have
+   names (used to be only ids).
+ - Adminclient: Import and parsing now one feature, with
+   many more options.
+ - Edited manual, corrected minor manual errors.
+API Changes:
+ - XhiveSessionIf
+    public XhiveDocumentIf createTemporaryDocument(); added
+      This method returns an empty X-Hive/DB document, that
+      does not cause locking conflicts. This document
+      can e.g. be used as the target document for an XLink
+      expansion. (617)
+ - XhiveIndexIf
+    public constant UNIQUE_KEYS; added
+      Specifying this option when creating an index means
+      the index is checked for uniqueness of keys as
+      entries are added.
+Bug-fixes:
+ - There was a small memory leak in session.checkpoint() for
+   the adding of (many) documents.
+ - Fixed OBJECT_DEAD, attempted persistent operation on dead 
+   object of class PageImpl exception that could occur after 
+   a session checkpoint (in special cases).
+ - Version information created by users that are deleted from
+   the database became inaccessible. (620)
+ - Some version information could not be removed properly (without
+   removing the entire library).
+ - When performing a checkout or getting an older document version 
+   from XhiveVersionIf with an outputstream as a target, the
+   document output is now no longer beautified (so left unchanged).
+ - XLink expansion did not work correctly for documents with 
+   document type nodes. (623)
+ - The percent sign (%) must be escaped in entity values
+   during serialization (and parsing against a DTD in
+   the database). (622)
+ - Removed excessive flushing of streams during serializations
+   (there still is one flush at the end of writeNode of DOMWriter).
+ - The adminclient could report errors on imports (but still
+   worked). (618)
+ - XPath number and empty query results gave errors in the 
+   administrator client. (619)
+ - setHint and setLocation on ASModels gotten off documents
+   did not work when the document had an internal subset. (625)
+ - getPublicIds() on XhiveCatalogIf could contain results with
+   #-characters instead of /-characters.
+ - Improvements in setting cascading features on DOMBuilder.
+   
+Changes since release 4.0 beta1
+-------------------------------
+New features:
+ - Value indexes are now typed (String, int, float, long double). 
+   This means amongst other things that you can use XQuery to look 
+   for ranges of numbers.
+ - Catalog system rewritten. Now works exclusively on
+   public ids. If you use DTDs a lot, you are advised to read
+   the new 'Using the catalog and DTDs' chapter in the manual.
+ - X-Hive/DB 4.0 on Linux now supports RedHat Linux 7.2 (through
+   Objectivity 7.1), and allows individual database segment files 
+   to be larger than 2 GB.
+API Changes:
+ - XhiveDriverFactory
+    public String getXhiveVersion(); added
+      Allow applications to determine which X-Hive/DB version
+      is being used.
+ - XhiveCatalogIf
+      A lot of the methods in XhiveCatalogIf now have a variant
+      where a boolean parameter 'includeHigerLevelCatalogs' can
+      be specified. By setting this parameter to true, higher
+      level catalogs will also be consulted for this information.
+    public boolean isUsed(ASModel model); no longer works
+    public Iterator getAssociatedDocuments(ASModel model); removed
+      Because of the new way the catalog is set up, it is
+      no longer maintained what documents use a certain ASModel,
+      or whether it is used at all.
+    public void setDefaultASModel(ASModel model); added
+      This method can be used to specify which ASModel (DTD)
+      to use in a library if none can be found with the
+      public id.
+ - XhiveDocumentTypeIf
+    This interface was added. DocumentType nodes can be cast
+    to this interface, to allow setting the public id and
+    system id.
+ - XhiveLibraryIf
+    public boolean hasLocalCatalog(); added
+    public void addLocalCatalog(); added
+    public void removeLocalCatalog(); added
+      You can now specify yourself which libraries should
+      get a catalog. By default, only the root-library
+      will have a catalog.
+ - XhiveNodeIf
+    public String getLastValidationErrorMessage(); removed
+    public Node getLastValidationErrorNode(); removed
+      These were deprecated methods, use DOMErrorHandler instead
+      (see the AbstractSchema.java sample for a sample).
+ - XhiveIndexListIf
+    public XhiveIndexIf addValueIndex(
+              String name, String elementURI, String elementName,
+              String attributeURI, String attributeName, 
+              int options); changed
+      The behavior of this method has changed somewhat, in the
+      sense that you can now pass the type of values to be
+      stored in the index (see below) as one of the options.
+ - XhiveIndexIf
+    public static final int TYPE_STRING; added
+    public static final int TYPE_INT; added
+    public static final int TYPE_LONG; added
+    public static final int TYPE_FLOAT; added
+    public static final int TYPE_DOUBLE; added
+      New constants that can be used to specify a type
+      of index for a value index
+    public static final int TYPE_MASK;
+      Can be used to determine the type of index, in combination
+      with getOptions()
+    public static final int FTI_GET_ALL_TEXT = 0x00100000;
+    public static final int FTI_SUPPORT_PHRASES = 0x00400000;
+    public static final int FTI_SA_ADJUST_TO_LOWERCASE = 0x20000000;
+    public static final int FTI_SA_FILTER_ENGLISH_STOP_WORDS = 0x40000000;
+    public static final int FULL_TEXT_INDEX = 7;
+     New constants related to full text indexing.
+Other improvements:
+ - Moved several advanced topics to the manual, parts of manual
+   rewritten and reordered.
+ - getAsDocument() no longer needs to write lock the library that 
+   contains the version that is retrieved.
+ - Enabled specifying a user defined analyzer for full text indexes.
+ - Performance improvements in the creation of indexes that index existing
+   data. You are advised to load data first, and then create the indexes
+   on them in the case of batch-loads.
+ - XQuery now supports:
+    - xmlspace declaration
+    - document constructor
+    - xf:root($node) function
+ - XQuery optimizer can use multiple indexes for a single path expression, e.g.
+    //x[@x='x']/y[@y='y']
+    //person[firstname="Art" and not(lastname="Vandelay")]
+ - X-Hive/DB 4.0 now comes with Xerces 2.2.1 and Xalan 2.4.1.
+ - In the Administrator Client:
+   - Improved XQuery dialog.
+   - Allow version information to be seen.
+   - Allow catalog information to be seen.
+Bug fixes:
+ - XQueries involving DOM Level 1 attributes gave no results. (612)
+ - Accessing deleted nodes in subsequent transaction now gives a
+   proper ObjectIsDeadException. (613)
+ - Obfuscation was performed incorrectly for evaluation versions, made
+   it impossible to create databases in certain environments. (611)
+ - Storing null as attribute or character data value now equivalent to 
+   storing empty string.
+(from 3.0.3)
+ - Made AMS working again. (616)
+ - Make it possible to call importNode on XQuery results. (615)
+
+
+Changes since release 3.0.2
+---------------------------
+New features:
+ - New storage model for documents and indexes:
+    - Faster storage (2.5 times as fast).
+    - Faster retrieval (over 5 times as fast).
+    - Faster index updates (depending on situation, may
+      be over 20 times as fast).
+    - Smaller footprint (up to 4 times less harddisk
+      space required).
+    - Better memory management, leading to fewer
+      out-of-memory exceptions.
+    - A side-effect of these changes is that documents
+      will use 8 KB minimum.
+ - New live full text indexing:
+    - Add full text interfaces on libraries or documents,
+      for specific elements or attributes.
+    - Indexes are used from queries using the xhive:fts
+      function.
+    - Also see the FTI.java sample
+API Changes/ updates:
+ - Removed most interfaces that were made deprecated in
+   X-Hive/DB 3.0 (this mostly relates to query-lists on the
+   user objects, and the old physical database structure).
+ - Removed old content model-interfaces (were not used by 
+   anybody anymore).
+ - Made all interfaces in 
+      com.xhive.index.fti.interfaces
+      com.xhive.index.fti.lucene.interfaces
+   deprecated. We know offer a more tightly integrated
+   full text search integration. We will soon offer the
+   interface implementation sources of these
+   com.xhive.index.fti.* packages as a sample on how
+   to integrate with Lucene yourself.
+ - The following interfaces were made deprecated:
+    - XhiveUserIf
+        public String getPassword();
+      Deemed unnecessary.
+    - XhiveNodeIf
+        public void detachDescendants();
+        public boolean descendantsAreDetachable();
+      No longer necessary to do your own memory management.
+    - XhiveIndexIf
+      XhiveIndexListIf
+        All methods related to 'buckets'.
+      The new index storage no longer uses buckets, so
+      there is no reason to specify bucket sizes or types.
+ - The following interfaces were added/ changed:
+    - XhiveDatabaseIf
+        public XhiveIndexListIf getIndexList(); removed
+          There is no longer an index-list on the database,
+          use the index-list on the root-library instead.
+    - XhiveIndexKeyIteratorIf
+        Added, a special version of java.util.Iterator that
+        allows to iterate over the keys of an index, and their
+        values, quickly.
+    - XhiveIndexListIf
+        public XhiveIndexIf addFullTextIndex(...);
+          Add a a full text index on an attribute or element
+          text content (see API documentation for more
+          information).
+    - XhiveIndexIf
+        Added several constants for the creation of live full
+        text indexes.
+        public XhiveIndexKeyIteratorIf getKeys();
+        public XhiveIndexKeyIteratorIf getKeysFrom(Object key);
+          getKeys...() will now return an XhiveIndexKeyIteratorIf 
+          instead of a java.util.Iterator (*).
+          When callling getKeys on a library id index, you will
+          get back Long objects, not Strings.
+        public XhiveNodeIteratorIf getNodesByKey(Object key);
+          Changed key argument from string to object (*).
+          The results are no longer returned in document order.
+        public Node getNodeByKey(Object key); added
+          Convenience method when you know there is only one matching 
+          result.
+        public int getOptions(); added
+          Get the options mask of an index.
+    - XhiveXQueryValueIf
+        public boolean isNode(); added
+          Convenience method to determine whether a result is a node
+          or not.
+    - XhiveCatalogIf
+        public Iterator getAssociatedDocuments(ASModel model); added
+          Get the list of all documents that use a specified ASModel.
+    - XhiveLibraryIf
+        public XhiveLibraryChildIf get(long id);
+        public XhiveLibraryChildIf get(String name);
+          get(...) will now return an XhiveLibraryChildIf instead of
+          a Node, to save a cast (*).
+    *) Will require a recompile but no source code change.
+Other changes/ bug fixes:
+ - XQuery now uses the indexes in more cases:
+      (samples assume a value index on 'name' element, placed
+      on persons library, that is used in each query).
+    - Indexes are used when the document and collection 
+      function is used with non-string constants (e.g. 
+        let $x = '/persons' return document($x)//name[. = 'Art Vandelay'] ).
+    - Queries will use indexes of libraries below the context
+      node (e.g 
+        document('/')//name[. = 'Art Vandelay'] ).
+    - Smarter path expression evaluation (e.g 
+        document('/persons')//person[name = 'Art Vandelay'] ).
+    - xhive:fts will use full text indexes whereever value indexes 
+      would be used (e.g 
+        document('/persons')//person[xhive:fts(name, 'Art Vandelay']
+      if there would be a full text index on the name element).
+    - Limited use of indexes in range queries
+        document('/persons')//person[name <= 'Art Vandelay'] ).
+ - Added the xhive:fts XQuery function. See the FTI.java sample
+   for usage examples.
+ - XQuery keyword 'unordered' is now useful in X-Hive/DB. If you have a 
+   query like
+     unordered document('/persons')//person[name = 'Art Vandelay']
+   and it uses indexes, especially if there are many results there
+   will be a performance boost as results do not have to be sorted
+   in document order.
+ - Removed not3 and shallow XQuery functions (no longer in latest
+   specification).
+ - Faster removal of libraries that have their own locking
+   context.
+ - You can no longer use == or != to compare nodes in your program, 
+   use .equals() instead (there may be multiple objects that refer to 
+   the same Node now).
+
+Changes since release 3.0.2
+---------------------------
+Bug fixes:
+ - Made AMS working again. (616)
+ - Make it possible to call importNode on XQuery results. (615)
+
+ - Building indexes (added after loading the to be indexed 
+   documents) used to have a memory leak for large
+   amounts of keys.
+ - getChildElements on ElementEditAS now gives no errors
+   for non-existing elements referenced in the DTD. (610)
+ - Bugfixes for libraries with the flag 
+   DOCUMENTS_DO_NOT_LOCK_WITH_PARENT set:
+   - Proper removal of versioned documents when removing
+     the library.
+   - Proper placement of the document type node (with the
+     document) in case of versioning.
+ - Better exception handling in XhiveSqlLoaderIf.
+   
+
+Changes since release 3.0.1
+---------------------------
+Added/ Changed features:
+ - To not clash with new releases of Xerces, placed
+   org.w3c.dom.ls interfaces in other package: org.w3c.dom.xhivels
+   This will require a change of imports/ recompile of sources
+   that use this package.
+   A new dom3_intermediate.jar with the interfaces in the new
+   package is provided, you should replace existing copies of
+   this jar.
+ - New type of indexes, using the option 
+    XhiveIndexIf.DOCUMENT_OPTIMIZED_BUCKETS 
+   will create indexes that are larger but have better removal 
+   performance (for when documents are replaced often).
+ - XhiveSessionIf 
+      public void setUserClassLoader(ClassLoader cl); added
+   Can be used to specify what classloader to use for user
+   defined functions on a per session basis.
+ - XQuery functions added:
+    - Added xhive:document-name() function that determines
+      name of document-argument.
+    - base-uri() function enabled that determines full path 
+      of document-argument.
+ - XSLT transformations through XhiveTransformerIf now allow
+     xhive:/path/to/library/or/document[#Xquery]
+   in document(...) functions in XPath and <xsl:import href="..."/>
+ - Adminclient
+    - Allow XML files and BLOBs to be shown in web-browser (in
+      properties window).
+    - XQuery result window shows number of results and time taken.
+    - Allow larger result sets to be shown in query dialog.
+    - Document editing improvements including showing that
+      document is edited, keeping internal subset when saving, 
+      allowing for ctrl-s to save, and editing of individual nodes 
+      instead of document.
+    - Document edit-window now has keep whitespaces parse option.
+    - Introduced 'recent files' for import.
+ - For test-license version, put obfuscated classes in package to 
+   allow interoperation with JBoss 3.0.1.
+Bug fixes:
+ - Removal/ updates of attributes from an index could lead to
+   removal of too many index entries. (601)
+ - Certain special DOM operations could lead to index errors
+   (object not found exceptions during updates and queries
+   on the index).
+ - Building Context conditioned indexes uses less memory.
+ - When removing a user, change ownership of their indexes. (596)
+ - Allow versioning of namespaced documents with prefix in
+   document element name. (598)
+ - In XQuery, comparisons of non-integer values are now performed 
+   as such.
+ - In XQuery, fixed NullPointerException in obscure cases where
+   only one result was expected and found.
+ - In XPath and XQuery queries, do not find nodes with a namespace
+   that does not exist in the document.
+ - In XPath, nodeset iterators could not be used as variable
+   bindings on a query context. (594)
+ - Administrator client does not keep references to documents
+   and libraries after a rollback. (602)
+ - Blobnodes are now clickable again in the administrator
+   client. (591)
+ - Importing large sets of small documents with the 
+   administrator client could sometimes cause the interface
+   to 'hang'. (593)
+ - Faster initialization of parser for combination with
+   JBoss 3.0.x. (599)
+ - Allow to respecify the location of the bootstrap file
+   when gettting a driver, if and only if the location
+   was first specified incorrectly (with some extra error
+   codes and messages to control this process).
+
+
+Changes since release 3.0
+-------------------------
+ - XhiveIndexIf
+      public Iterator getKeysFrom(Object key); added
+   Allows to get ranges of keys in a sorted index.
+ - XhiveDriverIf 
+      public void setUserClassLoader(ClassLoader cl); added
+   Can be used to specify what classloader to use for user
+   defined functions in XQuery and XPath and context conditioned
+   index nodefilters.
+ - XhiveLibraryIf
+      public int getNumChildren(); added
+   Count function, relatively quick if there is a library 
+   id index.
+ - Added several interface methods on XhiveIndexListIf, allowing
+   to add indexes specifying options but not the bucketsize
+   (it used to be that if you wanted to specify options, you
+   also had to specify a bucket size).
+ - For new databases, the default is now 25 initial pages for
+   new containers instead of 100 (this is to save space with
+   large amounts of separate locking contexts).
+ - Performance improvement in XQueries over libraries (created with 
+   release 3.0.1) with large amounts of documents, relatively few 
+   query-results where the results must be sorted (which is true for 
+   most non-trivial queries).
+ (The improvements for indexes mentioned below only apply to 
+ indexes created with release 3.0.1 (or later))
+ - There now is a bigger difference in performance between indexes
+   created in their own locking context (the default) and those
+   that lock with the library (or document) for which they are
+   created (those in their own locking context are quicker).
+ - Indexes created with addLibraryIdIndex(...) and addLibraryNameIndex(...)
+   on XhiveIndexListIf now create indexes that have their own locking
+   context by default (used to always lock with their owner-library).
+   You can override this by specifying the XhiveIndexIf.LOCK_WITH_OWNER 
+   parameter.
+   (The default library name index created when a library is created still 
+   locks with its parent. For performance you should replace that one with 
+   one that does not lock with the library if you plan to name more than 
+   approximately 5000 documents in a library)
+ - Removal of indexes now quick if they are in their own locking
+   context.
+ - Indexes take up less harddisk space, especially with large value 
+   bucket indexes (relative to large value buckets in previous releases).
+ - The Javadoc API documentation for the indexing interfaces has been 
+   rewritten (among others to reflect the changes listed above).
+ - Creation of indexes, as well as traversal, now takes up less 
+   working memory.
+ - During serialization of US-ASCII and ISO-8859-* encoded documents,
+   character entities are introduced for characters that cannot
+   otherwise be serialized in that encoding. (577)
+ - When serializing with namespace fixup (the default in the
+   Load/ Save module), xmlns attributes were incorrectly serialized
+   as xmlns:xmlns. (578)
+ - In XQuery, the match() function now also works on full matches
+   of the input (also a fix for expressions starting with '.'). (585)
+ - In XQuery, multiple argument user defined functions now work. (586)
+ - In XQuery, the string-length() function now returns 0 for an empty
+   String (was 1).
+ - Upgraded icu4j.jar, the icu4j jar must match the xhive jar used.
+ - One should not use DOM Level 1 documents (parsed with parseDocument
+   without PARSER_NAMESPACES_ENABLED) with XQuery, but setNamedItemNS
+   on NamedNodeMap now works for non-namespace aware items. (589)
+ - Function read() of InputStream returned by getContents() of
+   XhiveBlobNodeIf now returns the end of the stream correctly. (588)
+ - setIsPCDataOnly() on ASElementDecl now works when the parameter
+   is 'false'. (574)
+ - Better error message when there are no containers left in the
+   database files. (583)
+ - Documentation error: The 2 GB filesize limit does not apply
+   to the root-library, if you want the file to remain within
+   a certain filesize you should not store too much data in the
+   root-library. (573)
+ - Sessions with a maxCachePages of lower than 32 are no longer
+   allowed.
+ - Added LoadDirectory sample containing code to load an
+   entire directory structure.
+ - Installer for Unix did not allow to install with a user-defined 
+   data directory (575), now also works with JDK 1.4. (570)
+ - Administrator Client:
+   - Better recovery of the GUI tree-view after a rollback.
+   - Tab in right pane is now remembered as you click on 
+     different nodes.
+   - Parsing of documents with duplicate names failed.
+   - Namespace declarations were not used in XPath queries.
+   - Users other than the administrator could not get properties
+     of libraries and documents. (584)
+   - Better exception handling for editing an index. (571)
+   - Now uses seperate thread to retrieve the documents
+     of a library, resulting in better responsiveness when
+     accessing large libraries.
+   - Check for running threads before exiting.
+
+
+Changes since release 3.0 beta 1
+--------------------------------
+API Changes/ updates:
+ - The executeXQuery method has been moved to XhiveLibraryChildIf
+   (so that it can be executed on libraries as well as documents),
+   and now has an optional extra argument indicating where new
+   nodes must be created. If you were using
+      document.executeXQuery(queryString);
+   in earlier X-Hive/DB 3.0 releases, you can replace it with
+      document.executeXQuery(queryString, document);
+   for backwards compatibility (but you may not want to change your
+   statements, see the API documentation for more details).
+    XhiveLibraryChildIf
+      public Iterator executeXQuery(String query); added
+      public Iterator executeXQuery(String query, 
+            XhiveDocumentIf creationDocument); added
+    XhiveDocumentIf
+      public Iterator executeXQuery(String query); removed
+ - XhiveSessionIf
+      public void setDeadenObjectsAfterCommit(boolean mode); added
+   This method is the same as setFlushCacheAndDeadenObjectsAfterCommit
+   (but with a shorter name). What is important here is that we
+   changed the default to true, see the API documentation for details.
+ - XhiveLibraryChildIf
+      public XhiveLibraryChildIf getByPath(String path); added
+ - XhiveVersionIf
+      public void addLabel(String label); added
+      public Iterator getLabels(); added
+ - XhiveFileIf
+      public int getContainerCount(); added
+      public XhiveSegmentIf getSegment(); added
+      public void setMaxContainers(int maxContainers); added
+ - DOMError, DOMErrorHandler, DOMLocator, DOMSystemException
+   interfaces moved to org.w3c.dom.error subpackage (see error
+   559 below).
+ - XQuery support is now for the latest public specification, of 
+   April 30 2002. Amongst other things, this means that '==' in 
+   queries should be replaced by 'is'.
+ - Manual is now updated to reflect all the changes since X-Hive/DB 2.0.
+Administrator updates:
+ - The database meta-information of new types of database (segments, pools
+   and cluster-rules) is now accessible through the administrator client.
+ - XQueries over libraries are now possible, and 
+   documents and libraries in the result are now shown. (560)
+ - When adding indexes, the 'large value bucket' option is no longer
+   checked by default. (561)
+ - The interface is now updated, as well as disabled, when executing a
+   time-intensive query.
+Bug fixes:
+ - When parsing large sets of documents more memory is now released 
+   during parsing. (558)
+ - In Tomcat 4.0.4, you can now run X-Hive/DB as a servlet with all the
+   jars located in the servlet/lib directory (there is a bug in 
+   Tomcat 4.0.2/ 4.0.3 with a partial fix in 4.0.4). For this the 
+   extra org.w3c.dom interfaces were moved to an org.w3c.dom.error 
+   subpackage. (559)
+ - When running XQueries, the documents being queried are no longer 
+   locked for writing. (529)
+   Also, it is no longer needed to lock a document with queries that have
+   node creators, see first item in this changes list.
+ - Performance improvement for removal of nodes that leads to live index
+   updates.
+ - Serializing a large document no longer takes up memory (unless
+   you are serializing to String, than that String(-buffer) will take
+   up memory). (566)
+ - Whitespace between entity-references is no longer discarded. (568)
+
+Changes since release 3.0 Technology Preview
+--------------------------------------------
+Updates/ Additions:
+ - Easier database-setup, with less administration By default, you do not 
+   have to specify container pools for new databases anymore, databases 
+   extend automatically as they grow. More advanced configurations
+   possible.
+ - The use of a xhive.properties file has became optional. You can 
+   now also directly specifiy the path to the federation bootfile wherever
+   there was a reference to xhive.properties.
+ - XQuery:
+      - Can now use expressions in braces in quoted attributes
+        <elem attr="{ $x }"/>
+      - Can use XPath axes ancestor, ancestor-or-self, following,
+        following-sibling, preceding, preceding-sibling
+ - Administrator client improvements:
+    - Better responsiveness all around
+    - Ability to create Element-name indexes
+    - Easier to use query-dialogs, based on new API
+ - It is now possible to edit ASModels (should still be considered experimental)
+ - Xerces updated to 2.0.1, Lucene updated to release 1.2 rc4,
+   antlr upgraded, jakarta-regexp library no longer used.
+Important API Changes:
+ - Easier interfaces introduced for executing XPath and XPointer queries, and 
+   building querycontexts. Old interfaces are deprecated:
+    XhiveNodeIf
+      public XhiveQueryResultIf 
+          executeXPathQuery(String expression,
+                            XhiveXPathContextIf context); added
+      public XhiveQueryResultIf 
+          executeXPointerQuery(String expression,
+                            XhiveXPathContextIf context); added
+      public XhiveXPathContextIf createXPathContext(); added
+   (several other query interface interfaces have become
+   deprecated, they are replaced by these methods)
+ - XhiveXPathContextIf: added
+ - Storing queries, query contexts and query results has now 
+   become deprecated. The interfaces related to this in
+      com.xhive.query.interfaces
+   and
+      com.xhive.xpath.interfaces
+   have become deprecated, as well as the query-related methods
+   on
+      com.xhive.core.interfaces.XhiveUserIf
+   Use the new interfaces listed above instead.
+ - XhiveDriverIf
+      public void setStringProperty
+                    (String propertyName, String value); added
+   (other way than xhive.properties to set X-Hive/DB properties)
+ - XhiveLuceneQueryEngineIf
+      public void setUseAnalyzer(boolean useAnalyzer); added
+ - XhiveNodeIf
+      public ... getLastValidationErrorNode/Message(); deprecated,
+        use an error-handler instead (see AbstractSchema sample).
+ - The command line tools arguments order has been made
+   more logical.
+Bug Fixes:
+ - XQuery bug fixes
+      - &amp; and other predefined entity references in queries
+      - "Internal error : Owner document is lost X235" in queries
+        that create large intermediate results with newly
+        constructed nodes
+      - Regular expressions with '?' and '|'
+ - XQuery performance improvements for queries that use lots of
+   index entries. (554)
+ - When using an element name index, setting individual attributes
+   could lead to index corruption. (556)
+ - FTP now serializes documents with the right encoding (555)
+ - Uninstaller now works with JDK 1.4 (older JRE is included
+   but only used during deinstallation, for this). (541)
+ - You can now add element name indexes with the adminclient (542)
+ - In abstract schema, a difference is now made between strict
+   and partial validation, which has an effect on isNodeValue
+   and the can... methods on NodeEditAS.
+   Also, the error handler is now called on errors.
+ - XhiveFederationIf.createDatabase(...) methods do not return the newly created 
+   database anymore since superusers are not allowed to modify databases. (509)
+
+
+New in 3.0 Technology Preview
+-----------------------------
+ - XQuery
+ - Element name indexes
+ - Load/ Save interfaces
+ - Abstract Schema interfaces (experimental)
+ - Improved adminclient
+ - Removed methods/interfaces deprecated in X-Hive/DB 2.0 
+ - Upgraded to Xerces 2.0.0 and Xalan 2.3.1
+
+
+Changes since release 2.0.1
+---------------------------
+Improvements:
+ - Improved large document support for parsing of documents in not 
+   optimized libraries. The setting of special properties to enable 
+   parsing of large documents is not necessary anymore.
+ - Improved performance of updating live indexes.
+ - Addition of the XhiveLibraryIf.DOCUMENTS_DO_NOT_LOCK_WITH_PARENT 
+   option, allowing documents in a library created with this option to 
+   have their own locking context (530).
+Bug fixes:
+ - Attributes can now be moved from one element to another (536).
+ - In some case removed nodes where not properly deleted from the database
+   (463, 535).
+ - Groups and users do not have authority objects anymore, properties of 
+   users can only be changed by the user itself, or the administrator (533).
+Adminclient changes:
+ - Several settings, including window size and position, login information
+   and directories, are now remembered in the .xhive.admin.properties file 
+   in the user's home directory.
+ - The parse dialog is improved. It has a new file chooser dialog which 
+   has a preview function, it remembers the last 5 visited directories and
+   has an accurate progressbar.
+ - The management of indexes has moved to a special tab in the details pane 
+   of library children. From there the live indexes can be added, edited and
+   deleted.
+
+
+Changes since release 2.0
+-------------------------
+Bug fixes:
+ - For documents with a document-type node, Version.getAsDocument() 
+   and Version.checkout() now work. (513)
+ - In some cases, there were problems in removing libraries
+   with version information.
+ - Creating Value and ID-indexes on large data-sets no longer leads 
+   to memory problems.
+ - Removing multiple nodes with intermediate commits in documents
+   that are indexed no longer lead to dead-object-exceptions (524, 525).
+ - Fixed several problems with XLink, related to relative
+   links and links within a document. As a consequence of this,
+   absolute path XLinks will now only work on documents that
+   have been inserted in the library-tree (515, 516, 517)
+ - Relative paths to a document in the same library now work for
+   XhiveLibraryChildIf.executeFullPathXPointerQuery(...) (518)
+ - XhiveXPathQueryIf.executeToPrintWriter(...) now works
+   for when the query-result is unordered. (510)
+ - Using the id(...) function in XPath queries on documents
+   with ID-attribute indexes, no longer lead to exceptions
+   if the given id does not exist in the document. (523)
+ - The InputStream from XhiveBlobIf.getContents() can now
+   be wrapped in a BufferedInputStream. (512)
+ - XhiveNodeIf.toString()/ toXml() now give back proper
+   unicode-Strings.
+ - Attr.getFirstChild() (used by e.g. importNode of Xerces)
+   will no longer take a write lock. (521)
+ - XhiveQueryContextIf.isValid() would return false for
+   valid contexts (526).
+ - When parsing a document with a lot of character entities,
+   parsing speed remains okay. (511)
+ - Several changes were made to the FTP-server, among which the 
+   ability to remove libraries. (514)
+ - The methods from XhiveTransformerIf do not print exceptions on
+   the console in case of errors (they do throw exceptions).
+ - The parser instantiates the underlying Xerces parser directly, 
+   not using JAXP.
+
+API changes:
+ - XhiveDocumentIf
+    public boolean fixupDoctypeIds(String catalogFolderName);  added
+ - XhiveSchemaDocIf
+    public void setSystemId(String id);  added
+    public void setPublicId(String id);  added
+ - XhiveXLinkUtilIf
+    public Iterator resolveLinkedResources(uri, impl, context); added
+
+Sample changes:
+ - DomLinkBase.java
+    Added
+      library.appendChild(linkBase);
+    to line 117, to make sure the document with XLinks is in the
+    library structure (this is related to bug fix item 4).
+ - FTI.java
+   Changed the style-sheet, with the example stylesheet text
+   of different paragraphs was appended without a whitespace
+   between them.
+
+
+Changes since release 1.1.4
+---------------------------
+
+New features:
+
+- Added linear versioning and branching, to maintain different versions of one 
+  document in the database.
+- Added support for storing BLOBs (binary objects) in the database.
+- New indexing capabilities:
+  - Indexing of ID attribute values 
+  - Indexing of element and attribute values (not yet used by XPath/XPointer queries)
+  These indexes are live and incremental.
+- New session API that replaces the current connection/transaction API. 
+- Added Lucene integration, a light weight full text engine which can be used to perform full text 
+  searches on the database.
+- XPath Query results can be written to a Document or a stream.  
+- Better support for querying the database with a full path (including a library/document path).
+- (Upgraded Xerces to 1.4.3, which means you can validate against
+   http://www.w3.org/2001/XMLSchema XML Schema's)
+
+API changes:
+
+Documents that are marked as checked out will no longer be marked as 
+checked out after an upgrade.
+
+- XhiveFederationIf
+  public void setSuperUserPassword(String newPassword);  added
+  public void setLicenseKey(String key); added
+  publis String getVersion(); added
+  public String getLicenseKey(); added
+- XhiveLibraryIf
+  public int nrDocuments(); deprecated
+  public boolean removeAllowed(XhiveDocumentIf doc); deprecated
+- XhiveDocumentIf
+  public void checkOutDocument() throws XhiveException; throws UnsupportedOperationException()
+  public void checkInDocument() throws XhiveException; throws UnsupportedOperationException()
+  public XhiveUserIf getCheckedOutBy() throws XhiveException; throws UnsupportedOperationException()
+- XhiveSessionIf introduced
+- XhiveTransactionIf deprecated
+  public void getUser(); returns null in case of a super user.
+- XhiveConnectionIf deprecated
+- XhiveDriverIf
+  public XhiveSessionIf createSession(); introduced
+  public XhiveSessionIf getConnection(); deprecated
+  public XhiveQuickDBAccessIf getQuickDbAccess(); deprecated
+- XhiveQueryIf
+  public void executeToNode(Node node); introduced
+  public void exectuteToPrintWriter(PrintWriter writer); introduced
+- XhiveQuickDbAccessIf deprecated
+  public void setQuickaddressingDocumentSeparator(String separator); throws UnsupportedOperationException()
+  public void setQuickaddressingLibrarySeparator(String separator); throws UnsupportedOperationException()
+  public void setQuickaddressingXpointerSeparator(String separator); throws UnsupportedOperationException()
+- XhiveIndexIf
+  public void removeDocument(Document doc); deprecated
+  public boolean indexDocument(Document doc, ClassLoader classLoader);
+  public boolean sortsKeys(); deprecated
+  public boolean indexDocument(Document doc);  deprecated
+- XhiveNodeIteratorIf
+  public void hasPrevious(); deprecated; throws UnsupportedOperationException()
+  public void previous(); deprecated; throws UnsupportedOperationException()
+- XhiveNodeIf
+  public int getKey(); deprecated
+  public Node getDescendantByKey(int key); deprecated
+- XhiveUserIf
+  public boolean checkPassword(String tryPassword); deprecated
+
+Changes since release 1.1.3
+---------------------------
+Note: 1.1.4 was an internal release.
+Bug fixes:
+ - XhiveLibraryIf.importNode works on document type items. (503)
+ - Context Conditioned Indexes can contain Document nodes (fix
+   in retrieval). (496)
+ - Enabling large document support could lead to garbling
+   text-information in special cases (no incorrect storage). (497)
+ - When creating a new document with the adminclient, the
+   namespace is set to null if it is not entered.
+ - Entity References with whitespace now work. (500)
+
+Changes since release 1.1.2
+---------------------------
+Bug fixes:
+ - XPath querying remains possible after a rollback in a
+   transaction. (495)
+ - Document.getElementById(...) now functionally correct. (460)
+ - XPath now works correctly for CDATA-sections. (462)
+ - XhiveSqlLoader no longer creates an empty document type.
+ - NodeCM.isValid() improvements in element content checking.
+ - CMElementDeclaration.getCMGrandChildren() now works for mixed content.
+ - Serializing attributes and document types (using toString() or
+   toXml()), now gives a result.
+
+Release 1.1.3 is for the most part an effort to become more DOM Level 2 
+compliant, most users should not be affected by the changes/ fixes to
+accomplish that:
+ - Entity information is now accessible, when parsing in validated mode. 
+   See the property described below that controls this behavior.
+   (only works for entities used in the document) (482)
+ - Entity reference content is now read-only. When creating entity 
+   references, their content is copied from the entity value. (294)
+ - The document type node is now a proper child of the document. (438)
+ - Document.getElementsByTagName(...) improvements in working with 
+   namespaced documents. (480)
+ - Document.replaceChild(...) now works for the document element. (453)
+ - Node.setPrefix(null) now works. (469)
+ - Plus, a several small changes related to seldom used functionality,
+   fixed for compliancy.
+
+ - Added boolean property com.xhive.core.parser.storeEntities that can 
+   be set (to true or false) in the xhive.properties file.
+   It controls whether entities are stored or not (this can save 
+   a lot of space when storing validated documents with elaborate 
+   DTD entity information). There is no need to set this feature 
+   if you do not parse with DTD-validation, or when the DTD does not 
+   contain (large) entities (or when you want our DOM implementation
+   to act correctly for entities).
+   
+Changes since release 1.1.1
+---------------------------
+
+(Note: 1.1.2 is a minor maintenance release)
+
+Enhancements:
+  - Added the interface com.xhive.dom.interfaces.XhiveSchemaDocIf, to access
+    some content model information when the catalog items are approached as
+    a library. This interface is used in samples.util.FtpSample.
+  - The adminclient layout has been improved, its source code has been made
+    more modular.
+
+Bug fixes:
+ - Databases with the same name could not be created twice (442).
+ - Query-results and Query-contexts pointing to non existing
+   documents could not be deleted through the adminclient (446).
+ - The system identifier of documents was set to the system identifier
+   of the first document that was parsed with the same DTD (444).
+ - The system identifier of documents was set to the system identifier
+   of the first document that was parsed with the same DTD (444).
+ - XPointer queries using 'and' and 'or' did not yield correct results.
+
+Changes since release 1.1
+-------------------------
+
+Additions:
+  X-Hive/DB now has support for parsing and indexing large documents
+  (documents that exceed the working memory). Contact X-Hive Support
+  for more information on how to enable this.
+
+Bug fixes:
+  Bug:
+    Removing (parts of) a document that is/ are context
+    conditionally indexed is not possible (413).
+  Fix:
+    Context conditioned indexes are now automatically updated when (parts of)
+    documents that are indexed are removed.
+
+  Bug:
+    Users and groups may not be removed if they 'own' documents
+    and other data.
+  Fix:
+    There are now options to change (or clear) ownership when
+    users or groups are removed, keeping ownership information
+    consistent.
+
+  Bug:
+    Querying used a lot of containers, that and other conditions may lead
+    to lock-not-granted and out-of-container exceptions in heavy
+    (concurrent) use situations.
+  Fix:
+    All query-related information kept during querying within one transaction
+    is placed in the same container, leading to less containers being used
+    and better concurrent performance.
+
+  Bug:
+    Using insertBefore on optimized libraries may cause problems with live
+    indexes (417).
+  Description :
+    The problems are now resolved.
+
+  Bug:
+    Values of attributes do not appear as textnode-children (371).
+  Fix:
+    Limited support is now available, the value of the attribute appears as
+    a single text-node, and the value of an attribute can be set by
+    appending childnodes to an attribute.
+
+  Bug:
+    The XPath count function was slow in some cases.
+  Fix:
+    Performance of the count function has been improved.
+
+  Bug:
+    XPath descendant queries over nested libraries that have
+    their own locking context may give back incorrect results (437).
+  Fix:
+    This problem has been corrected.
+
+  Bug:
+    Namespace attributes cause exceptions when copied by using
+    Node.importNode (428).
+  Fix:
+    No incorrect exceptions are thrown when importing namespace attributes.
+
+  Bug:
+    When importing a document using XhiveLibraryIf.importNode the
+    attributes of the document element are not imported (402).
+  Fix:
+    Those attributes are now properly imported.
+
+  Bug:
+    XhiveXLinkUtil.expandDocument fails when linked resources are not
+    found (420).
+  Fix:
+    Expanding a document which contains 'embedded' links that
+    have 'unresolvable' resources, now skips links that cannot
+    be resolved.
+
+  Bug:
+    XhiveXLinkUtil.expandDocument does not use document element
+    of source DOM.
+  Fix:
+    expandDocument replaces the orginal document element of the
+    target document by the document element of the to be
+    expanded source document.
+
+  Bug:
+    Unclear exceptions occurred when unstored query-related
+    information was used after a commit (416, 418).
+  Fix:
+    When using unstored query-related objects after a commit,
+    an OBJECT_CLOSED exception is thrown.
+    This may have consequences for your program. It is now
+    illegal to use unstored query-releated items after a
+    commit, where in release 1.1 this would work in some
+    cases. In practice, this means you should mean you may
+    have to remove some commit/ begin pairs from your code
+    if you do this in the middle of querying.
+
+  Bug:
+    When calling replaceChild on XhiveLibraryIf with both nodes having the
+    same name an XhiveException.NAME_ALREADY_EXISTS occurs (406).
+  Fix:
+    When both nodes have the same name, replaceChild now succeeds
+
+  Bug:
+    Creating a library with own locking context in an optimized
+    library should not be possible (411).
+  Fix:
+    A proper exception is now thrown.
+
+Enhancements:
+  The adminclient has been redesigned, to present a more uniform look when
+  working with users, groups, queries, extensions and documents (all
+  presented as a tree now). Also, the superuser password and license
+  key can be changed.
+
+  The maximum number of pages per database container has been expanded
+  from 39321 to 65536 pages (You can control how many pages are actually
+  used through the maxpagefilling properties in xhive.properties).
+
+
+Interface changes:
+(Note: removal of interface methods concerns mostly obsolete methods)
+
+com.xhive.core.interfaces:
+  removed
+    public boolean XhiveGroupIf.isOccupied();
+      This used to be necessary to check whether a group could be
+      removed, but now a group will be automatically cleared
+      when removed.
+      (This also has an effect on the exceptions thrown during
+      other user and group removal actions).
+  added on XhiveGroupListIf
+    public void removeGroup(XhiveGroupIf group,
+                    XhiveGroupIf newGroup) throws XhiveException;
+      Remove a group from the list, transferring all its members
+      and authorities to a new group.
+  replaced on XhiveContainerPoolTypeIf
+    public int getMaxPagesPerContainer();
+  by
+    public double getMaxFillPercentage();
+      getMaxPagesPerContainer returned a percentage.
+com.xhive.dom.interfaces:
+  added on XhiveNodeIf
+    public void detachDescendants();
+    public boolean descendantsAreDetachable();
+      These methods were added taking into consideration large documents
+      that may exceed the computer-memory.
+      It makes the descendents of a node garbagecollectable, meaning
+      they can be released from memory (it has no effect on the database,
+      if you request the children of the element that you called
+      detachDescendants on, they will be brought back into memory).
+  moved to XhiveNodeIf
+    public String toXml();
+    public void toXml(Writer output, boolean beautify);
+      Serialization moved from XhiveDocumentIf (more generally
+      applicable), and added way to write directly to an
+      output stream.
+  added on XhiveNodeIf
+    public void detachDescendants();
+    public boolean descendantsAreDetachable();
+      Related to working with large documents.
+com.xhive.dom.xlink:
+  added on XhiveXLinkUtilIf
+    public Document expandDocument (Document document,
+                                    Document resultDocument,
+                                    boolean deep,
+                                    boolean replace) throws XhiveException;
+      This method extends the existing 'expandDocument' function with a
+      'replace' parameter. This extra parameter enables embedding of linked
+      resources by replacing the original 'linking' element.
+com.xhive.error:
+  added
+    XhiveException.OBJECT_CLOSED
+      This exception is thrown when you try to use objects after a
+      commit/rollback.
+    XhiveException.EXCEPTION_WRITING_PROPERTIES
+      It is now possible to change some properties of
+      xhive.properties in the administrator client.
+      This exception is related to when an update fails
+      there.
+com.xhive.index.interfaces:
+    public Iterator XhiveIndexIf.getNodesByKey();
+      The iterator returned does not support the hasPrevious() and
+      previous methods. These methods are not necessary (you
+      will usually just want to get all the nodes), and performance
+      could be improved by not supporting these methods.
+  added
+    public boolean indexDocument(Document doc, ClassLoader loader);
+      An extra indexDocument for usage in e.g. servlets.
+com.xhive.query.interfaces:
+  removed
+    public XhiveAuthorityIf XhiveQueryIf.getAuthority();
+    public XhiveAuthorityIf XhiveQueryContextIf.getAuthority();
+    public XhiveAuthorityIf XhiveQueryResultIf.getAuthority();
+      These methods are available on the superclass
+      (so XhiveQueryIf.getAuthority() is still possible).
+com.xhive.util.interfaces:
+  added on XhiveTransfomerIf
+    public void formatAsPDFToStream(Document foSource, OutputStream os);
+    public void formatAsPDFToStream(DOMImplementation docCreator,
+          Node xmlSource, Document xslSource, OutputStream outputStream);
+  added on XhiveTransfomerIf
+    public void transformToStream(Node xmlSource, Document xslSource,
+          Writer writer);
+      Added methods to write the output of an XSL(T) transformation
+      directly to an outputstream (which could e.g. be a file or an
+      http-output stream).
+
+
+Changes since release 1.01
+--------------------------
+New functionality
+  XPointer support
+  XLink support
+  DOM Level 3 Content Model support for DTD's
+  Nested libraries, Document names
+  HTTP addressing
+  Full text indexing (optional module)
+  FOP, Xalan 2 support
+  Function Objects
+  Meta database
+  XMetal integration
+  FTP access support
+
+Interface changes:
+  Several changes in interfaces since release 1.0.1. (see the javadoc for
+  details).
+  New interfaces related to the new functionalities offered. See the javadocs
+  for details.
+
+Performance improvements:
+  Enormous gains in speed related to descendent X-Path queries, and
+  element searches.
+  Smaller disk footprint, especially with namespace data
+
+Bug fixes:
+  Several bugfixes see our bugdatabase at http://support.xhive.com
+
+
+Changes since release 1.0
+-------------------------
+Interface changes:
+  none.
+Performance improvements:
+  Several performance improvements are achieved. Index scalability and size
+  have been improved.
+Bug fixes:
+  Concurrent XPath queries were slowing down in very specific situations.
+  Bin directory added to the PATH by the installer.
+  Validating parsing with Xerces in your classpath has been fixed.
+
+Support site:
+
+  http://support.xhive.com

@@ -1,0 +1,48 @@
+Evaluation Software license agreement
+
+
+X-Hive Corporation (hereinafter referred to as "X-Hive"), having its registered office in Rotterdam and his principal place of business at Aert van Nesstraat 45, 3012 CA in Rotterdam, the Netherlands and Licensee hereby agree as follows:
+
+Article 1.	The License
+
+1.1	X-Hive hereby grants to Licensee a temporary non-exclusive, non-assignable and non-transferable license to use the Program X-Hive/DB for evaluation of the functional specifications only. The program is provided gratuitously.
+
+1.2	Licensee agrees to restrict access to Licensee's copy of the Program to	individuals officially affiliated with Licensee's organization. Licensee will not install the Program outside Licensee's organization. 
+
+1.3	Licensee agrees to give feedback to the X-Hive about the usage of the Program in a written report, or otherwise if requested by X-Hive.
+
+1.4	Licensee will not, at any time during or after the term of this Agreement, use the Program X-Hive/DB in any other function other than those under clauses 1.1 and 1.2. 
+
+1.5	Intellectual property rights in and to the Program and associated documentation shall remain unconditionally with X-Hive and/or its suppliers.
+
+1.6	Licensee is prohibited to decompile the Classes [The compiled source -code of the Java sources] in any way during the term of the Agreement and after termination of this Agreement. Decompilation shall be interpreted as an infringement of copyright. Licensee explicitly acknowledges that decompilation of the Classes is not necessary for evaluation of the functional specifications and that interoperability with other programs is realized by application program interfaces (so called api's), belonging to the Program.
+
+
+Article 2.	Term and Termination
+
+2.1	This Agreement is effective as of the day of signing of this Agreement by Parties. This Agreement will have an initial term of 30 days. Any extension to this period, at the sole dicretion of and subject to approval of X-Hive and will commence only for Licensee upon receipt of written or validated electronic notice by X-Hive.
+
+2.2	X-Hive may terminate this Agreement immediately by written notice to Licensee at any time for any reason what so ever.
+
+2.3	Upon termination of this Agreement, Licensee shall immediately cease use of the Program and will promptly return all copies of the Program and associated documentation, or destroy them if so requested.
+
+
+Article 3.	Confidentiality
+
+All proprietary information disclosed by one party to the other shall be treated as confidential and not disclosed or transferred by the recipient to third parties. Proprietary information shall be deemed to include the Program.
+
+
+Article 4.	Liability
+
+Given the fact that the Program is provided for evaluation purposes only, in no event shall X-Hive be liable for any damages including without limitation any indirect, incidental, special or consequential damages (including but not limited to loss of anticipated of profits, revenues, data or use), arising from any cause under or related to this agreement or the Program.
+
+Article 5.	Penalty
+
+Any use of the Program (and proprietary information) outside the scope of this Agreement is prohibited and shall result in a penalty. This immediately payable penalty of 100,000 Euro shall be due from Licensee to X-Hive, without further notice of default by the X-Hive. The payment of the penalty shall in no way affect any other legal rights, or legal claims to full compensation for breaching this Agreement, X-Hive has under this agreement and in law.
+
+
+Article 6.	Governing law and Jurisdiction
+
+6.1.	This Agreement shall be governed by and construed in accordance with the laws of The Netherlands.
+
+6.2.	Regarding any dispute, controversy or claim arising under, out of, or relating to this Agreement and any subsequent amendments of this Agreement, including, without limitation, its formation, validity, binding effect, interpretation, performance, breach or termination, as well as non-contractual claims, the Parties hereto shall submit exclusively to the jurisdiction of the competent court in Rotterdam.

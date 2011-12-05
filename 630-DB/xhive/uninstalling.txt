@@ -1,0 +1,17 @@
+Uninstalling X-hive
+
+Windows:
+========
+Uninstalling xhive can be done by using the Add/ Remove Programs item in the
+Control Panel. The data directories and other remaining files can be removed
+'by hand' afterwards.
+(You should not simply delete the directory, as X-Hive/DB will unregister 
+the dedicated page server service during deinstallation).
+
+Unix:
+=====
+Uninstalling xhive should be done as following:
+- Stop the dedicated page server, if running, with XHStopServer
+- Remove the installation and data directories
+
+

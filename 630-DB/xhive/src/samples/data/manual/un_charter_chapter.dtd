@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT article (para)>
+<!ATTLIST article
+	number CDATA #REQUIRED
+>
+<!ELEMENT chapter (title, (section+ | article+))>
+<!ATTLIST chapter
+	number CDATA #REQUIRED
+>
+<!ELEMENT item (para)>
+<!ELEMENT list (item+)>
+<!ELEMENT para (#PCDATA | list)*>
+<!ELEMENT section (title, article+)> 
+<!ELEMENT title (#PCDATA)>

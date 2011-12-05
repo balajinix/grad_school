@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server version="X-Hive/DB 5.0" pagesize="4096" license="048USP3Tef4zzVwhzKaxeP4rNf5jSONA6x1XN#yZRZSTYYQSQyyRswaQi.hweqWI" passwd="HTydsbSJYxSl6">
+  <log path="log" keep-log-files="false"/>
+  <database name="united_nations">
+    <segment id="default" temp="false">
+      <file path="united_nations-default-0.XhiveDatabase.DB" id="0"/>
+    </segment>
+  </database>
+</server>

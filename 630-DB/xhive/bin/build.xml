@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="xhive" default="usage" basedir=".">
+<target name="usage">
+<echo>
+  ******* Xhive/DB xhive-ant command help ******* 
+  
+xhive-ant is used to execute commands related to running
+samples, the administrator client from the sources, and
+some miscelleneous functions.
+
+  xhive-ant build-samples
+       Compile the samples (compiling is done automatically before
+       running, so there is no real need to do this)
+  xhive-ant clean-samples
+       Remove the compiled classes related to the samples
+  xhive-ant run-sample ....
+       Run a sample from our sample-set, example:
+         xhive-ant run-sample -Dname=manual.StoreDocuments
+
+  xhive-ant build-admin
+       Compile the sources of the administrator client
+  xhive-ant clean-admin
+       Remove the compiled classes related to the administrator
+       client
+  xhive-ant run-admin
+       Run the administrator client from the compiled sources
+
+  xhive-ant install-federation -Dxhive.superpwd="YourPwd"
+       Use with extreme care! Removes all existing databases!
+       Installs a new empty federation
+       (When working with an upgraded X-Hive/DB, always run
+           xhive-ant upgrade-database
+       after running this command)
+
+  xhive-ant upgrade-database -Dxhive.superpwd="YourPwd"
+       For non-evalution copies only, upgrade database between
+       patch-releases (if needed)
+
+  xhive-ant run-ftpserver -Ddbname=DatabaseName
+       Compile and run the FTP-server, to which you can connect
+       externally (you must supply a database name)
+  	    </echo>
+</target>
+<property file="build.properties"/>
+<target name="build-samples">
+<mkdir dir="${samples.build.dir}"/>
+<javac srcdir="${samples.src.dir}" destdir="${samples.build.dir}" classpath="${samples.classpath}" debug="${compiler.debug}" optimize="${compiler.optimize}" deprecation="${compiler.deprecation}">
+<include name="samples/**/*.java"/>
+</javac>
+</target>
+<target name="clean-samples">
+<mkdir dir="${samples.build.dir}"/>
+<delete dir="${samples.build.dir}"/>
+</target>
+<target name="run-sample" depends=" build-samples">
+<java classname="samples.${name}" fork="true" classpath="${samples.classpath}:${samples.build.dir}">
+<jvmarg line="${xhive.jvmargs}"/>
+</java>
+</target>
+
+<target name="build-apriori">
+<mkdir dir="c:\xhive\build\apriori"/>
+<javac srcdir="c:\xhive\src\apriori\" destdir="c:\xhive\build\apriori\" classpath="C:\xhive\lib\antlr.jar;C:\xhive\lib\fop.jar;C:\xhive\lib\icu4j.jar;C:\xhive\lib\jsr173_api.jar;C:\xhive\lib\lucene.jar;C:\xhive\lib\mx4j.jar;C:\xhive\lib\retroweaver-rt.jar;C:\xhive\lib\w3c.jar;C:\xhive\lib\xalan.jar;C:\xhive\lib\xbean.jar;C:\xhive\lib\xercesImpl.jar;C:\xhive\lib\xml-apis.jar;C:\xhive\lib\xhive.jar;" >
+<include name="apriori.java"/>
+</javac>
+</target>
+<target name="clean-apriori">
+<mkdir dir="c:\xhive\build\apriori"/>
+<delete dir="c:\xhive\build\apriori"/>
+</target>
+<target name="run-apriori" depends=" build-apriori">
+<java classname="c:\xhive\build\apriori\" fork="true" classpath="C:\xhive\lib\antlr.jar;C:\xhive\lib\fop.jar;C:\xhive\lib\icu4j.jar;C:\xhive\lib\jsr173_api.jar;C:\xhive\lib\lucene.jar;C:\xhive\lib\mx4j.jar;C:\xhive\lib\retroweaver-rt.jar;C:\xhive\lib\w3c.jar;C:\xhive\lib\xalan.jar;C:\xhive\lib\xbean.jar;C:\xhive\lib\xercesImpl.jar;C:\xhive\lib\xml-apis.jar;C:\xhive\lib\xhive.jar;c:\xhive\build\apriori\">
+<jvmarg line="${xhive.jvmargs}"/>
+</java>
+</target>
+
+<target name="build-admin">
+<mkdir dir="${util.build.dir}"/>
+<copy todir="${util.build.dir}">
+<fileset dir="${util.src.dir}">
+<include name="com/xhive/adminclient/**/*.png"/>
+<include name="com/xhive/adminclient/**/*.gif"/>
+<include name="com/xhive/adminclient/**/*.jpg"/>
+</fileset>
+</copy>
+<javac srcdir="${util.src.dir}" destdir="${util.build.dir}" classpath="${util.classpath}" debug="${compiler.debug}" optimize="${compiler.optimize}" deprecation="${compiler.deprecation}">
+<include name="com/xhive/adminclient/**/*.java"/>
+</javac>
+</target>
+<target name="clean-admin">
+<mkdir dir="${util.build.dir}"/>
+<delete>
+<fileset dir="${util.build.dir}">
+<include name="com/xhive/adminclient/**/*.class"/>
+</fileset>
+</delete>
+</target>
+<target name="run-admin" depends=" build-admin">
+<java classname="com.xhive.adminclient.Admin" fork="true" classpath="${util.build.dir}:${util.classpath}">
+<jvmarg line="${xhive.jvmargs}"/>
+</java>
+</target>
+<target name="build-ftpserver">
+<mkdir dir="${util.build.dir}"/>
+<javac srcdir="${util.src.dir}" destdir="${util.build.dir}" classpath="${util.classpath}" deprecation="off">
+<include name="com/xhive/ftpserver/**/*.java"/>
+</javac>
+</target>
+<target name="run-ftpserver" depends=" build-ftpserver">
+<java classname="com.xhive.ftpserver.XhiveFtpServer" fork="true" classpath="${util.build.dir}:${util.classpath}">
+<jvmarg line="${xhive.jvmargs}"/>
+<arg line="${dbname}"/>
+</java>
+</target>
+<target name="setup-unix">
+<chmod dir="." perm="ugo+rx" includes="**/XH*"/>
+<chmod dir="." perm="ugo+rx" includes="**/xh_*"/>
+<delete failonerror="false">
+<fileset dir=".">
+<include name="*.bat"/>
+<include name="*.EXE"/>
+<include name="*.exe"/>
+<include name="*.dll"/>
+</fileset>
+</delete>
+<antcall target="install-federation"/>
+</target>
+<target name="setup-federation">
+<antcall target="setup-federation-check"/>
+<antcall target="setup-federation-perform"/>
+</target>
+<target name="install-federation">
+<delete dir="${data.dir}" quiet="true"/>
+<mkdir dir="${data.dir}"/>
+<java classname="com.xhive.tools.XhiveCreateFederation" fork="true" classpath="${classpath}">
+<jvmarg line="${xhive.jvmargs}"/>
+<arg line="-debug -verbose -federation &quot;${xhive.server.boot}&quot; -log ${journal.dir} -pagesize ${xhive.pageSize} -passwd ${xhive.superpwd}"/>
+</java>
+<antcall target="setup-federation"/>
+</target>
+<target name="setup-federation-check" unless="xhive.superpwd">
+<echo message="Use xhive-ant install-federation -Dxhive.superpwd=XXXXX"/>
+</target>
+<target name="setup-federation-perform" if="xhive.superpwd">
+<java classname="com.xhive.tools.XhiveInstallFederation" fork="true" classpath="${util.classpath}:${util.build.dir}">
+<jvmarg line="${xhive.jvmargs}"/>
+<arg line="-debug -verbose -federation &quot;${xhive.server.boot}&quot; -licensekey ${xhive.licensekey} ${xhive.superpwd}"/>
+</java>
+</target>
+<path id="emma.lib">
+<pathelement location="../lib/misc/emma.jar"/>
+<pathelement location="../lib/misc/emma_ant.jar"/>
+</path>
+</project>

@@ -1,0 +1,2 @@
+il-st-2 --c $1.c
+mv -f $1.int.c $2.c

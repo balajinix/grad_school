@@ -1,0 +1,457 @@
+X-Hive/DB release 7.0.0, 03 Oct 2005
+
+Changes in release 7.0.0
+------------------------
+
+- Used Java 5 generics in the X-Hive/DB interfaces. This only applies
+  to the Java 5 version of X-Hive/DB.
+
+- Added new kind of indexes called "path indexes" that allow more
+  detailed specification of what nodes to index and also allow
+  multiple values to be used as index keys. See section 8.5 of the
+  manual.
+
+- More DOM level 3 core methods are now implemented.
+
+- The DOMConfiguration option "xhive-psvi" can now be set on existing
+  documents.
+
+- We have removed the DOM level 3 validation interfaces. The
+  validateDocument() call of DocumentEditVAL has been moved to
+  XhiveDocumentIf and returns a boolean instead of the constants
+  NodeEditVAL.VAL_TRUE/VAL_FALSE, but the preferred way of
+  revalidating documents is with the normalizeDocument() method of the
+  DOM level 3 core Document interface. See also section 5.23 of the
+  manual.
+
+- Nodes can be serialized in a pull-based way. See
+  XhiveNodeIf.toXml(LSSerializer).
+
+- Blob contents can now be set through an output stream. See
+  XhiveBlobNodeIf.setContents(). Conversely, their contents can be
+  written directly to an output stream. See
+  XhiveBlobNodeIf.writeTo(OutputStream).
+
+- Blobs can now be made versionable like documents. Various version
+  interfaces have been moved from XhiveDocumentIf to
+  XhiveLibraryChildIf.
+
+- Metadata fields on versionable blobs and documents can now be made
+  non-versionable. This means that you can change these metadata
+  fields without a checkout/checkin sequence, but no history is kept
+  for them.
+
+- You can now create temporary blobs and temporary DOMImplementation
+  instances (that create temporary documents) like the already
+  existing temporary documents. See
+  XhiveSessionIf.createTemporaryBlob() and
+  XhiveSessionIf.getTemporaryDOMImplementation().
+
+- Separate federations can now share their cache. See
+  XhiveFederationFactoryIf.createPageCache(int cachePages). You can
+  also use your own listener for socket connections, e.g. to share a
+  single listener with more federations. See
+  XhiveDriverIf.acceptConnection(Socket).
+
+- Added simpler way to run multiple federations in a single
+  server. See the manual section 12.10 on federation sets and the API
+  docs of the com.xhive.federationset.interfaces package.
+
+- Upgraded included Xerces to version 2.7.1, Xalan to version 2.7.0,
+  ICU4J to version 3.4, lucene to version 1.4.3.
+
+- Lock acquisition priority and deadlock victim selection have been
+  improved to reduce the number of deadlocks in situations with much
+  concurrency. It is now possible to get a library child from a
+  library and take an update or write lock atomically to avoid
+  deadlocks. See XhiveLibraryIf.get(..., int lockType).
+
+- Index keys can be retrieved in reverse order, see
+  XhiveIndexIf.getKeysDescending() and
+  XhiveIndexIf.getKeysDescendingFrom(Object key).
+
+- Added XhiveSessionIf.getJoinedThread() to retrieve the currently
+  joined thread.
+
+- Some internal performance counters can be retrieved. See
+  XhiveDriverIf.getStatistics().
+
+- Application code can be notified of fatal X-Hive/DB errors (e.g.,
+  disk I/O errors). See
+  XhiveDriverIf.addObserver(XhiveDriverObserverIf).
+
+- Added JMX bean to monitor federations. See API docs of the
+  com.xhive.jmx package.
+
+- Added API to delete federations. See
+  XhiveFederationFactoryIf.deleteFederation().
+
+- Database configuration files can now also be used to create
+  temporary data segments. See section 11.2 in the manual.
+
+- Added utility classes ReaderInputStream and WriterOutputStream in
+  package com.xhive.util.interfaces.
+
+- Added an XhiveLoginModule for use with JAAS to allow checking of
+  X-Hive/DB passwords in a JAAS setting.
+ 
+- Miscellaneous performance improvements.
+
+XQuery changes
+--------------
+
+- X-Hive/DB is now compliant to the current XQuery Working Draft from the 15 
+  September 2005 and the related specifications (XQuery & XPath functions, 
+  XQuery & XPath Data Model, etc.).
+
+- Added a set of functions to perform updates within XQuerys.
+
+- Added functionality to detect and optimize grouped queries using 
+  fn:distinct-values()
+  
+- Ordered indexes can now be used to optimize order by statements like
+    for $b in /bib/book[@year]
+    order by $b/@year
+    return $b
+
+- Queries are now allowed on all XhiveNodeIf elements, see 
+  XhiveNodeIf.executeXQuery() and XhiveNodeIf.createXQuery()
+  
+- New XQuery API: you can use XhiveNodeIf.createXQuery() to obtain an object
+  of type XhiveXQueryQueryIf which allows a more flexible XQuery execution,
+  see the API docs and the manual for more information.
+  
+- Imports and modules:
+  From now on modules can be imported using the syntax:
+    import module prefix = 'namespace' at '/path/to/module';
+  
+- The syntax to specify debugging information has been changed to fit the current
+  XQuery specification, use either
+    declare option xhive:queryplan-debug 'stdout';
+  for global debugging or
+    (# xhive:queryplan-debug 'stdout' #) { expr }
+  for local debugging (only enabled in expr).
+  
+- Changed XHAdmin in order to support new debug syntax (see above).
+  - With *no* text selected, the button will add/remove global debug options
+    at start of prolog,
+  - otherwise it will add/remove debug pragmata around selected text.
+
+- Proprietary extension to order by specifications
+  On user request we implemented a proprietary syntax extension to XQuery that
+  allows the order direction (ascending/descending) to be dynamically specified
+  as opposed to hard coded language keywords.
+  The syntax is:
+    [for, let, where...]
+    order by [expr1] ascending if ([expr2])
+    return [...]
+  See the manual for more information.
+  
+- Cleanup of function names:
+  Several function names were renamed in later versions of the spec. The current
+  names are consistent with the W3C Working Draft from 4 April 2005.
+  Functions that have been removed from the spec but were implemented by X-Hive
+  at some point of time are mostly still available.
+	
+  Changes in detail:
+  
+  - added fn:codepoint-equal()
+  - added fn:dateTime()
+  - added fn:document-uri()
+  - added fn:doc-avalaible()
+  - added fn:in-scope-prefixes() (old name fn:get-in-scope-namespaces() still 
+    available)
+  - added fn:prefix-from-QName()
+  - added fn:static-base-uri()
+  - added fn:trace() (use "stdout" or "stderr" as second ($label) parameter)
+  - added xs:QName()
+  - Changed fn:namespace-uri-for-prefix() function signature to match the 
+    current specification
+  - Changed fn:sum() to return an xs:Integer(0) if run on the emtpy sequence 
+    (matches current specification now).
+  - renamed fn:expanded-QName() to fn:QName()
+  - removed get-* prefix from functions to match the current version of the spec
+    (e.g. get-timezone-from-dateTime() -> timezone-from-dateTime())
+    also renamed *-from-dayTimeDuration to *-from-duration (same for 
+    yearMonthDuration).
+  - removed xhive:set-option(), use "declare option QName Value" or 
+    "(# QName Value #) { expr }" instead
+  
+  All unimplemented functions:
+  - fn:nilled()
+  - op:divide-dayTimeDuration-by-dayTimeDuration()
+  - op:divide-yearMonthDuration-by-yearMonthDuration()
+
+New in release 6.1.4
+--------------------
+- Fix subtle problem with readonly transaction view of re-allocated pages
+  on replica
+- FogBUGZ Case 1079 DisableDeleteButtonWhenInQueryResult:
+  - Admin GUI now does not suggest xquery result tree nodes can be deleted
+- FogBUGZ case 1077, DontAskOldPasswdWhenAdmin
+  - Admin user now not asked for non admin users passwd when changing it
+
+Changes since release 6.1.2 (New in release 6.1.3)
+--------------------------------------------------
+- Reduce pretty printing of XML to avoid modifying non-whitespace text nodes.
+- Fix bug with creating snapshot view for readonly transactions on a
+  replication slave with concurrent updates.
+- Fix potential internal deadlock in cache management code.
+- Fix potential leak of open transaction in XHSessionInfo and
+  XhiveDriverIf.printSessionInformation()
+- Adaptations to take care of empty sequence parameters in xquery functions
+  accepting sequences that are supposed to contain a single value.
+- in Xhive/DB API non Admin user cannot remove herself anymore (came up with
+  FogBugs case 1018)
+- Several changes to Admin tool
+  - Fogbugs case 1017, non Admin user can change own password now
+  - FogBugs case 1018, refactoring/correcting security related functionality
+    - disable some actions (buttons) for non Administrator users when
+      it is clear they cannot have the authority to do the action
+  - FogBugz case 1019, double click on query result tree leaf gives no
+    NullPointerException anymore
+  - FogBugz case 1020, add (de)serialize users and groups functionality
+    to Admin tool
+  - FogBUGZ Case 1057: DontExpandTextElements
+    - when searching treenodes representing text elements,
+      do not expand them in order to avoid creation of funny children
+      producing class cast exceptions when double clicked
+  - Case FOGBUGZ 1058, DelChildDialogShowsNullRefs
+    - when selecting library -> popup menu -> delete children,
+      when library has no proper name, dialog shows
+        "id:" + item.getId() instead of "null"
+      similar to how a library child is listed in the databasetree
+
+Changes since release 6.1.1
+---------------------------
+ - Contested locks are now acquired in FIFO order.
+ - The output of XhiveDriverIf.printSessionInformation() (and therefore
+   also the output of XHSessionInfo) has been extended.
+ - The message of XhiveLockNotGrantedException now shows the lock id.
+ - Fix bug causing dead object exceptions with internal subsets in cases
+   with temporary documents and/or XhiveLibraryIf.adoptNode().
+ - Optimize some queries, by checking for administrator now to avoid
+   to retrieve data from disk when not necessary.
+ - Fix bug causing Admin client to keep info about a connection that
+   failed, e.g. due to "invalid license" exception.
+ - Fix bug concerning XhiveIndexDialog. GUI does not suggest anymore that
+   indexes can be unique and concurrent at the same time.
+
+Changes since release 6.1.0
+---------------------------
+ - small memoryleak fixed (related to ownercaches)
+ - Terms used in a Full Text Search query may contain
+   plus and minus signs.
+   Usually, they are interpreted as Modifier.
+   They are now also allowed as part of a Term.
+   - they are still *not* allowed as the first character of a Term
+   - but, from now, are allowed as a following character of a Term
+   This refines section 7.8.2 of the manual.
+ - When a document/library is not accessible for some user, the user
+   - is *not* allowed to visit its children,
+   - but, from now, still allowed to visit the parent or the siblings.
+   This allows the programmer to define a (subclass of)
+     org.w3c.dom.traversal.NodeFilter
+   to traverse e.g. the documents of a tree by
+   - skipping libraries,
+   - rejecting unaccessable documents, visiting accessable ones,
+   provided the user has still access to the libraries of the tree.
+ - When the user has no access to some documents,
+   queries will silently skip these documents.
+ - When parsing with 
+     "validate", Boolean.TRUE
+     "xhive-store-schema", Boolean.TRUE
+     "xhive-store-schema-only-internal-subset", Boolean.TRUE
+   documents will be stored together with their internal DTD subset,
+   - without requiring a write-lock
+   - from now, only a read-lock is required
+
+Changes since release 6.0.5
+---------------------------
+ - method getSessionName (for debugging purposes) added
+ - All AdminClient file filters show filetype *and* extension
+ - All library children (libraries, documents and blobs) now have
+   metadata consisting of key/value pairs of strings.  This metadata
+   can be indexed in value or full text indexes and queried in XQuery
+   queries.  See section 5.28 of the manual and
+      com.xhive.dom.interfaces.XhiveLibraryChildIf.getMetadata
+      com.xhive.index.interfaces.XhiveIndexListIf.addMetadataValueIndex
+      com.xhive.index.interfaces.XhiveIndexListIf.addMetadataFullTextIndex
+ - Indexes can be concurrent, which means that they are not locked for
+   the duration of the transaction and can therefore be modified by
+   multiple concurrent transactions.  See section 8.8 of the manual.
+ - Libraries and documents can have additional permissions that can be
+   used to give additional permissions to specific users and/or
+   groups.  See the API docs for
+      com.xhive.core.interfaces.XhiveAuthorityIf.getAdditionalPermissions
+ - XQuery queries can have external parameters that are set by the
+   calling code.  See the new class
+      com.xhive.query.interfaces.XhiveXQueryParam
+ - The DOM level 3 methods Text.getWholeText and Text.replaceWholeText
+   have been implemented.
+ - Parsing of documents with a large DTD that is already in a catalog
+   in the database is now significantly faster.
+
+Changes since release 6.0.2
+---------------------------
+ - release 6.0.3 and 6.0.4 are not published officially.
+ - bug fixes concerning FLWOR expressions
+ - bug fix concerning importing a document with many children
+   (e.g. processing instructions before root element) 
+
+Changes since release 6.0.1
+---------------------------
+ - Further fixes with respect to variables declared in FLWOR expressions
+   used in order by clauses.
+
+Changes since release 6.0
+-------------------------
+ - Versionspace names no longer need to be unique, duplicate
+   version space names within one library are now allowed.
+ - Problems could arise with variables declared in earlier
+   FLWOR expressions used in order by clauses.
+
+Changes since release 5.1.x
+---------------------------
+(Note: A short application migration guide for X-Hive/DB 5.x.x users
+is included in the readme of the update release)
+
+ - Replication: Added feature for master/ slave replication of 
+   federations of databases, to allow to have of copies of databases
+   on multiple machines to distribute database load.
+   For more information, see section 13 of the manual. As well as
+   extra menu options and an XHCreateReplica commandline tool, the 
+   following API calls were added for it:
+      com.xhive.core.interfaces.XhiveDriverIf:
+       Set up a driver object to act as a replica (slave).
+        void configureReplicator(String master, String replicatorId);
+      com.xhive.core.interfaces.XhiveFederationIf:
+       Add/ remove/ list replicator ids
+        void registerReplicator(String id);
+        void unregisterReplicator(String id);
+        void getReplicators();
+       Initialize a full replica of a federation
+        void replicateFully(String bootstrapFilename, 
+            XhiveFederationFactoryIf.PathMapper mapper);
+       Shut down a federation, optionally bringing replicas up to date.
+        void shutdown(String[] replicatorIds);
+      com.xhive.core.interfaces.XhiveSessionIf:
+       Synchronize sessions running on different replicated federations.
+        TimeStamp getUpdateTimeStamp();
+        void waitForTimeStamp(TimeStamp timeStamp);
+
+ - The DOM 3 Validation and Load/ Save interfaces have been made
+   Recommendations by W3C, and we therefor upgraded our support.
+   These DOM 3 interfaces should now not change anymore.
+   This means the following changes:
+    - The interfaces have been moved from org.w3c.dom.xhivecore,
+      org.w3c.dom.xhivels, and org.w3c.dom.xhiveval to
+      org.w3c.dom, org.w3c.dom.ls, and org.w3c.validation. This
+      means the interfaces may now clash with other interfaces
+      with the same name in third party jars. Please ensure that
+      you use jars with the recommendation versions of the 
+      interfaces, so e.g. the ones we include. See the note on
+      xml-apis.jar below.
+    - Most of the LS interfaces have been renamed, e.g.
+        DOMBuilder -> LSParser
+        DOMWriter -> LSSerializer
+        DOMInputSource -> LSInput
+        DOMEntityResolver -> LSResourceResolver
+      However, almost all of the methods that existed in the
+      previous specification we supported are still there, and
+      only a few methods have been renamed.
+    - Because Validation is now final, and the Abstract Schema
+      is no longer supported by W3C, we removed those interfaces
+      from AS that have replacements in Validation, being:
+        NodeEditAS -> NodeEditVAL
+        DocumentEditAS -> DocumentEditVAL
+        ElementEditAS -> ElementEditVAL
+        CharacterDataEditAS -> CharacterDataEditVAL
+      The most significant changes in the methods of these interfaces
+      are that instead of booleans these methods now return
+      shorts representing states. So you'll have to use e.g.
+        if (elementEditVAL.canSetAttribute("foo", "bar") == 
+            NodeEditVAL.VAL_TRUE)) ...
+      We also removed the AbstractSchema.java sample. 
+      We added one routine nodeValidity(mode, deep) to XhiveNodeIf
+      to replace isNodeValid(mode,deep) on NodeEditAS.
+    - Some DOMConfiguration options have been renamed, specifically
+      if you used 'whitespace-in-element-content' on a DOMBuilder
+      you should now use 'element-content-whitespace' on the
+      LSParser configuration.
+    - We upgraded the included Xerces to release 2.6.2, plus we
+      now include the 'experimental' DOM 3 Xerces jars instead of
+      the regular jars, because only that version has the correct
+      DOM 3 interfaces.
+      (Side note: we also upgraded some other jars; Xalan to version
+      2.6.0, icu4j to 2.8)
+    - The xml-apis.jar now has the DOM 3 interfaces, dom3_intermediate.jar
+      no longer exists (or is empty, depending on your distribution).
+      For certain applications (read: Tomcat) it is very important
+      that this jar is now placed in the endorsed directory so
+      that it will extend the standard DOM 3 interfaces (for Tomcat
+      this means, use Tomcat 4.1 or better and place the jar in
+      tomcatDir/common/endorsed, you can also place the jar
+      in jdkdir/jre/lib/endorsed).
+ 
+ - Added functionality to interrupt a session. When called, an
+   XhiveInterruptedException will be thrown from code that does
+   further database access in a transaction of that session. As an
+   example, the Adminclient uses this to terminate running queries.
+      com.xhive.core.interfaces.XhiveFederationIf:
+        void interrupt();
+ - It is now possible to suspend diskwrites, to allow for quick copying
+   of federation files (useful with certain third party backup tools).
+   There is a XHSuspendDiskWrites command line tool which calls the
+   following methods:
+      com.xhive.core.interfaces.XhiveFederationIf:
+        void suspendDiskWrites(int options);
+        void resumeDiskWrites();
+ - Other API changes:
+     Allow to disconnect sessions of applications running in 
+     another JVM:
+      com.xhive.core.interfaces.XhiveFederationIf:
+        List getRemoteConnections();
+        boolean closeRemoteConnection(SocketAddress address);
+     Set the number of database files that may be opened 
+     by X-Hive/DB:
+      com.xhive.core.interfaces.XhiveDriverIf:
+        int getMaxOpenDataFiles();
+        void setMaxOpenDataFiles(int numFiles);
+     Move a library child (document, library or BLOB) to another
+     library, faster than importNode(...) does:
+      com.xhive.dom.interfaces.XhiveLibraryIf:
+        Node adoptNode(Node source);
+
+ - The InputStreams returned by getContents() of XhiveBlobNodeIf
+   now support mark(), reset() and skip(...).
+ 
+ - The xhive:fts function now takes an optional third argument to
+   set options on how the full text query is executed. Currently
+   the following options are available that can be concatenated with
+   a ';':
+    - include-attrs, to also look in the attribute values of elements
+      being searched in the full text search.
+    - analyze-wildcards, to prevent complications by wildcard query 
+      terms like 'C?lin*' are not processed by the analyzer, by using
+      this option they will be passed to the analyzer so that the terms
+      can e.g. be made lowercase or the diacritics can be stripped.
+    - fully.specified.AnalyzerClassName, to override the analyzer used
+      in the query analysis.
+   An extra full text index creation option FTI_INCLUDE_ATTRIBUTES 
+   was added to XhiveIndexIf to be able to create a full text index
+   that can be used in combination with the 'include-attrs'.
+ - A bug has been fixed in the full text indexes (only indexes created
+   after installing X-Hive/DB 6) that will treat nodes that include
+   entity references used for characters better.
+
+ - Improved deadlock victim selection: instead of selecting the
+   session that requests the lock, the youngest (most recently called
+   begin()) session is selected as the deadlock victim.
+ 
+ - The Adminclient has a few new features: Replication dialogs,
+   query interruption, delete multiple children, copy/ paste using
+   serialization.
+ 
+
+(changes from earlier releases can be found in history.txt)

@@ -1,0 +1,10 @@
+This directory contains some source 
+files that we've successfully run
+through this version of Aristotle.
+
+When just the .c file is required
+the file is at the top level.
+
+When the code has associated .h
+files we've placed all required
+source into a subdirectory.
